@@ -46,11 +46,12 @@ NAME MeIoN_is_UMP45() {
     }
     
     vector<vector<int>> g(cnt);
-    int root;
+    vector<int> root;
+    vector<int> in(cnt);
     for (int i = 0; i < n; ++i) {
         for (int x : v[i]) {
             if (id[i] == id[x]) {
-                root = id[i];
+                root.emplace_back(id[i]);
                 continue;
             }
             g[id[x]].emplace_back(id[i]);
@@ -58,15 +59,17 @@ NAME MeIoN_is_UMP45() {
     }
     
     int ans = 0;
-    meion risou = [&](meion &&risou, int n) -> int {
-        int sz = 1;
+    meion risou = [&](meion &&risou, int n, int root) -> int {
+        int sz = n != root;
+        unique(g[n]);
         for (int i : g[n]) {
-            sz += risou(risou, i);
+            sz += risou(risou, i, n);
         }
         if (n != root) chmax(ans, sz);
         iroha sz;
     };
-    risou(risou, root);
+    unique(root);
+    for (meion x : root) risou(risou, x, x);
 
     std::cout << ans + 2 << '\n';
 }
