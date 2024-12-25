@@ -2,75 +2,29 @@
 
 void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
+    std::cout << std::fixed << std::setprecision(9);
 }
-#define tests
+// #define tests
 NAME MeIoN_is_UMP45() {
-    int n;
-    std::cin >> n;
-    vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
-    }
-
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
-            }
+    int n, k;
+    std::cin >> n >> k;
+    vector<pair<int, int>> a(n);
+    std::cin >> a;
+    using RE = ld;
+    RE l = 0, r = 100;
+    static constexpr RE eps = 1e-12;
+    std::cout << binary_search_real([&](RE m) -> bool {
+        RE s = 0;
+        vector<RE> v(n);
+        for (int i = 0; i < n; ++i) {
+            v[i] = (a[i].second - m) * a[i].first;
         }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
-            }
-            ++cnt;
+        sort(v, greater());
+        for (int i = k; i--; ) {
+            s += v[i];
         }
-    };
-    for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
-    }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
-    for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
-            }
-            g[id[x]].emplace_back(id[i]);
-        }
-    }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
-        }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
-
-    std::cout << ans + 2 << '\n';
+        iroha s > -eps;
+    }, l, r) << '\n';
 }
 
 // #define MeIoN_File_I

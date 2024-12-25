@@ -1,76 +1,47 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
+#include "MeIoN_Lib/geo/1-base.hpp"
 
 void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     std::cout << std::fixed << std::setprecision(12);
 }
-#define tests
+// #define tests
+using RE = ld;
+using P = point<ll>;
+constexpr RE eps = 1e-10;
+constexpr RE pi2 = pi / 2;
 NAME MeIoN_is_UMP45() {
     int n;
     std::cin >> n;
-    vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
-    }
+    vector<P> ps(n);
+    std::cin >> ps;
 
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
-            }
-        }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
-            }
-            ++cnt;
-        }
-    };
+    ll a = 0, b = 0;
     for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
-    }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
-    for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
-            }
-            g[id[x]].emplace_back(id[i]);
+        vector<RE> angles;
+        for (int k = 0; k < n; ++k) {
+            if (i == k) continue;
+            angles.emplace_back((ps[k] - ps[i]).angle<RE>());
         }
-    }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
+        sort(angles);
+        for (int i = 0; i < n - 1; ++i) {
+            angles.emplace_back(angles[i] + 2 * pi);
         }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
+        for (int i = 0, k = 0, j = 0; i < n - 1; ++i) {
+            while (angles[k + 1] < angles[i] + pi2 - eps) ++k;
+            while (angles[j + 1] < angles[i] + pi) ++j;
 
-    std::cout << ans + 2 << '\n';
+            if (std::abs(angles[k + 1] - angles[i] - pi2) < eps) {
+                ++a;
+                b += j - k - 1;
+            } else {
+                b += j - k;
+            }
+        }
+    }
+    ll all = 1ll * n * (n - 1) * (n - 2) / 6;
+    ll ls = all - a - b;
+    std::cout << ls << ' ' << a << ' ' << b << '\n';
 }
 
 // #define MeIoN_File_I

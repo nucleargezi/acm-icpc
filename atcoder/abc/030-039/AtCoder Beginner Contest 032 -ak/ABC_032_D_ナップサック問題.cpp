@@ -4,73 +4,68 @@ void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     std::cout << std::fixed << std::setprecision(12);
 }
-#define tests
+// #define tests
 NAME MeIoN_is_UMP45() {
-    int n;
-    std::cin >> n;
-    vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
+    int n, V;
+    std::cin >> n >> V;
+    vector<pair<int, int>> a(n);
+    std::cin >> a;
+    int max_v = 0, max_w = 0;
+    for (const meion &[v, w] : a) {
+        chmax(max_v, v), chmax(max_w, w);
     }
-
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
+    if (std::min(max_v, max_w) > 1000) {
+        ll ans = 0, val = 0, w = 0;
+        sort(a, [](meion &a, meion &b) { iroha a.second < b.second; });
+        meion ser = [&](meion &&ser, int p) -> void {
+            if (p == n) {
+                chmax(ans, val);
+                iroha;
+            }
+            if (w + a[p].second < V + 1) {
+                val += a[p].first, w += a[p].second;
+                ser(ser, p + 1);
+                val -= a[p].first, w -= a[p].second;
+            }
+            ser(ser, p + 1);
+        };
+        ser(ser, 0);
+        std::cout << ans << '\n';
+    } else if (max_v > 1000) { 
+        ll s_w = 0;
+        for (const meion &[v, w] : a) {
+            s_w += w;
+        }
+        chmin(V, s_w);
+        vector<ll> dp(V + 1, 0);
+        for (const meion &[v, w] : a) {
+            for (int i = V; i > w - 1; --i) {
+                chmax(dp[i], dp[i - w] + v);
             }
         }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
+        std::cout << dp[V] << '\n';
+    } else {
+        int s_v = 0;
+        for (const meion &[v, w] : a) {
+            s_v += v;
+        }
+        vector<ll> dp(s_v + 1, inf<ll>);
+        dp[0] = 0;
+        for (meion &[v, w] : a) {
+            for (int i = s_v - v; i > -1; --i) {
+                if (dp[i] != inf<ll>) {
+                    chmin(dp[i + v], dp[i] + w);
+                }
             }
-            ++cnt;
         }
-    };
-    for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
-    }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
-    for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
+        int ans = 0;
+        for (int i = 0; i < s_v + 1; ++i) {
+            if (dp[i] < V + 1) {
+                ans = i;
             }
-            g[id[x]].emplace_back(id[i]);
         }
+        std::cout << ans << '\n';
     }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
-        }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
-
-    std::cout << ans + 2 << '\n';
 }
 
 // #define MeIoN_File_I

@@ -4,73 +4,51 @@ void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     std::cout << std::fixed << std::setprecision(12);
 }
-#define tests
+// #define tests
 NAME MeIoN_is_UMP45() {
-    int n;
-    std::cin >> n;
-    vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
-    }
-
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
-            }
-        }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
-            }
-            ++cnt;
-        }
-    };
-    for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
-    }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
-    for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
-            }
-            g[id[x]].emplace_back(id[i]);
+    int n, m;
+    std::cin >> n >> m;
+    static bool a[0721][0721], b[0721][0721], c[0721][0721];
+    for (int i = 1; i < n + 1; ++i) {
+        for (int k = 1; k < m + 1; ++k) {
+            static char c;
+            std::cin >> c;
+            a[i][k] = c == '.';
         }
     }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
+    for (int i = 1; i < n + 1; ++i) {
+        for (int k = 1; k < m + 1; ++k) {
+            bool ok = a[i][k];
+            c[i][k] = 1;
+            for (int x, y; meion [dx, dy] : vector<pair<int, int>>{{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}}) {
+                x = i + dx, y = k + dy;
+                ok |= a[x][y];
+            }
+            b[i][k] = ok;
         }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
-
-    std::cout << ans + 2 << '\n';
+    }
+    for (int i = 1; i < n + 1; ++i) {
+        for (int k = 1; k < m + 1; ++k) {
+            if (b[i][k]) continue;
+            c[i][k] = 0;
+            for (int x, y; meion [dx, dy] : vector<pair<int, int>>{{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}}) {
+                x = i + dx, y = k + dy;
+                c[x][y] = 0;
+            }
+        }
+    }
+    for (int i = 1; i < n + 1; ++i) {
+        for (int k = 1; k < m + 1; ++k) {
+            if (a[i][k] != c[i][k]) iroha impossible();
+        }
+    }
+    possible();
+    for (int i = 1; i < n + 1; ++i) {
+        for (int k = 1; k < m + 1; ++k) {
+            std::cout << (b[i][k] ? '.' : '#');
+        }
+        std::cout << '\n';
+    }
 }
 
 // #define MeIoN_File_I

@@ -4,73 +4,23 @@ void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     std::cout << std::fixed << std::setprecision(12);
 }
-#define tests
+// #define tests
 NAME MeIoN_is_UMP45() {
-    int n;
-    std::cin >> n;
-    vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
-    }
-
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
-            }
-        }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
-            }
-            ++cnt;
-        }
-    };
-    for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
-    }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
-    for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
-            }
-            g[id[x]].emplace_back(id[i]);
-        }
-    }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
-        }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
-
-    std::cout << ans + 2 << '\n';
+    string s;
+    std::cin >> s;
+    s = s.substr(0, 12);
+    if (s == "WBWBWWBWBWBW") std::cout << "Do\n";
+    if (s == "BWBWWBWBWBWW") std::cout << "#Do\n";
+    if (s == "WBWWBWBWBWWB") std::cout << "Re\n";
+    if (s == "BWWBWBWBWWBW") std::cout << "#Re\n";
+    if (s == "WWBWBWBWWBWB") std::cout << "Mi\n";
+    if (s == "WBWBWBWWBWBW") std::cout << "Fa\n";
+    if (s == "BWBWBWWBWBWW") std::cout << "#Fa\n";
+    if (s == "WBWBWWBWBWWB") std::cout << "So\n";
+    if (s == "BWBWWBWBWWBW") std::cout << "#So\n";
+    if (s == "WBWWBWBWWBWB") std::cout << "La\n";
+    if (s == "BWWBWBWWBWBW") std::cout << "#La\n";
+    if (s == "WWBWBWWBWBWB") std::cout << "Si\n";
 }
 
 // #define MeIoN_File_I

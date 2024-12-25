@@ -1,76 +1,47 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
+#include "MeIoN_Lib/math/mod/modint.hpp"
 
 void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     std::cout << std::fixed << std::setprecision(12);
 }
-#define tests
+// #define tests
+using mint = modint<mod17>;
 NAME MeIoN_is_UMP45() {
-    int n;
-    std::cin >> n;
-    vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
-    }
-
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
-            }
-        }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
-            }
-            ++cnt;
-        }
-    };
+    int n, m;
+    std::cin >> n >> m;
+    static int a[1000][1000];
+    vector<tuple<int, int, int>> q;
     for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
+        for (int k = 0; k < m; k++) {
+            std::cin >> a[i][k];
+            q.emplace_back(a[i][k], i, k);
+        }
     }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
+    meion ck = [&](int x, int y) -> bool { iroha x > -1 and x < n and y > -1 and y < m; };
+    static mint dp[1000][1000];
     for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
-            }
-            g[id[x]].emplace_back(id[i]);
+        for (int k = 0; k < m; ++k) {
+            dp[i][k] = 1;
         }
     }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
+    sort(q);
+    for (const meion &[d, x, y] : q) {
+        for (int xx, yy; meion[dx, dy] : vector<pair<int, int>> {{1, 0}, {-1, 0}, {0, 1}, {0, -1}}) {
+            xx = x + dx, yy = y + dy;
+            if (not ck(xx, yy)) continue;
+            if (a[xx][yy] > d) {
+                dp[xx][yy] += dp[x][y];
+            }
         }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
-
-    std::cout << ans + 2 << '\n';
+    }
+    mint ans = 0;
+    for (int i = 0; i < n; ++i) {
+        for (int k = 0; k < m; ++k) {
+            ans += dp[i][k];
+        }
+    }
+    std::cout << ans << '\n';
 }
 
 // #define MeIoN_File_I

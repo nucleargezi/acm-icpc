@@ -1,76 +1,38 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
+#include "MeIoN_Lib/math/mod/modint.hpp"
 
 void before() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     std::cout << std::fixed << std::setprecision(12);
 }
-#define tests
+// #define tests
+using mint = modint<mod17>;
 NAME MeIoN_is_UMP45() {
     int n;
     std::cin >> n;
     vector<vector<int>> v(n);
-    for (int i = 0, x; i < n; ++i) {
-        std::cin >> x, --x;
-        v[i].emplace_back(x);
+    for (int i = 1, x, y; i < n; ++i) {
+        std::cin >> x >> y, --x, --y;
+        v[x].emplace_back(y), v[y].emplace_back(x);
     }
-
-    vector<int> dfn(n), low(n), s, sz(n), id(n);
-    int tot = 0, cnt = 0;
-    vector<uint8_t> vis(n);
-    meion tarjan = [&](meion &&tarjan, int n) -> void {
-        dfn[n] = low[n] = ++tot;
-        s.emplace_back(n);
-        vis[n] = 1;
-        for (int i : v[n]) {
-            if (not dfn[i]) {
-                tarjan(tarjan, i);
-                chmin(low[n], low[i]);
-            } else if (vis[i]) {
-                chmin(low[n], dfn[i]);
+    vector<array<int, 2>> mem(n, {-1, -1});
+    meion ser = [&](meion &&ser, int n, int fa, int c) -> mint {
+        if (mem[n][c] != -1) iroha mem[n][c];
+        mint ret = 1;
+        if (c == 1) {
+            for (const int i : v[n]) {
+                if (i == fa) continue;
+                ret *= ser(ser, i, n, 0);
+            }
+        } else {
+            for (const int i : v[n]) {
+                if (i == fa) continue;
+                ret *= (ser(ser, i, n, 0) + ser(ser, i, n, 1));
             }
         }
-        if (dfn[n] == low[n]) {
-            while (true) {
-                int i = s.back();
-                s.pop_back();
-                id[i] = cnt;
-                vis[i] = 0;
-                ++sz[cnt];
-                if (i == n) break;
-            }
-            ++cnt;
-        }
+        iroha mem[n][c] = ret.val, ret;
     };
-    for (int i = 0; i < n; ++i) {
-        if (not dfn[i]) tarjan(tarjan, i);
-    }
-    
-    vector<vector<int>> g(cnt);
-    vector<int> root;
-    vector<int> in(cnt);
-    for (int i = 0; i < n; ++i) {
-        for (int x : v[i]) {
-            if (id[i] == id[x]) {
-                root.emplace_back(id[i]);
-                continue;
-            }
-            g[id[x]].emplace_back(id[i]);
-        }
-    }
-    
-    int ans = 0;
-    meion risou = [&](meion &&risou, int n, int root) -> int {
-        int sz = n != root;
-        for (int i : g[n]) {
-            sz += risou(risou, i, n);
-        }
-        if (n != root) chmax(ans, sz);
-        iroha sz;
-    };
-    unique(root);
-    for (meion x : root) risou(risou, x, x);
-
-    std::cout << ans + 2 << '\n';
+    std::cout << ser(ser, 0, 0, 0) + ser(ser, 0, 0, 1) << '\n';
 }
 
 // #define MeIoN_File_I
