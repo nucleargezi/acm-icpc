@@ -17,11 +17,13 @@ def count_cpp_lines(directory):
     before_func_pattern = re.compile(r"\bbefore\b")
     pre_work_func_pattern = re.compile(r"\bpre_work\b")
     comment_pattern = re.compile(r"^\s*(//.*|/\*.*\*/|/\*.*|.*\*/)$")
-
+    strs = [""]
+    strs.pop()
     total_lines = 0
     for root, _, files in os.walk(directory):
         for file in files:
             if file.endswith(".cpp"):
+                strs.append(file + '\n')
                 file_path = os.path.join(root, file)
                 with open(file_path, 'r', encoding='utf-8') as f:
                     in_main_func = False
@@ -73,7 +75,11 @@ def count_cpp_lines(directory):
                             continue
 
                         # 统计有效代码行
+                        strs.append(line)
                         total_lines += 1
+    with open("out", "w") as file:
+        for s in strs:
+            file.write(s)
     return total_lines
 
 if __name__ == "__main__":

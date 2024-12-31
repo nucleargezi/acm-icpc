@@ -104,7 +104,8 @@
         "valarray": "cpp",
         "variant": "cpp",
         "dynamic_bitset": "cpp",
-        "output": "cpp"
+        "output": "cpp",
+        "out": "cpp"
     },
     "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.inlayHints.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
