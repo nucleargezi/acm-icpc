@@ -3,9 +3,9 @@ import re
 from datetime import datetime
 
 def count_cpp_files(directory):
-    cpp_count = 0
+    cpp_count = -1
     for root, _, files in os.walk(directory):
-        cpp_count += sum(1 for file in files if file.endswith('.cpp'))
+        cpp_count += sum(1 for file in files if file.endswith('.cpp') or file.endswith('.py'))
     return cpp_count
 
 def count_cpp_lines(directory):
@@ -21,6 +21,8 @@ def count_cpp_lines(directory):
     total_lines = 0
     for root, _, files in os.walk(directory):
         for file in files:
+            if file == 'sum.py':
+                continue
             if file.endswith(".cpp"):
                 file_path = os.path.join(root, file)
                 with open(file_path, 'r', encoding='utf-8') as f:
@@ -74,6 +76,14 @@ def count_cpp_lines(directory):
 
                         # 统计有效代码行
                         total_lines += 1
+            elif file.endswith(".py"):
+                file_path = os.path.join(root, file)
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        stripped_line = line.strip()
+                        if not stripped_line:
+                            continue
+                        total_lines += 1
     return total_lines
 
 if __name__ == "__main__":
@@ -89,7 +99,7 @@ if __name__ == "__main__":
     mess = formatted_date + f"   problems: {cpp_file_count}" + f"   R_lines: {total_cpp_lines}"
     print(mess)
 
-    file_path = "rec.md"
+    file_path = "README.md"
     with open(file_path, 'r+', encoding='utf-8') as file:
         # 读取文件内容
         lines = file.readlines()
