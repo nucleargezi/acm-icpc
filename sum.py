@@ -96,7 +96,7 @@ if __name__ == "__main__":
     cpp_file_count = count_cpp_files(current_directory)
     total_cpp_lines = count_cpp_lines(current_directory)
 
-    mess = formatted_date + f"   problems: {cpp_file_count}" + f"   R_lines: {total_cpp_lines}"
+    mess = '##### ' + formatted_date + f"   problems: {cpp_file_count};" + f"   R_lines: {total_cpp_lines};"
     print(mess)
 
     file_path = "README.md"
@@ -106,8 +106,7 @@ if __name__ == "__main__":
         
         if lines:  # 文件非空
             first_line = lines[0].strip()  # 去除首行两端空白字符
-            first_year_month = first_line[:7]  # 提取首行年份和月份部分
-            
+            first_year_month = first_line[6:13]  # 提取首行年份和月份部分
             if first_year_month == current_year_month:
                 # 覆盖第一行
                 lines[0] = mess + "\n"
