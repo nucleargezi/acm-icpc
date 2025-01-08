@@ -23,7 +23,7 @@ NAME MeIoN_is_UMP45() {
     }
 
     vector<ll> dp(n + 2), ddp(n + 2);
-    MeIoN_Que<int> q;
+    queue<int> q;
     q.reserve(n);
     q.emplace_back(0);
     for (int i = 1; i < n + 2; ++i) {
@@ -62,7 +62,7 @@ NAME MeIoN_is_UMP45() {
     meion sol = [&](int p) -> ll {
         ll ret = inf<ll>;
         static ll A[514514];
-        MeIoN_Que<int> q;
+        queue<int> q;
         for (int i = std::max(0, p - k); i < p; ++i) {
             while (not q.empty() and q.front() + k < i) {
                 q.pop();

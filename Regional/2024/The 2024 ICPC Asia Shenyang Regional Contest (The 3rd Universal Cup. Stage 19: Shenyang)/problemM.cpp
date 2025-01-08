@@ -58,7 +58,8 @@ NAME MeIoN_is_UMP45() {
     vector<ll> dis(n, inf<ll>);
     vector<int> cnt(n);
     vector<uint8_t> vis_sp(n);
-
+    
+    // find ZERO ring
     for (meion &s : scc) {
         for (int x : s) {
             for (meion [to, w] : v[x]) {
@@ -71,7 +72,7 @@ NAME MeIoN_is_UMP45() {
  
         // spfa
         bool flag = 1;
-        MeIoN_Que<int> q;
+        queue<int> q;
         q.emplace_back(s[0]);
         dis[s[0]] = 0;
         while (not q.empty() and flag) {
@@ -93,7 +94,8 @@ NAME MeIoN_is_UMP45() {
         }
         vis[id[s[0]]] = not flag;
     }
- 
+    
+    // search in rev greph
     vector<vector<int>> adj(tarjan_cnt);
     for (int i = 0; i < n; ++i) {
         for (meion [x, w] : v[i]) {
