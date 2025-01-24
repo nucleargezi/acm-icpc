@@ -6,7 +6,7 @@ void before() {}
 NAME MeIoN_is_UMP45() {
     int x, y;
     std::cin >> x >> y;
-    std::cout << (x < y ? x : x - 1) << '\n';
+    std::cout << (x < y + 1 ? x : x - 1) << '\n';
 }
 
 // 日々を貪り尽くしてきた
