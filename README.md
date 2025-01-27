@@ -1,4 +1,4 @@
-#### categorization
+#### Categorization
 | Category      | Problem Count |
 |:-----------:|:--------:|
 |atcoder | 472|
