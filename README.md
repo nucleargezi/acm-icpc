@@ -1,11 +1,14 @@
-##### atcoder: 472
-##### codeforces: 161
-##### luogu: 0
-##### problemset: 77
-##### Prov: 42
-##### Regional: 27
+#### categorization
+| Category      | Problem Count |
+|:-----------:|:--------:|
+|atcoder | 472|
+|codeforces | 162|
+|luogu | 0|
+|Prov | 42|
+|Regional | 27|
+|problemset | 77|
 
 
-##### 2025/01/27   problems: 781;   R_lines: 19460;
-##### 2024/12/31   problems: 485;   R_lines: 11786;
-##### since 2024/12
+#### Summary (since 2024/12)
+- 2025/01/27   problems: 779;   R_lines: 29181;
+- 2024/12/31   problems: 485;   R_lines: 20786;
