@@ -1,6 +1,0 @@
-atcoder: 472  
-codeforces: 161  
-luogu: 0  
-problemset: 77  
-Prov: 42  
-Regional: 27  
