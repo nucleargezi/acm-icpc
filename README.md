@@ -2,7 +2,7 @@
 | Category      | Problem Count |
 |:-----------:|:--------:|
 |atcoder | 661|
-|codeforces | 168|
+|codeforces | 186|
 |luogu | 6|
 |Prov | 51|
 |Regional | 27|
@@ -10,6 +10,6 @@
 
 
 #### Summary (since 2024/12)
-- 2025/02/09   problems: 989;   R_lines: 34491;
+- 2025/02/10   problems: 1007;   R_lines: 35038;
 - 2025/01/30   problems: 833;   R_lines: 30520;
 - 2024/12/31   problems: 485;   R_lines: 20786;
