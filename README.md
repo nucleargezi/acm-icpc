@@ -1,4 +1,3 @@
-#### Categorization
 | Category      | Problem Count |
 |:-----------:|:--------:|
 |atcoder | 661|
@@ -8,7 +7,6 @@
 |Regional | 27|
 |problemset | 77|
 |YUKIcoder | 1|
-
 
 #### Summary (since 2024/12)
 - 2025/02/17   problems: 1062;   R_lines: 36901;
