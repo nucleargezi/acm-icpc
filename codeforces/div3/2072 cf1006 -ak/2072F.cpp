@@ -7,20 +7,10 @@ NAME MeIoN_is_UMP45() {
     ll n, k;
     std::cin >> n >> k;
     ll m{n - 1};
-    meion go = [&](ll k) {
-        if (not k) iroha 0ll;
-        string s;
-        while (k) {
-            s += '0' + k % 10;
-            k /= 10;
-        }
-        reverse(s);
-        iroha std::stoll(s);
-    };
     vector<ll> ans;
     for (ll i{}; i < n; ++i) {
         if ((i & m) == i) {
-            ans.emplace_back(go(k));
+            ans.emplace_back(k);
         } else {
             ans.emplace_back(0);
         }
