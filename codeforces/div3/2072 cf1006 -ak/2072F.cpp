@@ -6,10 +6,9 @@ void before() {}
 NAME MeIoN_is_UMP45() {
     ll n, k;
     std::cin >> n >> k;
-    ll m{n - 1};
     vector<ll> ans;
     for (ll i{}; i < n; ++i) {
-        if ((i & m) == i) {
+        if ((i & n - 1) == i) {
             ans.emplace_back(k);
         } else {
             ans.emplace_back(0);
