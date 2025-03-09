@@ -8,9 +8,10 @@
 |problemset | 119|
 |YUKIcoder | 1|
 |Library_chacker | 3|
+|BJTU_training | 12|
 
 #### Summary (since 2024/12)
-- 2025/03/08   problems: 1220;   R_lines: 42025;
+- 2025/03/09   problems: 1232;   R_lines: 42330;
 - 2025/02/28   problems: 1096;   R_lines: 38213;
 - 2025/01/30   problems: 833;   R_lines: 30520;
 - 2024/12/31   problems: 485;   R_lines: 20786;
