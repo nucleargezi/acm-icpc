@@ -3,7 +3,7 @@
 |atcoder | 675|
 |codeforces | 346|
 |luogu | 42|
-|Prov | 54|
+|Prov | 61|
 |Regional | 27|
 |problemset | 119|
 |YUKIcoder | 1|
@@ -11,7 +11,7 @@
 |BJTU_training | 30|
 
 #### Summary (since 2024/12)
-- 2025/03/12   problems: 1296;   R_lines: 44162;
+- 2025/03/13   problems: 1303;   R_lines: 44446;
 - 2025/02/28   problems: 1096;   R_lines: 38213;
 - 2025/01/30   problems: 833;   R_lines: 30520;
 - 2024/12/31   problems: 485;   R_lines: 20786;
