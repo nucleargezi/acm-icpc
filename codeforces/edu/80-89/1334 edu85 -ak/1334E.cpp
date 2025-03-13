@@ -9,7 +9,7 @@ using mint = modint<mod99>;
 NAME MeIoN_is_UMP45() {
     LL(D);
     
-    meion roads = [&](ll x, ll y) -> mint {
+    meion road = [&](ll x, ll y) -> mint {
         mint cnt{1};
         for (ll s{}; meion [e, p] : factor(y / x)) {
             if (s != 0) {
@@ -25,7 +25,7 @@ NAME MeIoN_is_UMP45() {
         LL(x, y);
         if (x > y) std::swap(x, y);
         ll gcd{GCD(x, y)};
-        UL(roads(gcd, x) * roads(gcd, y));
+        UL(road(gcd, x) * road(gcd, y));
     }
 }
 
