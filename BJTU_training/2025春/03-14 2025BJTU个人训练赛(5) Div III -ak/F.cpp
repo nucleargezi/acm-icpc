@@ -5,8 +5,7 @@ void before() {}
 // #define tests
 NAME MeIoN_is_UMP45() {
     INT(n);
-    vector<int> a(1 << n);
-    std::cin >> a;
+    VEC(int, a, 1 << n);
     multiset<int> se{a.begin(), a.end()}, sse;
     sse.emplace(*--se.end());
     FOR(i, n) {
