@@ -16,7 +16,7 @@ NAME MeIoN_is_UMP45() {
     FOR(i, n) {
         int l{L[m[i + 1]]}, r{R[m[i + 1]]};
         if (l > 0) ans += (i + 1) * (l - L[l]) * (r - m[i + 1]);
-        if(r < n + 1) ans += (i + 1) * (R[r] - r) * (m[i + 1] - l);
+        if (r < n + 1) ans += (i + 1) * (R[r] - r) * (m[i + 1] - l);
         L[r] = l, R[l] = r;
     }
     UL(ans);
