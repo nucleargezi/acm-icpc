@@ -3,18 +3,6 @@
 ![Problem Statistics Chart](chart.png)
 
 ## Platform Statistics
-
-| Platform | Problems Solved |
-|----------|----------------:|
-| atcoder | 675 |
-| codeforces | 385 |
-| luogu | 42 |
-| Prov | 61 |
-| Regional | 27 |
-| problemset | 119 |
-| YUKIcoder | 1 |
-| Library_chacker | 3 |
-| BJTU_training | 36 |
 #### Summary (since 2024/12)
 - 2025/03/15   problems: 1349;
 - 2025/02/28   problems: 1096;
