@@ -1,20 +1,25 @@
-| Category      | Problem Count |
-|:-----------:|:--------:|
-|atcoder | 675|
-|codeforces | 385|
-|luogu | 42|
-|Prov | 61|
-|Regional | 27|
-|problemset | 119|
-|YUKIcoder | 1|
-|Library_chacker | 3|
-|BJTU_training | 36|
+# Programming Problem Statistics
 
+![Problem Statistics Chart](chart.png)
+
+## Platform Statistics
+
+| Platform | Problems Solved |
+|----------|----------------:|
+| atcoder | 675 |
+| codeforces | 385 |
+| luogu | 42 |
+| Prov | 61 |
+| Regional | 27 |
+| problemset | 119 |
+| YUKIcoder | 1 |
+| Library_chacker | 3 |
+| BJTU_training | 36 |
 #### Summary (since 2024/12)
-- 2025/03/15   problems: 1348;   R_lines: 45743;
-- 2025/02/28   problems: 1096;   R_lines: 38213;
-- 2025/01/30   problems: 833;   R_lines: 30520;
-- 2024/12/31   problems: 485;   R_lines: 20786;
+- 2025/03/15   problems: 1349;
+- 2025/02/28   problems: 1096;
+- 2025/01/30   problems: 833;
+- 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/03/15
   - 1366 edu89 -ak
