@@ -1,13 +1,4 @@
-# Programming Problem Statistics
 
-![Problem Statistics Chart](chart.png)
-
-## Platform Statistics
-#### Summary (since 2024/12)
-- 2025/03/16   problems: 1363;
-- 2025/02/28   problems: 1096;
-- 2025/01/30   problems: 833;
-- 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/03/16
   - 03-16 2025BJTU个人训练赛(6) Div III -ak
