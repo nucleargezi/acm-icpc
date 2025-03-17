@@ -4,12 +4,13 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/03/17   problems: 1370;
+- 2025/03/17   problems: 1378;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/03/17
+  - P_2000 P_3367 P_4043 P_4708 P_4722 P_5468 P_9902 P_10509
   - 1373 edu90 -ak
 - 2025/03/16
   - 03-16 2025BJTU个人训练赛(6) Div III -ak
