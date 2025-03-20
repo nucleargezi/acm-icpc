@@ -1,18 +1,23 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/flow/HLPP.hpp"
 
 void before() {}
 
-// #define tests
+#define tests
 NAME MeIoN_is_UMP45() {
-    INT(n, m, s, t);
-    --s, --t;
-    HLPP FL(n, m, s, t);
-    FOR(m) {
-        INT(x, y, w);
-        FL.add(--x, --y, w);
+    INT(s, n);
+    VEC(int, a, n);
+    vector<ll> c(s + 1);
+    FOR(i, n) {
+        ++c[a[i]];
     }
-    UL(FL.flow());
+    FOR_R(i, s) {
+        c[i] += c[i + 1];
+    }
+    ll ans{};
+    FOR(i, 1, s) {
+        ans += c[i] * c[s - i] - c[MAX(i, s - i)];
+    }
+    UL(ans);
 }
 
 // 日々を貪り尽くしてきた

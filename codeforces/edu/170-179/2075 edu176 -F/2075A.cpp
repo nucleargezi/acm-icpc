@@ -1,18 +1,11 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/flow/HLPP.hpp"
 
 void before() {}
 
-// #define tests
+#define tests
 NAME MeIoN_is_UMP45() {
-    INT(n, m, s, t);
-    --s, --t;
-    HLPP FL(n, m, s, t);
-    FOR(m) {
-        INT(x, y, w);
-        FL.add(--x, --y, w);
-    }
-    UL(FL.flow());
+    LL(n, k);
+    UL(n & 1 ? (1 + (n - 2) / (k - 1)) : (n + k - 2) / (k - 1));
 }
 
 // 日々を貪り尽くしてきた
