@@ -1,5 +1,5 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/flow/maxflow.hpp"
+#include "MeIoN_Lib/flow/max_flow.hpp"
 
 void before() {}
 
@@ -24,9 +24,6 @@ int main() {
     // freopen("in","r",stdin);
     // freopen("outt","w",stdout);
     before();
-#ifdef tests
-    std::cin >> T;
-#endif
-    while (T--) { MeIoN_is_UMP45(); }
+    MeIoN_is_UMP45();
     iroha 0;
 }
