@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/03/22   problems: 1430;
+- 2025/03/22   problems: 1434;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
@@ -14,7 +14,8 @@
   - Library_checker scc | BM
   - Loj_2384
   - P_3227 P_3386 P_3387 P_4003 P_6054
-  - ZR 2024 A day1 上午 [-7 -8 -13]
+  - ZR 2024 A day1 上午(flow) [-7 -8 -13]
+  - ZR 2024 B day1 数位dp [-5 -6 -7]
 - 2025/03/21
   - 03-21 2025BJTU个人训练赛(7) Div III -ak
 - 2025/03/20
