@@ -4,15 +4,16 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/03/23   problems: 1444;
+- 2025/03/23   problems: 1448;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/03/23
-  - P_2657 P_2704 P_7519 P_7961 P_11714 P_4363 
+  - ZR 2024 B day1 斜率优化dp -ak
   - ZR 2024 B day1 状压dp [-4]
-- 2025/03/22
+  - P_2657 P_2704 P_7519 P_7961 P_11714 P_4363 P_3195 P_3299 
+- 2025/03/22 
   - 55 cf_beta51 -ak
   - Library_checker scc | BM
   - Loj_2384
