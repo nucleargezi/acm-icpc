@@ -4,12 +4,13 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/03/22   problems: 1425;
+- 2025/03/22   problems: 1430;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/03/22
+  - 55 cf_beta51 -ak
   - Library_checker scc | BM
   - Loj_2384
   - P_3227 P_3386 P_3387 P_4003 P_6054
