@@ -4,11 +4,14 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/03/23   problems: 1448;
+- 2025/03/24   problems: 1452;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/03/24
+  - P_4097 P_5785 P_9989
+  - 李超树 [-2]
 - 2025/03/23
   - ZR 2024 B day1 斜率优化dp -ak
   - ZR 2024 B day1 状压dp [-4]
