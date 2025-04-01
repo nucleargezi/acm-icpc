@@ -4,11 +4,17 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2025/04/02   problems: 1533;
 - 2025/03/31   problems: 1514;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/04/2
+  - P_3372
+  - 234 cf145 -ak
+  - 712 cf370 -ak
+  - 828 cf423 -F
 - 2025/03/31
   - 03-31 BJTU第三届C语言积分赛 -ak
 - 2025/03/28
