@@ -4,13 +4,14 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/04/04   problems: 1560;
+- 2025/04/04   problems: 1566;
 - 2025/03/31   problems: 1514;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/04/04
+  - 586 cf325 -ak
   - 899 cf452 -ak
 - 2025/04/03
   - 22 cf22 -ak
