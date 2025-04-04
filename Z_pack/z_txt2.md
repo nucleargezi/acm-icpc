@@ -1,6 +1,9 @@
 
 #### History (since 2025/03/12)
 - 2025/04/04
+  - 1 cf_beta1 -ak
+  - 2 cf_beta2 -ak
+  - 3 cf_beta3 -ak
   - 586 cf325 -ak
   - 899 cf452 -ak
 - 2025/04/03
