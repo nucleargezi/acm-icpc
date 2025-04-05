@@ -5,6 +5,7 @@
   - 5 cf_beta5 -ak
   - 6 cf_beta6 -ak
   - 7 cf_beta7 -E
+  - 8 cf_beta8 -ak
 - 2025/04/04
   - 1 cf_beta1 -ak
   - 2 cf_beta2 -ak
