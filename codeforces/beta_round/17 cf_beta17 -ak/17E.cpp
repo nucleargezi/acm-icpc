@@ -30,9 +30,7 @@ void Yorisou() {
   L = pre_sum<false>(pre_sum<false>(L));
   R = pre_sum<false>(R);
   ans = ans * (ans - 1) / 2;
-  FOR(i, n) {
-    ans -= R[i] * (L[n] - L[i]);
-  }
+  FOR(i, n) ans -= R[i] * (L[n] - L[i]);
   UL(ans.val);
 }
 
