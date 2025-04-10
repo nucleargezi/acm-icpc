@@ -4,20 +4,12 @@ void before() {}
 
 // #define tests
 void Yorisou() {
-  INT(n, m, v);
-  vector<pair<int, int>> ans;
-  vector<int> I(n);
-  std::iota(I.begin(), I.end(), 1);
-  std::swap(I[v - 1], I[n - 2]);
-  FOR(i, n - 1) ans.emplace_back(I[i], I[i + 1]);
-  m -= n - 1;
-  FOR(i, n - 1) FOR(k, i + 2, n - 1) {
-      if (m < 1) break;
-      --m;
-      ans.emplace_back(I[i], I[k]);
-  }
-  if (m) iroha UL(-1);
-  FOR(i, len(ans)) UL(ans[i]);
+  S(s);
+  meion seg = run_length(s);
+  string ans;
+  for (meion [c, n] : seg) ans += string(c == '/' ? 1 : n, c);
+  while (len(ans) > 1 and ans.back() == '/') ans.pop_back();
+  UL(ans);
 }
 
 // 日々を貪り尽くしてきた

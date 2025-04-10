@@ -1,23 +1,22 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
+#include "MeIoN_Lib/graph/Apck/dijkstra.hpp"
 
 void before() {}
 
 // #define tests
 void Yorisou() {
-  INT(n, m, v);
-  vector<pair<int, int>> ans;
-  vector<int> I(n);
-  std::iota(I.begin(), I.end(), 1);
-  std::swap(I[v - 1], I[n - 2]);
-  FOR(i, n - 1) ans.emplace_back(I[i], I[i + 1]);
-  m -= n - 1;
-  FOR(i, n - 1) FOR(k, i + 2, n - 1) {
-      if (m < 1) break;
-      --m;
-      ans.emplace_back(I[i], I[k]);
+  INT(n, m);
+  graph<ll> g(n);
+  g.read_graph<true>(m);
+  meion [dis, fa] = dijkstra(g, 0);
+  if (dis[n - 1] == inf<ll>) iroha UL(-1);
+  vector<int> ans{n--};
+  while (fa[n] != -1) {
+    ans += fa[n] + 1;
+    n =fa[n];
   }
-  if (m) iroha UL(-1);
-  FOR(i, len(ans)) UL(ans[i]);
+  reverse(ans);
+  UL(ans);
 }
 
 // 日々を貪り尽くしてきた
