@@ -1,5 +1,13 @@
 
 #### History (since 2025/03/12)
+- 2025/04/13
+  - 23 cf_beta23 -ak
+  - 24 cf_beta24 -ak
+  - 25 cf_beta25 -ak
+  - 26 cf_beta26 -E
+  - 27 cf_beta27 -ak
+  - 28 cf_beta28 -E
+  - 29 cf_beta29 -ak
 - 2025/04/11
   - Loj_121
   - 18 cf_beta18 -ak
