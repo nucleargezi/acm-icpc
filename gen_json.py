@@ -8,11 +8,11 @@ def f_count(root='.'):
         'codeforces',
         'luogu',
         'Loj',
-        'YUKIcoder'
+        'YUKIcoder',
         'BJTU_training',
         'Prov',
         'Regional',
-        'problemset',
+        'problemset'
     ]
     count = OrderedDict()
     
