@@ -1,8 +1,1 @@
-.clang-format
-myenv
-# Z_pack
-
-sum0.py
-oj_count.py
-get_chart.py
-go.sh
+.yenv

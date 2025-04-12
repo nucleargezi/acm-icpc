@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "../../MeIoN_FILE/MeIoN_alg_space"
+                "..//Yorisou_alg_space"
             ],
             "defines": [
                 "MeIoN"

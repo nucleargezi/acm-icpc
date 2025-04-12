@@ -5,7 +5,7 @@
         "python" : "cd $dir && python3 $fileName"
     },
     "cph.general.defaultLanguage": "cpp",
-    "cph.general.defaultLanguageTemplateFileLocation": "/home/guiding_star/MeIoN_FILE/MeIoN_alg_space/MeIoN_Lib/basic.cpp",
+    "cph.general.defaultLanguageTemplateFileLocation": "/home/yorisou/Yorisou_alg_space/MeIoN_Lib/basic.cpp",
     "cph.language.cpp.SubmissionCompiler": "GNU G++20 13.2 (64 bit, winlibs)", // 使用 C++20 标准
     "cph.language.cpp.Args": "-std=c++20 -DMeIoN -O2",
     "cph.general.firstTime": false,
@@ -109,28 +109,5 @@
     },
     "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.inlayHints.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
-    // "C_Cpp.errorSquiggles": "disabled",
-    // "C_Cpp.intelliSenseEngine": "default",
-    "includeInliner.excludedPaths": [
-        "home/guiding_star/MeIoN_FILE/MeIoN_alg_space/MeIoN_Lib"
-    ],
     "C_Cpp.dimInactiveRegions": false,
-    // "editor.glyphMargin": true, // 禁用代码旁边的符号栏
-    // "editor.hover.enabled": true // 禁用鼠标悬停提示
-
-
-    "background.enabled": true,
-    "background.fullscreen": {
-        // 本地图片可以拖到浏览器中，快速从地址栏得到file协议的地址
-        "images": ["file:///E:/%E7%B4%A0%E6%9D%90/550b5bfd8313c109021fae9d0bd311fc8246091.jpg"],
-        "useFront": true,
-        "opacity": 0.2,
-        "size": "cover",
-        "position": "center",
-        "interval": 0,
-        "random": false
-    },
-    // `sidebar`、`panel` 的配置与 `fullscreen` 一致
-    "background.sidebar": {},
-    "background.panel": {}
 }

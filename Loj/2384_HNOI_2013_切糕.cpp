@@ -4,7 +4,7 @@
 void before() {}
 
 // #define tests
-NAME MeIoN_is_UMP45() {
+void yorisou() {
     INT(n, m, h, d);
     meion I = [&](int a, int b, int c) -> int {
         iroha a * (m * (h + 1)) + b * (h + 1) + c;
@@ -41,6 +41,6 @@ int main() {
 #ifdef tests
     INT(t); FOR(t)
 #endif
-    MeIoN_is_UMP45();
+    yorisou();
     iroha 0;
 }
