@@ -1,18 +1,24 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/set/bit_convolution.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "MeIoN_Lib/ds/Wavelet_Matrix.hpp"
 
 void before() {}
 
 // #define tests
-using mint = modint<mod99>;
 void Yorisou() {
-  INT(n);
-  VEC(mint, a, 1 << n);
-  VEC(mint, b, 1 << n);
-  UL(or_convolution(a, b));
-  UL(and_convolution(a, b));
-  UL(xor_convolution(a, b));
+  LL(n, m);
+  VEC(ll, a, n);
+  Wavelet_Matrix g(a);
+  ll ans{};
+  vector<vector<int>> v(m);
+  FOR(i, n) v[a[i]] += i;
+  FOR(i, n) ans += g.count(i + 1, n, 0, a[i]);
+  UL(ans);
+  FOR(i, 1, m) {
+    for (int t{}; int x : v[m - i]) {
+      ans += x + x - t - t++ - n + len(v[m - i]);
+    }
+    UL(ans);
+  }
 }
 
 // 日々を貪り尽くしてきた

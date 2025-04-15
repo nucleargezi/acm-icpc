@@ -1,18 +1,16 @@
 #include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/set/bit_convolution.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
 
 void before() {}
 
 // #define tests
-using mint = modint<mod99>;
 void Yorisou() {
-  INT(n);
-  VEC(mint, a, 1 << n);
-  VEC(mint, b, 1 << n);
-  UL(or_convolution(a, b));
-  UL(and_convolution(a, b));
-  UL(xor_convolution(a, b));
+  S(s);
+  const int n{len(s)};
+  int ans{};
+  FOR(i, n) {
+    ans += (s[i] == 'o') ^ (i & 1) ^ (ans & 1);
+  }
+  UL(ans + (ans + n & 1));
 }
 
 // 日々を貪り尽くしてきた
