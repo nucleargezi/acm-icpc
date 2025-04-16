@@ -11,8 +11,8 @@ void Yorisou() {
   sort(b, greater());
   a = pre_sum(a);
   b = pre_sum(b);
-  FOR_R(i, n - 1) chmax(a[i], a[i + 1]);
-  ll ans{a[0]};
+  FOR_R(i, n) chmax(a[i], a[i + 1]);
+  ll ans{};
   FOR(i, MIN(n, m) + 1) {
     chmax(ans, a[i] + b[i]);
   }
