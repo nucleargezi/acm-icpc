@@ -4,13 +4,14 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/04/16   problems: 1750;
+- 2025/04/17   problems: 1757;
 - 2025/03/31   problems: 1514;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/04/16
+  - 04-16 BJTU训练赛 -ak
   - abc396 -ak
   - abc397 -ak
 - 2025/04/15
