@@ -1,5 +1,12 @@
 
 #### History (since 2025/03/12)
+- 2025/04/25
+  - 32 cf_beta32 -ak
+  - 33 cf_beta33 -E
+  - 34 cf_beta34 -ak
+  - 35 cf_beta35 -ak
+  - 36 cf_beta36 -ak
+  - 37 cf_beta37 -ak
 - 2025/04/22
   - 04-23 BJTU训练赛 -ak
   - 30 cf_beta30 -ak
