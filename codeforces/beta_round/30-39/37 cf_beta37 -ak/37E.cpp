@@ -22,7 +22,6 @@ void Yorisou() {
     while (not q.empty()) {
       meion [x, y] = q.front();
       q.pop_front();
-      assert(dis[I(x, y)] != inf<ll>);
       FOR(i, 4) {
         ll xx = x + dx[i], yy = y + dy[i];
         if (MIN(xx, yy) > -1 and xx < n and yy < m) {
