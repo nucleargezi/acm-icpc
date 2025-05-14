@@ -4,13 +4,16 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/05/14   problems: 1995;
+- 2025/05/15   problems: 2002;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/05/15
+  - Library_checker A_B.cpp | K_Shortest_Walk.cpp | Many_A_B_128_bit.cpp | Many_A_B.cpp
+  - P_2483 P_4555 P_4467 P_3649 P_5826 P_3500 P_7708
 - 2025/05/13
   - 05-11 BJTU训练赛 -ak
   - 2021 四川省賽 -G
