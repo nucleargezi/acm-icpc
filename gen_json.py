@@ -7,6 +7,7 @@ def f_count(root='.'):
         'atcoder',
         'codeforces',
         'luogu',
+        'Library_chacker',
         'Loj',
         'YUKIcoder',
         'BJTU_training',

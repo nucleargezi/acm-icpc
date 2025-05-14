@@ -6,6 +6,7 @@ def count(root='.'):
         'atcoder',
         'BJTU_training',
         'codeforces',
+        'Library_chacker',
         'Loj',
         'luogu',
         'problemset',
