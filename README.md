@@ -4,13 +4,15 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/05/15   problems: 2017;
+- 2025/05/16   problems: 2023;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/05/16
+  - P_5283 P_4887 P_4462 P_5501 P_2163 P_5047
 - 2025/05/15
   - Library_checker A_B.cpp | K_Shortest_Walk.cpp | Many_A_B_128_bit.cpp | Many_A_B.cpp
   - Library_checker Associative_Array.cpp | Unionfind_with_Potential.cpp
