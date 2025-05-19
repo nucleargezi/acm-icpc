@@ -13,31 +13,23 @@ void Yorisou() {
     iroha UL(n - len(a));
   }
   map<ll, vector<ll>> M;
-  FOR(i, n) M[a[i] % d] += a[i] / d;
-  meion dp = [](vector<ll> &a) -> ll {
-    if (a.empty()) iroha 0;
-    ll n = len(a);
-    ll sum = a[0], x = 0, y = a[0];
-    FOR(i, 1, n) {
-      sum += a[i];
-      std::tie(x, y) = PLL(MAX(x, y), x + a[i]);
-    }
-    iroha sum - MAX(x, y);
-  };
+  FOR(i, n) M[a[i] % d].emplace_back(a[i] / d);
   ll ans = 0;
   for (meion [_, v] : M) {
     sort(v);
-    vector<ll> go;
-    for (ll pr = -1; meion [x, y] : run_length(v)) {
-      if (not go.empty() and pr != x - 1) {
-        ans += dp(go);
-        go.clear();
+    ll sum = 0, dp[2]{}, pre = -1; 
+    for (meion [x, y] : run_length(v)) {
+      if (pre != x - 1) {
+        ans += MAX(dp[0], dp[1]);
+        sum = 0;
+        dp[0] = dp[1] = 0;
       }
-      go += y;
-      pr = x;
+      sum += y;
+      std::tie(dp[0], dp[1]) = pair(dp[1] + y, MAX(dp[0], dp[1]));
+      pre = x;
     }
-    ans += dp(go);
+    ans += MAX(dp[0], dp[1]);
   }
-  UL(ans);
+  UL(n - ans);
 }
 #include "MeIoN_Lib/Z_H/main.hpp"
