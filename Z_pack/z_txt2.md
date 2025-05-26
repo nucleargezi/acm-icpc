@@ -1,6 +1,7 @@
 
 #### History (since 2025/03/12)
 - 2025/05/26
+  - 557 cf311 -ak
   - Library_checker Persistent_Range_Affine_Range_Sum.cpp | Point_Set_Range_Composite.cpp | Static_Range_Sum.cpp | 
   - Library_checker Static_RMQ.cpp | Point_Set_Range_Composite_Large_Array.cpp | Ordered_Set.cpp | 
   - Library_checker Range_Affine_Point_Get.cpp | Range_Affine_Range_Sum_Large_Array.cpp | Range_Affine_Range_Sum.cpp | 
