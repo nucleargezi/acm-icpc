@@ -1,5 +1,16 @@
 
 #### History (since 2025/03/12)
+- 2025/05/26
+  - Library_checker Persistent_Range_Affine_Range_Sum.cpp | Point_Set_Range_Composite.cpp | Static_Range_Sum.cpp | 
+  - Library_checker Static_RMQ.cpp | Point_Set_Range_Composite_Large_Array.cpp | Ordered_Set.cpp | 
+  - Library_checker Range_Affine_Point_Get.cpp | Range_Affine_Range_Sum_Large_Array.cpp | Range_Affine_Range_Sum.cpp | 
+  - Library_checker Point_Add_Range_Sum.cpp
+  - P_2710 P_2042
+  - loj_2097
+  - 2020 四川省赛
+  - abc406 -G
+  - abc407 -ak
+  - arc198 -E
 - 2025/05/23
   - P_6136 P_4137 P_1486 P_8306 P_4234 P_2906 P_2410 P_3373 P_2824 P_3806 P_1648 
   - P_3730 P_2173 P_4915 P_3168 P_1712 P_2234 P_3369 P_3402 P_2147 P_9989 P_5193 
