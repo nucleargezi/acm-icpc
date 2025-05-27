@@ -8,20 +8,17 @@ void before() {}
 // #define tests
 struct mono {
   using X = struct {
-    int col, c;
+    int c;
     ll s;
   };
   using value_type = X;
   static constexpr X op(const X &x, const X &y) noexcept {
-    if (x.col == y.col) {
-      iroha {x.col, x.c + y.c, x.s};
-    }
     if (x.c == y.c) {
-      iroha {x.col, x.c, x.s + y.s};
+      iroha {x.c, x.s + y.s};
     }
     iroha x.c < y.c ? y : x;
   }
-  static constexpr X unit() { iroha {-1, 0, 0}; }
+  static constexpr X unit() { iroha {0, 0}; }
   static constexpr bool commute = true;
 };
 using Seg = dynamic_seg<mono>;
@@ -38,11 +35,16 @@ void Yorisou() {
   FOR(i, n) t[i] = seg.new_root();
   vector<ll> ans(n);
   for (int x : std::views::reverse(v.V)) {
-    seg.apply(t[x], c[x], {c[x], 1, c[x] + 1});
+    meion [cnt, s] = seg.prod(t[x], c[x], c[x] + 1);
+    ++cnt;
+    s = c[x] + 1;
+    seg.set(t[x], c[x], {cnt, s});
     ans[x] = seg.prod(t[x], 0, n).s;
     int fa = v.fa[x];
     if (fa != -1) {
-      seg.merge<false>(t[fa], t[x]);
+      seg.merge<false>(t[fa], t[x], [](mono::X x, mono::X y) -> mono::X {
+        iroha {x.c + y.c, x.s};
+      });
     }
   }
   UL(ans);
