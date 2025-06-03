@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/06/02   problems: 2097;
+- 2025/06/03   problems: 2106;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
@@ -12,6 +12,8 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/06/03
+  - 2025 吉林省赛 -3
 - 2025/05/26
   - 557 cf311 -ak
   - Library_checker Persistent_Range_Affine_Range_Sum.cpp | Point_Set_Range_Composite.cpp | Static_Range_Sum.cpp | 

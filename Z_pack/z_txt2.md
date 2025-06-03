@@ -1,5 +1,7 @@
 
 #### History (since 2025/03/12)
+- 2025/06/03
+  - 2025 吉林省赛 -3
 - 2025/05/26
   - 557 cf311 -ak
   - Library_checker Persistent_Range_Affine_Range_Sum.cpp | Point_Set_Range_Composite.cpp | Static_Range_Sum.cpp | 
