@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/06/07   problems: 2156;
+- 2025/06/10   problems: 2176;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
@@ -12,6 +12,11 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/06/10
+  - abc409 -ak
+  - Library_checker Segment_Add_Get_Min.cpp | Queue_Operate_All_Composite.cpp | Set_Xor_Min.cpp | Rectangle_Sum.cpp | Static_Range_Frequency.cpp |
+  - Library_checker Line_Add_Get_Min.cpp | Static_Range_Mode_Query.cpp | Static_Range_Count_Distinct.cpp | Static_Range_Inversions_Query.cpp |
+  - Library_checker Multiplication_of_Big_Integers.cpp | Addition_of_Big_Integers.cpp | Range_Reverse_Range_Sum.cpp
 - 2025/06/07
   - 2025 河北 -B -L
 - 2025/06/06
