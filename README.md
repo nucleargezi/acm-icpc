@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/06/10   problems: 2176;
+- 2025/06/12   problems: 2176;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
@@ -12,6 +12,10 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/06/12
+  - Library_checker Area_of_Union_of_Rectangles.cpp | Vertex_Set_Path_Composite.cpp | Vertex_Add_Path_Sum.cpp | Bitwise_Xor_Convolution.cpp | 
+  - Library_checker Bitwise_And_Convolution.cpp | Jump_on_Tree.cpp | Subset_Convolution.cpp | Point_Set_Range_Sort_Range_Composite.cpp | 
+  - Library_checker Tree_Diameter.cpp | Vertex_Add_Subtree_Sum.cpp | Convolution_Mod_1_000_000_007.cpp
 - 2025/06/10
   - abc409 -ak
   - Library_checker Segment_Add_Get_Min.cpp | Queue_Operate_All_Composite.cpp | Set_Xor_Min.cpp | Rectangle_Sum.cpp | Static_Range_Frequency.cpp |
