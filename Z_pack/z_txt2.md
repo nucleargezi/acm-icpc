@@ -1,14 +1,16 @@
 
 #### History (since 2025/03/12)
 - 2025/06/12
-  - Library_checker Area_of_Union_of_Rectangles.cpp | Vertex_Set_Path_Composite.cpp | Vertex_Add_Path_Sum.cpp | Bitwise_Xor_Convolution.cpp | 
-  - Library_checker Bitwise_And_Convolution.cpp | Jump_on_Tree.cpp | Subset_Convolution.cpp | Point_Set_Range_Sort_Range_Composite.cpp | 
-  - Library_checker Tree_Diameter.cpp | Vertex_Add_Subtree_Sum.cpp | Convolution_Mod_1_000_000_007.cpp
+  - Library_checker Dynamic_Tree_Vertex_Add_Subtree_Sum | Counting_Primes | Discrete_Logarithm | Primality_Test | 
+  - Dynamic_Tree_Vertex_Add_Path_Sum | Dynamic_Tree_Vertex_Set_Path_Composite
+  - Library_checker Area_of_Union_of_Rectangles | Vertex_Set_Path_Composite | Vertex_Add_Path_Sum | Bitwise_Xor_Convolution | 
+  - Library_checker Bitwise_And_Convolution | Jump_on_Tree | Subset_Convolution | Point_Set_Range_Sort_Range_Composite | 
+  - Library_checker Tree_Diameter | Vertex_Add_Subtree_Sum | Convolution_Mod_1_000_000_007
 - 2025/06/10
   - abc409 -ak
-  - Library_checker Segment_Add_Get_Min.cpp | Queue_Operate_All_Composite.cpp | Set_Xor_Min.cpp | Rectangle_Sum.cpp | Static_Range_Frequency.cpp |
-  - Library_checker Line_Add_Get_Min.cpp | Static_Range_Mode_Query.cpp | Static_Range_Count_Distinct.cpp | Static_Range_Inversions_Query.cpp |
-  - Library_checker Multiplication_of_Big_Integers.cpp | Addition_of_Big_Integers.cpp | Range_Reverse_Range_Sum.cpp
+  - Library_checker Segment_Add_Get_Min | Queue_Operate_All_Composite | Set_Xor_Min | Rectangle_Sum | Static_Range_Frequency |
+  - Library_checker Line_Add_Get_Min | Static_Range_Mode_Query | Static_Range_Count_Distinct | Static_Range_Inversions_Query |
+  - Library_checker Multiplication_of_Big_Integers | Addition_of_Big_Integers | Range_Reverse_Range_Sum
 - 2025/06/07
   - 2025 河北 -B -L
 - 2025/06/06
@@ -20,10 +22,10 @@
   - 2025 吉林省赛 -3
 - 2025/05/26
   - 557 cf311 -ak
-  - Library_checker Persistent_Range_Affine_Range_Sum.cpp | Point_Set_Range_Composite.cpp | Static_Range_Sum.cpp | 
-  - Library_checker Static_RMQ.cpp | Point_Set_Range_Composite_Large_Array.cpp | Ordered_Set.cpp | 
-  - Library_checker Range_Affine_Point_Get.cpp | Range_Affine_Range_Sum_Large_Array.cpp | Range_Affine_Range_Sum.cpp | 
-  - Library_checker Point_Add_Range_Sum.cpp
+  - Library_checker Persistent_Range_Affine_Range_Sum | Point_Set_Range_Composite | Static_Range_Sum | 
+  - Library_checker Static_RMQ | Point_Set_Range_Composite_Large_Array | Ordered_Set | 
+  - Library_checker Range_Affine_Point_Get | Range_Affine_Range_Sum_Large_Array | Range_Affine_Range_Sum | 
+  - Library_checker Point_Add_Range_Sum
   - P_2710 P_2042
   - loj_2097
   - 2020 四川省赛
@@ -38,9 +40,9 @@
 - 2025/05/16
   - P_5283 P_4887 P_4462 P_5501 P_2163 P_5047
 - 2025/05/15
-  - Library_checker A_B.cpp | K_Shortest_Walk.cpp | Many_A_B_128_bit.cpp | Many_A_B.cpp
-  - Library_checker Associative_Array.cpp | Unionfind_with_Potential.cpp
-  - Library_checker Unionfind.cpp | Double_Ended_Priority_Queue.cpp | Predecessor_Problem.cpp
+  - Library_checker A_B | K_Shortest_Walk | Many_A_B_128_bit | Many_A_B
+  - Library_checker Associative_Array | Unionfind_with_Potential
+  - Library_checker Unionfind | Double_Ended_Priority_Queue | Predecessor_Problem
   - P_2483 P_4555 P_4467 P_3649 P_5826 P_3500 P_7708
 - 2025/05/13
   - 05-11 BJTU训练赛 -ak
