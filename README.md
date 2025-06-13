@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/06/13   problems: 2219;
+- 2025/06/13   problems: 2228;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
@@ -15,6 +15,7 @@
 - 2025/06/13
   - 2025山东省赛 -B
   - 2025南昌省赛 -B -J
+  - 2025陕西 -4
   - 2022河南省赛 -C -D -L
 - 2025/06/12
   - Library_checker Dynamic_Tree_Vertex_Add_Subtree_Sum | Counting_Primes | Discrete_Logarithm | Primality_Test | 

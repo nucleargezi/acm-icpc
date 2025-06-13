@@ -3,6 +3,7 @@
 - 2025/06/13
   - 2025山东省赛 -B
   - 2025南昌省赛 -B -J
+  - 2025陕西 -4
   - 2022河南省赛 -C -D -L
 - 2025/06/12
   - Library_checker Dynamic_Tree_Vertex_Add_Subtree_Sum | Counting_Primes | Discrete_Logarithm | Primality_Test | 
