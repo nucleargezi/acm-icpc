@@ -1,5 +1,9 @@
 
 #### History (since 2025/03/12)
+- 2025/06/13
+  - 2025山东省赛 -B
+  - 2025南昌省赛 -B -J
+  - 2022河南省赛 -C -D -L
 - 2025/06/12
   - Library_checker Dynamic_Tree_Vertex_Add_Subtree_Sum | Counting_Primes | Discrete_Logarithm | Primality_Test | 
   - Dynamic_Tree_Vertex_Add_Path_Sum | Dynamic_Tree_Vertex_Set_Path_Composite
