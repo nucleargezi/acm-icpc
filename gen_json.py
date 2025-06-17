@@ -4,6 +4,7 @@ from collections import OrderedDict
 
 def f_count(root='.'):
     oj_list = [
+        'Aizu',
         'atcoder',
         'codeforces',
         'luogu',
