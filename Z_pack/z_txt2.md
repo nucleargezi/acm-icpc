@@ -1,5 +1,15 @@
 
 #### History (since 2025/03/12)
+- 2025/06/20
+  - 47 cf_beta44 -ak
+  - 48 cf_beta45 -H
+  - 49 cf_beta46 -ak
+  - 50 cf_beta47 -ak
+  - 51 cf_beta48 -ak
+  - 53 cf_beta49 -ak
+  - 54 cf_beta50 -ak
+  - 55 cf_beta51 -ak
+  - P_1989
 - 2025/06/18
   - P_5179
   - Yukicoder No_1 No_2 No_3 No_4 No_5 No_6 No_7 No_8 No_9
