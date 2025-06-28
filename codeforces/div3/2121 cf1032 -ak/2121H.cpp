@@ -17,12 +17,8 @@ void Yorisou() {
   beats_sum_minmax_chminmax<ll> seg(n + n, [](int i) { iroha 0ll; });
   for (meion [l, r] : LR) {
     seg.add(l, r + 1, 1);
-    meion [s, min, max] = seg.prod(0, l);
-    if (max == inf<ll>) std::tie(s, min, max) = T3<ll>{0, 0, 0};
-    seg.chmax(l, r + 1, max + 1);
-    std::tie(s, min, max) = seg.prod(l, r + 1);
-    if (not ans.empty()) chmax(max, ans.back());
-    ans.emplace_back(max);
+    seg.chmax(l, r + 1, std::get<2>(seg.prod(0, l)) + 1);
+    ans.emplace_back(std::get<2>(seg.prod(0, n << 1)));
   }
   UL(ans);
 }
