@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/06/20   problems: 2331;
+- 2025/06/28   problems: 2379;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
 - 2025/03/31   problems: 1514;
@@ -12,6 +12,15 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/06/28
+  - 2112 edu180 -ak
+  - 2120 cf1033 -G
+  - abc411 -ak
+  - abc410 -ak
+  - arc222 -CDE
+  - arc223 -DF
+  - 2025四川
+  - 2025重庆
 - 2025/06/20
   - 47 cf_beta44 -ak
   - 48 cf_beta45 -H
