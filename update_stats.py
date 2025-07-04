@@ -3,16 +3,18 @@ from datetime import datetime
 
 def count(root='.'):
     oj_list = [
+        'Aizu',
         'atcoder',
-        'BJTU_training',
         'codeforces',
+        'luogu',
         'Library_chacker',
         'Loj',
-        'luogu',
-        'problemset',
+        'qoj',
+        'YUKIcoder',
+        'BJTU_training',
         'Prov',
         'Regional',
-        'YUKIcoder'
+        'problemset'
     ]
     res = 0
     for oj_name in oj_list:

@@ -10,6 +10,7 @@ def f_count(root='.'):
         'luogu',
         'Library_chacker',
         'Loj',
+        'qoj',
         'YUKIcoder',
         'BJTU_training',
         'Prov',

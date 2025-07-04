@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2025/07/04   problems: 2485;
 - 2025/06/30   problems: 2400;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
@@ -12,6 +13,13 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/07/04
+  - 2014 HNCPC -J
+  - 2016 HNCPC -K
+  - 2111 edu179 -G
+  - 2117 cf1029 -ak
+  - 2123 cf1034 -ak
+  - 56 cf_beta52 -ak
 - 2025/06/30
   - 2118 cf1030 -F
   - abc412 -G
