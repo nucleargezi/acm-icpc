@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/07/04   problems: 2485;
+- 2025/07/10   problems: 2522;
 - 2025/06/30   problems: 2400;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
@@ -13,6 +13,13 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/07/10
+  - abc413 -ak
+  - 2114 cf1027 -ak
+  - 2116 cf1028 -EF
+  - 2119 cf1025 -EF
+  - 2142 cf1036 -F2GHI
+  - 105668 MITIT 2025 begin -ak
 - 2025/07/04
   - 2014 HNCPC -J
   - 2016 HNCPC -K
