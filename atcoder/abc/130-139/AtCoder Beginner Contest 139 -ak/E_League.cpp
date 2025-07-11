@@ -1,60 +1,40 @@
+#include "MeIoN_Lib/Z_H/MeioN.hpp"
 #include "MeIoN_Lib/MeIoN_all.hpp"
-
-void before() {}
+#include "MeIoN_Lib/IO/fmt.hpp"
+#include "MeIoN_Lib/ds/basic/queue.hpp"
 
 // #define tests
-NAME MeIoN_is_UMP45() {
-    int n, m;
-    std::cin >> n;
-    m = n - 1;
-    vector<int> v[n + 1];
-    for (int i{}; i < n; ++i) {
-        for (int k{}, x; k < n - 1; ++k) {
-            std::cin >> x;
-            v[i].emplace_back(--x);
-        }
-        v[i].emplace_back(n);
-        rev(v[i]);
+void Yorisou() {
+  LL(n);
+  int a[n][n - 1];
+  FOR(i, n) FOR(k, n - 1) IN(a[i][k]), --a[i][k];
+  const int N = n * n;
+  vector<vector<int>> v(N);
+  vector<int> in(N);
+  FOR(i, n) {
+    FOR(k, 1, n - 1) {
+      meion [x, y] = MINMAX((int)i, a[i][k - 1]);
+      int f = x * n + y;
+      std::tie(x, y) = MINMAX((int)i, a[i][k]);
+      int t = x * n + y;
+      v[f].emplace_back(t);
+      ++in[t];
     }
-    v[n].emplace_back(n);
-    vector<int> q(n);
-    std::iota(q.begin(), q.end(), 0);
-    int ans{};
-    while (not q.empty()) {
-        ++ans;
-        vector<uint8_t> vis(n + 1);
-        for (meion x : q) {
-            if (v[v[x].back()].back() == x) {
-                vis[v[x].back()] = 1;
-                vis[x] = 1;
-            }
-        }
-        q.clear();
-        for (int i{}; i < n; ++i) {
-            if (vis[i]) {
-                q.emplace_back(i);
-                v[i].pop_back();
-            }
-        }
+  }
+  vector<int> dis(N, 1);
+  int cnt = 0;
+  queue<int> q;
+  FOR(i, N) if (not in[i]) q.emplace_back(i);
+  while (not q.empty()) {
+    int n = q.pop();
+    ++cnt;
+    for (int t : v[n]) {
+      chmax(dis[t], dis[n] + 1);
+      if (not --in[t]) {
+        q.emplace_back(t);
+      }
     }
-    for (int i{}; i < n; ++i) {
-        if (v[i].back() != n) {
-            iroha std::cout << -1 << '\n', void();
-        }
-    }
-    std::cout << --ans << '\n';
+  }
+  print("{}", cnt == N ? QMAX(dis) : -1);
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    std::cin >> T;
-#endif
-    while (T--) { MeIoN_is_UMP45(); }
-    iroha 0;
-}
+#include "MeIoN_Lib/Z_H/main.hpp"

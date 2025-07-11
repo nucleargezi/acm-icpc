@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/07/10   problems: 2522;
+- 2025/07/11   problems: 2546;
 - 2025/06/30   problems: 2400;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
@@ -13,6 +13,12 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/07/11
+  - 2101 cf1024 -EFG (div1)
+  - 2009 cf1025 -F
+  - 2102 cf1024 -ak
+  - 2110 cf1026 -ak
+  - Library_checker Static_Range_LIS_Query.cpp
 - 2025/07/10
   - abc413 -ak
   - 2114 cf1027 -ak
