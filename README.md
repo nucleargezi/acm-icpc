@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/07/14   problems: 2546;
+- 2025/07/26   problems: 2652;
 - 2025/06/30   problems: 2400;
 - 2025/05/27   problems: 2096;
 - 2025/04/28   problems: 1842;
@@ -13,6 +13,25 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/07/26
+  - hdu 1
+  - hdu 2
+  - hdu 3
+  - nowcode 1
+  - nowcode 2
+  - nowcode 3
+  - nowcode 4
+  - 2097 cf1021 -F
+  - 2098 cf1021 -ak
+  - 2106 cf1020 -G
+  - 2122 cf1038 -?
+  - 2125 edu181 -F
+  - Library_checker Longest_Common_Substring.cpp | Number_of_Substrings.cpp | Suffix_Array.cpp | Two_Edge_Connected_Components.cpp
+  - P_13310 P_3809 P_6656
+  - abc414 -FG
+  - abc415 -ak
+  - loj_6235
+  - qoj 2244 XXI 赛前模板训练赛
 - 2025/07/11
   - 2101 cf1024 -EFG (div1)
   - 2009 cf1025 -F

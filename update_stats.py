@@ -6,6 +6,7 @@ def count(root='.'):
         'Aizu',
         'atcoder',
         'codeforces',
+        'camp_like',
         'luogu',
         'Library_chacker',
         'Loj',
