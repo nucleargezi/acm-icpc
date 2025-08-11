@@ -1,5 +1,17 @@
 
 #### History (since 2025/03/12)
+- 2025/08/12
+  - 2127 cf1041 -G
+  - 2129 cf1040 -C23 E F
+  - Library_checker 
+    - Assignment_Problem.cpp | Chromatic_Number.cpp | Cycle_Detection_Directed.cpp | Cycle_Detection_Undirected.cpp | 
+    - Dominator_Tree.cpp | Enumerate_Cliques.cpp | Enumerate_Triangles.cpp | Eulerian_Trail_Directed.cpp | Eulerian_Trail_Undirected.cpp | 
+    - Exp_of_Set_Power_Series.cpp | Longest_Increasing_Subsequence.cpp | Majority_Voting.cpp | Maximum_Independent_Set.cpp | 
+    - Minimum_Cost_b_flow.cpp | Point_Add_Rectangle_Sum.cpp | Range_Chmin_Chmax_Add_Range_Sum.cpp | Range_Set_Range_Composite.cpp | 
+    - Rectangle_Sum.cpp | Shortest_Path.cpp | Static_Range_Sum_with_Upper_Bound.cpp | Vertex_Add_Range_Contour_Sum_on_Tree.cpp | 
+    - Vertex_Get_Range_Contour_Add_on_Tree.cpp
+  - P_10461 P_10603 P_12230 P_12231 P_12232 P_2075 P_3806 P_4239 P_5264 P_5667 P_6097 P_6192 P_6329 P_6800
+  - loj_184
 - 2025/07/26
   - hdu 1
   - hdu 2
