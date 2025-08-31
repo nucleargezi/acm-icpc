@@ -110,4 +110,22 @@
     "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.inlayHints.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
     "C_Cpp.dimInactiveRegions": false,
+    // 指定 clangd 可执行文件路径（WSL 环境下通常在 /usr/bin）
+    "clangd.path": "/usr/bin/clangd",
+    // 额外启动参数：开启后台索引和 clang-tidy 检查
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy"
+    ],
+    "clangd.fallbackFlags": [
+        "-std=c++23",
+        "-Wall",
+        "-Wextra",
+        "-I.",
+        "-I${workspaceFolder}",
+        "-include",
+        "${workspaceFolder}/YRS/all.hpp"
+    ],
+    // 如果同时安装了微软官方的 C/C++ 插件，禁用它的 IntelliSense 引擎
+    "C_Cpp.intelliSenseEngine": "disabled",
 }
