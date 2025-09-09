@@ -2,12 +2,11 @@
 #include "YRS/all.hpp"
 #include "YRS/ge/pairs/furthest_pair.hpp"
 
-// #define tests
+#define tests
 using P = point<ll>;
 void Yorisou() {
   INT(N);
   VEC(P, a, N);
-  Z [i, k] = furthest_pair(a);
-  UL((a[i] - a[k]).square());
+  UL(furthest_pair(a));
 }
 #include "YRS/Z_H/main.hpp"

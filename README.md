@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/09/01   problems: 2830;
+- 2025/09/10   problems: 2891;
 - 2025/08/14   problems: 2711;
 - 2025/07/26   problems: 2652;
 - 2025/06/30   problems: 2400;
@@ -15,6 +15,18 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/09/10
+  - Library_checker Closest_Pair_of_Points | Furthest_Pair_of_Points | Manhattan_MST
+  - HNCPC2018 -ak
+  - AIZU geo -upd
+  - P_1257 P_1429 P_1452 P_2742 P_4357 P_4423 P_4557 P_7883
+  - cf beta53 -D
+  - cf beta54 -E
+  - cf beta55 -ak
+  - cf beta56 -ak
+  - cf beta57 -ak
+  - cf beta58 -ak
+  - cf beta59 -ak
 - 2025/09/01
   - Library_checker 
     - 一般图最大匹配
@@ -26,20 +38,20 @@
     - upd
 - 2025/08/14
   - Library_checker 
-    - Convolution_Large.cpp | Convolution_Mod_2_64.cpp | Deque.cpp | Exp_of_Formal_Power_Series.cpp | Factorial.cpp | Factorize.cpp | 
-    - Gcd_Convolution.cpp | Inv_of_Formal_Power_Series.cpp | Lcm_Convolution.cpp | Log_of_Formal_Power_Series.cpp | 
-    - Pow_of_Formal_Power_Series.cpp | Sqrt_Mod.cpp | Sqrt_of_Formal_Power_Series.cpp
+    - Convolution_Large | Convolution_Mod_2_64 | Deque | Exp_of_Formal_Power_Series | Factorial | Factorize | 
+    - Gcd_Convolution | Inv_of_Formal_Power_Series | Lcm_Convolution | Log_of_Formal_Power_Series | 
+    - Pow_of_Formal_Power_Series | Sqrt_Mod | Sqrt_of_Formal_Power_Series
   - P_3649 P_4287 P_4762 P_5496 P_5555 P_5685
 - 2025/08/12
   - 2127 cf1041 -G
   - 2129 cf1040 -C23 E F
   - Library_checker 
-    - Assignment_Problem.cpp | Chromatic_Number.cpp | Cycle_Detection_Directed.cpp | Cycle_Detection_Undirected.cpp | 
-    - Dominator_Tree.cpp | Enumerate_Cliques.cpp | Enumerate_Triangles.cpp | Eulerian_Trail_Directed.cpp | Eulerian_Trail_Undirected.cpp | 
-    - Exp_of_Set_Power_Series.cpp | Longest_Increasing_Subsequence.cpp | Majority_Voting.cpp | Maximum_Independent_Set.cpp | 
-    - Minimum_Cost_b_flow.cpp | Point_Add_Rectangle_Sum.cpp | Range_Chmin_Chmax_Add_Range_Sum.cpp | Range_Set_Range_Composite.cpp | 
-    - Rectangle_Sum.cpp | Shortest_Path.cpp | Static_Range_Sum_with_Upper_Bound.cpp | Vertex_Add_Range_Contour_Sum_on_Tree.cpp | 
-    - Vertex_Get_Range_Contour_Add_on_Tree.cpp
+    - Assignment_Problem | Chromatic_Number | Cycle_Detection_Directed | Cycle_Detection_Undirected | 
+    - Dominator_Tree | Enumerate_Cliques | Enumerate_Triangles | Eulerian_Trail_Directed | Eulerian_Trail_Undirected | 
+    - Exp_of_Set_Power_Series | Longest_Increasing_Subsequence | Majority_Voting | Maximum_Independent_Set | 
+    - Minimum_Cost_b_flow | Point_Add_Rectangle_Sum | Range_Chmin_Chmax_Add_Range_Sum | Range_Set_Range_Composite | 
+    - Rectangle_Sum | Shortest_Path | Static_Range_Sum_with_Upper_Bound | Vertex_Add_Range_Contour_Sum_on_Tree | 
+    - Vertex_Get_Range_Contour_Add_on_Tree
   - P_10461 P_10603 P_12230 P_12231 P_12232 P_2075 P_3806 P_4239 P_5264 P_5667 P_6097 P_6192 P_6329 P_6800
   - loj_184
 - 2025/07/26
@@ -55,7 +67,7 @@
   - 2106 cf1020 -G
   - 2122 cf1038 -?
   - 2125 edu181 -F
-  - Library_checker Longest_Common_Substring.cpp | Number_of_Substrings.cpp | Suffix_Array.cpp | Two_Edge_Connected_Components.cpp
+  - Library_checker Longest_Common_Substring | Number_of_Substrings | Suffix_Array | Two_Edge_Connected_Components
   - P_13310 P_3809 P_6656
   - abc414 -FG
   - abc415 -ak
@@ -66,7 +78,7 @@
   - 2009 cf1025 -F
   - 2102 cf1024 -ak
   - 2110 cf1026 -ak
-  - Library_checker Static_Range_LIS_Query.cpp
+  - Library_checker Static_Range_LIS_Query
 - 2025/07/10
   - abc413 -ak
   - 2114 cf1027 -ak
