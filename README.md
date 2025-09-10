@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/09/10   problems: 2891;
+- 2025/09/11   problems: 2908;
 - 2025/08/14   problems: 2711;
 - 2025/07/26   problems: 2652;
 - 2025/06/30   problems: 2400;
@@ -15,6 +15,13 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/09/11
+  - Library_checker 
+    - Sort_Points_by_Argument | Determinant_of_Matrix | Determinant_of_Matrix_Arbitrary_Mod 
+    - Inverse_Matrix | Matrix_Product | Pow_of_Matrix | Rank_of_Matrix | System_of_Linear_Equations 
+    - Enumerate_Palindromes | Lyndon_Factorization | Palindromes_in_Deque | Prefix_Substring_LCS
+    - Run_Enumerate | Wildcard_Pattern_Matching | Z_Algorithm | Eertree
+  - P_4722 P_6114
 - 2025/09/10
   - Library_checker Closest_Pair_of_Points | Furthest_Pair_of_Points | Manhattan_MST
   - HNCPC2018 -ak

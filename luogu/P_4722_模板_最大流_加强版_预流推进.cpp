@@ -1,30 +1,18 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/flow/HLPP.hpp"
-
-void before() {}
+#include "YRS/Z_H/MeioN.hpp"
+#include "YRS/all.hpp"
+#include "YRS/flow/HLPP.hpp"
 
 // #define tests
-NAME MeIoN_is_UMP45() {
-    INT(n, m, s, t);
-    --s, --t;
-    HLPP FL(n, m, s, t);
-    FOR(m) {
-        INT(x, y, w);
-        FL.add(--x, --y, w);
-    }
-    UL(FL.flow());
+void Yorisou() {
+  INT(N, M, S, T);
+  --S, --T;
+  HLPP FL(N);
+  FOR(M) {
+    INT(f, t, w);
+    --f, --t;
+    FL.add(f, t, w);
+  }
+  FL.build();
+  print(FL.flow(S, T));
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    INT(t); FOR(t)
-#endif
-    MeIoN_is_UMP45();
-    iroha 0;
-}
+#include "YRS/Z_H/main.hpp"
