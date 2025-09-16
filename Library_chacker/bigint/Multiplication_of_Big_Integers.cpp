@@ -1,12 +1,12 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/Big_int.hpp"
+#include "YRS/Z_H/MeioN.hpp"
+#include "YRS/all.hpp"
+#include "YRS/math/bigint/big.hpp"
 
 #define tests
-using INT = BigInteger;
-INT a, b;
+using big = bigint;
 void Yorisou() {
+  big a, b;
   IN(a, b);
-  UL(a * b);
+  print(a * b);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"

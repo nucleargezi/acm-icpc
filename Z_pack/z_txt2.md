@@ -1,5 +1,16 @@
 
 #### History (since 2025/03/12)
+- 2025/09/16
+  - JXCPC -J M
+  - Library_checker Addition_of_Big_Integers.cpp | Division_of_Big_Integers.cpp | Minimum_Enclosing_Circle.cpp
+  - Library_checker Minimum_Steiner_Tree.cpp | Multiplication_of_Big_Integers.cpp | Range_Add_Range_Min.cpp
+  - ICPC online1
+  - ICPC online2
+  - P_3376
+  - 2085 cf1011 -ak
+  - 2086 edu177 -F
+  - 2092 cf1014 -ak
+  - 65 cf beta60 -E
 - 2025/09/11
   - Library_checker 
     - Sort_Points_by_Argument | Determinant_of_Matrix | Determinant_of_Matrix_Arbitrary_Mod 
