@@ -1,5 +1,20 @@
 
 #### History (since 2025/03/12)
+- 2025/09/26
+  - 2019 HNCPC -ak
+  - 2025 SHCPC
+  - 2019 SCCPC -F K
+  - P_2521 P_2835 P_5214 P_6492 P_7251 P_8460
+  - Library_checker Exp_of_Formal_Power_Series_Sparse.cpp | Inv_of_Formal_Power_Series_Sparse.cpp | Log_of_Formal_Power_Series_Sparse.cpp | Pow_of_Formal_Power_Series_Sparse.cpp | Sqrt_of_Formal_Power_Series_Sparse.cpp
+  - 66 cf beta61 -ak
+  - 68 cf beta62 -ak
+  - 69 cf beta63 -ak
+  - 70 cf beta64 -ak
+  - 71 cf beta65 -ak
+  - 73 cf beta66 -ak
+  - 75 cf beta67 -ak
+  - 76 cf beta68 -ak
+  - 80 cf beta69 -ak
 - 2025/09/16
   - JXCPC -J M
   - Library_checker Addition_of_Big_Integers.cpp | Division_of_Big_Integers.cpp | Minimum_Enclosing_Circle.cpp

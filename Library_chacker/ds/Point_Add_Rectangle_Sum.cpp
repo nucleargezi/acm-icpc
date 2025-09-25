@@ -1,38 +1,35 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-// #include "MeIoN_Lib/IO/fmt.hpp"
-#include "MeIoN_Lib/ds/wave_matrix2d.hpp"
-#include "MeIoN_Lib/ds/fenw/fenw.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/ds/wave/wave_mat_2d.hpp"
+#include "YRS/ds/seg/seg_base.hpp"
 
 // #define tests
-using mono = monoid_add<ll>;
-using Fenw = fenw<mono>;
-using WM = wave_matrix_2d<int, 0, 0, Fenw>;
-template <typename T>
-using T5 = tuple<T, T, T, T, T>;
+using MX = monoid_add<ll>;
+using DS = Seg<MX>;
+using WM = wave_matrix_2d<int, 0, 0, DS>;
+using T = tuple<int, int, int, int, int>;
 void Yorisou() {
-  LL(n, q);
-  VEC(T3<int>, a, n);
-  vector<T5<int>> quis(q);
-  FOR(i, q) {
-    LL(op);
+  INT(N, Q);
+  VEC(T3<int>, a, N);
+  vector<T> quis(Q);
+  FOR(i, Q) {
+    INT(op);
     if (op == 0) {
-      LL(x, y, w);
+      INT(x, y, w);
       quis[i] = {op, x, y, w, 0};
-      a.emplace_back(x, y, 0);
+      a.ep(x, y, 0);
     } else {
-      LL(l, r, u, d);
+      INT(l, r, u, d);
       quis[i] = {op, l, r, u, d};
     }
   }
-  WM seg(len(a), [&](int i) { iroha a[i]; });
-  for (meion [op, a, b, c, d] : quis) {
+  WM seg(len(a), [&](int i) { return a[i]; });
+  for (int t = 0; Z [op, a, b, c, d] : quis) {
     if (op == 0) {
-      seg.add(n++, c);
+      seg.multiply(N + t++, c);
     } else {
-      UL(seg.prod(a, c, b, d));
+      print(seg.prod(a, c, b, d));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"

@@ -1,7 +1,6 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/seg_base.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#include "YRS/all.hpp"
+#include "YRS/ds/seg/seg_base.hpp"
+#include "YRS/ds/monoid/add.hpp"
 
 void before() {}
 
@@ -13,10 +12,10 @@ void Yorisou() {
   FOR(q) {
     LL(op, x, y);
     if (op == 0) {
-      seg.apply(x, y);
+      seg.multiply(x, y);
     } else {
-      UL(seg.prod(x, y));
+      print(seg.prod(x, y));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"
