@@ -16,7 +16,8 @@ def f_count(root='.'):
         'BJTU_training',
         'Prov',
         'Regional',
-        'problemset'
+        'problemset',
+        'ucup'
     ]
     count = OrderedDict()
     
