@@ -1,0 +1,4 @@
+CompileFlags:
+  Add: [-std=gnu++20, -O2, -Wall, -Wextra, -Wno-unused-parameter, -DLOCAL]
+Diagnostics:
+  Suppress: [unused-includes]

@@ -1,13 +1,9 @@
 BasedOnStyle: Google
 IndentWidth: 2
 ColumnLimit: 80
-# ColumnLimit: 100
 AllowShortBlocksOnASingleLine: false
 AllowShortCaseLabelsOnASingleLine: true
 AlignAfterOpenBracket: DontAlign #不强制对齐多行初始化列表的起始括号，减少空白
 BreakBeforeBraces: Attach
 BinPackArguments: true    # 禁止将不同行的参数压缩到一行 保持每行一个数值
-# Cpp11BracedListStyle: true # Cpp11统一的大括号初始化风格
 SpaceBeforeCpp11BracedList: true
-# AlignConsecutiveArrays: false
-# AlignAfterOpenBracket: false
