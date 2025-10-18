@@ -17,6 +17,18 @@
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
 - 2025/10/18
+  - ucup3-1
+  - ucup3-10
+  - ucup3-13
+  - ucup3-15
+  - ucup3-2
+  - ucup3-21
+  - ucup3-24
+  - ucup3-3
+  - ucup3-4
+  - ucup3-7
+  - ucup3-8
+  - ucup4-2
   - Library_checker Rooted_Tree_Isomorphism_Classification | Tree_Path_Composite_Sum
   - 77 cf beta69 -ak
   - 2018 青岛
