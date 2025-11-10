@@ -1,25 +1,22 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/LCT.hpp"
-
-void before() {}
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/ds/lct/lct_simple.hpp"
 
 // #define tests
-using LCT = Link_Cut_Tree<LCT_Node_Base>;
 void Yorisou() {
-  LL(n, q);
-  LCT seg(n);
-  FOR(q) {
-    S(op);
-    LL(x, y);
+  INT(N, Q);
+  LCT_simple lct(N);
+  FOR(Q) {
+    STR(op);
+    INT(x, y);
     --x, --y;
-    if (op[0] == 'C') {
-      seg.link(x, y);
-    } else if (op[0] == 'D') {
-      seg.cut(x, y);
+    if (op[0] == 'Q') {
+      Yes(lct.get_rt(x) == lct.get_rt(y));
+    } else if (op[0] == 'C') {
+      lct.link(x, y);
     } else {
-      Yes(seg.get_root(x) == seg.get_root(y));
+      lct.cut(x, y);
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"

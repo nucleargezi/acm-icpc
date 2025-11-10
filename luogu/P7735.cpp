@@ -1,55 +1,55 @@
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-#include "YRS/graph/Tree/tree_monoid_lazy.hpp"
-#include "YRS/ds/monoid/set.hpp"
+#include "YRS/ds/lct/lct_act.hpp"
 
 #define tests
-struct monoid_X {
-  using X = struct {
-    int l, r, c;
-  };
-
-  static constexpr X op(const X &L, const X &R) {
-    if (L.l == -1) return R;
-    if (R.l == -1) return L;
-    X res{L.l, R.r, L.c + R.c};
-    res.c += L.r == R.l;
-    return res;
-  }
-  static constexpr X unit() { return {-1, -1, 0}; }
-  static constexpr X make(int x) { return {x, x, 0}; }
-  static constexpr bool commute = false;
+using X = struct {
+  int l, r, c;
 };
-struct mono {
-  using MX = monoid_X;
-  using MA = monoid_set<int>;
+struct MX {
+  using X = ::X;
+  static constexpr X unit() { return {}; }
+  static constexpr X op(X L, X R) {
+    if (L.l == -1) return R;
+    if (R.r == -1) return L;
+    return {L.l, R.r, L.c + R.c + (L.r == R.l)};
+  }
+};
+constexpr X make(int x) { return {x, x, 0}; }
+using A = int;
+struct MA {
+  using X = ::A;
+  static constexpr X unit() { return -1; }
+  static constexpr X op(X L, X R) {
+    if (R != -1) return R;
+    return L;
+  }
+};
+struct AM {
+  using MX = ::MX;
+  using MA = ::MA;
   using X = MX::X;
   using A = MA::X;
-
-  static constexpr X act(X x, A a, int size) {
-    if (a.has_set) x = {a.set, a.set, size - 1};
+  static constexpr X act(X x, A a, int sz) {
+    if (a != -1) return {a, a, sz - 1};
     return x;
   }
 };
-using MX = mono::MX;
-using MA = mono::MA;
+using LCT = LCT_act<AM>;
 void Yorisou() {
   INT(N, Q);
-  graph g(N);
-  g.read_tree();
-  tree v(g);
-
-  lazy_tree_monoid<decltype(v), mono> seg(v, [&](int i) -> MX::X {
-    return MX::make(N + Q - i);
-  });
+  LCT lct(N);
+  FOR(i, N) lct.a[i].mx = make(N + Q - i);
+  FOR(i, N - 1) {
+    INT(x, y);
+    --x, --y;
+    lct.link(x, y);
+  }
   FOR(i, Q) {
     INT(op, x, y);
     --x, --y;
-    if (op == 1) {
-      seg.apply_path(x, y, MA::make_set(i));
-    } else {
-      print(seg.prod_path(x, y).c);
-    }
+    if (op == 1) lct.apply(x, y, i);
+    else print(lct.prod(x, y).c);
   }
 }
 #include "YRS/Z_H/main.hpp"

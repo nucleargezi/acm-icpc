@@ -1,44 +1,42 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/heap/erase_heap.hpp"
-#include "MeIoN_Lib/ds/LCT.hpp"
-#include "MeIoN_Lib/ds/monoid/min.hpp"
-
-void before() {}
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/ds/dsu.hpp"
+#include "YRS/ds/lct/lct_monoid.hpp"
+#include "YRS/ds/monoid/min_idx.hpp"
 
 // #define tests
-using LCT = Link_Cut_Tree<lct_node_commutative_monoid<monoid_min<PII>, 0>>;
+using LCT = LCT_monoid_commute<monoid_min_idx<int>>;
 void Yorisou() {
-  LL(n, m);
-  VEC(T3<int>, e, m);
-  sort(e, [&](meion &x, meion &y) -> bool {
-    iroha std::get<2>(x) < std::get<2>(y);
-  });
-  LCT seg(n + m);
-  FOR(i, n) seg.set(i, {inf<int>, i});
-  int ans = inf<int>;
-  erase_heap<int, greater<>> ew;
-  int cnt = 0;
-  FOR(i, m) {
-    meion &[x, y, w] = e[i];
-    if (x == y) continue;
+  INT(N, M);
+  VEC(T3<int>, e, M);
+  for (Z &[x, y, w] : e) {
     --x, --y;
-    seg.set(n + i, {w, i});
-    if (seg.get_root(x) == seg.get_root(y)) {
-      --cnt;
-      meion [min, idx] = seg.prod_path(x, y);
-      meion [px, py, _] = e[idx];
-      ew.pop(min);
-      seg.cut(px, idx + n);
-      seg.cut(py, idx + n);
-    }
-    seg.link(x, i + n);
-    seg.link(y, i + n);
-    ew.emplace(w);
-    if (++cnt == n - 1) {
-      chmin(ans, w - ew.top());
-    }
+    swap(x, w);
   }
-  UL(ans);
+  sort(e);
+  dsu g(N);
+  LCT lct(N + M);
+  FOR(i, N + M) lct[i]->mx = {inf<int>, i};
+  int ans = inf<int>;
+  multiset<int> se;
+  FOR(i, M) {
+    Z [w, x, y] = e[i];
+    if (x == y) continue;
+    lct.a[i + N].mx.fi = w;
+    if (g[x] == g[y]) {
+      Z [min, id] = lct.prod(x, y);
+      Z [ww, xx, yy] = e[id - N];
+      lct.cut(xx, id);
+      lct.cut(yy, id);
+      se.extract(ww);
+    }
+    g.merge(x, y);
+    se.eb(w);
+    lct.link(x, i + N);
+    lct.link(y, i + N);
+    if (g.count() == 1) chmin(ans, w - *se.begin());
+  }
+  print(ans);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"

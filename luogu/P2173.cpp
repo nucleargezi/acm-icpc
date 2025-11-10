@@ -1,63 +1,57 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/LCT.hpp"
-#include "MeIoN_Lib/ds/monoid/max.hpp"
-
-void before() {}
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/ds/lct/lct_monoid.hpp"
+#include "YRS/ds/monoid/max.hpp"
 
 // #define tests
-using LCT = Link_Cut_Tree<lct_node_commutative_monoid<monoid_max<int>, 0>>;
+using LCT = LCT_monoid_commute<monoid_max<int>>;
 void Yorisou() {
-  LL(n, m, c, q);
-  VEC(int, a, n);
-  vector seg(c, LCT(n));
-  FOR(i, c) FOR(k, n) seg[i].set(k, a[k]);
-  vector in(c, vector<int>(n));
-  FOR(m) {
-    LL(x, y, w);
+  INT(N, M, C, Q);
+  VEC(int, a, N);
+  vector<LCT> lct(C, LCT(N));
+  FOR(x, C) FOR(i, N) lct[x].set(i, a[i]);
+  vector in(C, vector<int>(N));
+  FOR(M) {
+    INT(x, y, c);
     --x, --y;
-    ++in[w][x], ++in[w][y];
-    seg[w].link(x, y);
-  } 
-  FOR(q) {
-    LL(op);
+    ++in[c][x], ++in[c][y];
+    lct[c].link(x, y);
+  }
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      LL(x, w);
+      INT(x, y);
       --x;
-      FOR(i, c) seg[i].set(x, w);
+      FOR(i, C) lct[i].set(x, y);
     } else if (op == 1) {
-      LL(x, y, w);
+      INT(x, y, w);
       --x, --y;
-      int rc = -1;
-      FOR(i, c) {
-        if (seg[i].get_root(x) == seg[i].get_root(y)) {
-          seg[i].evert(x);
-          if (seg[i].get_fa(y) == x) {
-            rc = i;
-            break;
-          }
-        }
+      int col = -1;
+      FOR(i, C) if (lct[i].evert(x), lct[i].get_fa(y) == x) {
+        col = i;
+        break;
       }
-      if (rc == -1) {
-        UL("No such edge.");
-      } else if (rc == w) {
-        UL("Success.");
-      } else if (MAX(in[w][x], in[w][y]) >= 2) {
-        UL("Error 1.");
-      } else if (seg[w].get_root(x) == seg[w].get_root(y)) {
-        UL("Error 2.");
+      if (col == -1) {
+        print("No such edge.");
+      } else if (col == w) {
+        print("Success.");
+      } else if (max(in[w][x], in[w][y]) > 1) {
+        print("Error 1.");
+      } else if (lct[w].get_rt(x) == lct[w].get_rt(y)) {
+        print("Error 2.");
       } else {
-        --in[rc][x], --in[rc][y];
+        --in[col][x], --in[col][y];
         ++in[w][x], ++in[w][y];
-        seg[rc].cut(x, y);
-        seg[w].link(x, y);
-        UL("Success.");
+        lct[col].cut(x, y);
+        lct[w].link(x, y);
+        print("Success.");
       }
     } else {
-      LL(w, x, y);
+      INT(c, x, y);
       --x, --y;
-      UL(seg[w].get_root(x) == seg[w].get_root(y) ? seg[w].prod_path(x, y) : -1);
+      print(lct[c].get_rt(x) == lct[c].get_rt(y) ? lct[c].prod(x, y) : -1);
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"

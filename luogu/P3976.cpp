@@ -1,53 +1,50 @@
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-#include "YRS/graph/Tree/tree_monoid_lazy.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/ds/lct/lct_act.hpp"
 #include "YRS/ds/monoid/add.hpp"
 
-// #define tests
 struct monoid_X {
   using X = struct {
-    int min, max, L, R;
+    int x, min, max, r;
   };
-
-  static constexpr X op(const X &L, const X &R) {
-    X res;
-    res.max = std::max(L.max, R.max);
-    res.min = std::min(L.min, R.min);
-    res.L = std::max({L.L, R.L, L.max - R.min});
-    res.R = std::max({L.R, R.R, R.max - L.min});
-    return res;
+  static constexpr X unit() { return {}; }
+  static constexpr X make(int x) { return {x, x, x, 0}; }
+  static constexpr X op(X a, X b) {
+    chmax(a.r, b.r);
+    chmax(a.r, b.max - a.min);
+    chmax(a.max, b.max);
+    chmin(a.min, b.min);
+    return a;
   }
-  static constexpr X unit() { return {inf<int> / 2, -inf<int> / 2, 0, 0}; }
-  static constexpr X make(int x) { return {x, x, 0, 0}; }
   static constexpr bool commute = false;
 };
-struct mono {
+struct AM {
   using MX = monoid_X;
   using MA = monoid_add<int>;
   using X = MX::X;
   using A = MA::X;
-
-  static constexpr X act(const X &x, const A &a, ll) {
-    X res = x;
-    res.min += a, res.max += a;
-    return res;
+  static constexpr X act(X x, A a, int) {
+    x.x += a, x.min += a, x.max += a;
+    return x;
   }
 };
+using LCT = LCT_act<AM>;
 void Yorisou() {
   INT(N);
   VEC(int, a, N);
-  graph g(N);
-  g.read_tree();
-  tree v(g);
-
-  lazy_tree_monoid<decltype(v), mono> seg(
-      v, [&](int i) -> mono::X { return mono::MX::make(a[i]); });
+  LCT lct(N, [&](int i) -> AM::X { return AM::MX::make(a[i]); });
+  FOR(i, N - 1) {
+    INT(x, y);
+    --x, --y;
+    lct.link(x, y);
+  }
   INT(Q);
   FOR(Q) {
     INT(x, y, w);
     --x, --y;
-    print(seg.prod_path(x, y).R);
-    seg.apply_path(x, y, w);
+    print(lct.prod(x, y).r);
+    lct.apply(x, y, w);
   }
 }
 #include "YRS/Z_H/main.hpp"
