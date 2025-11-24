@@ -1,5 +1,25 @@
 
 #### History (since 2025/03/12)
+- 2025/11/25
+  - P1048 P1537 P2444 P3327 P3391 P4036 P5906 P6329
+  - Library_checker Vertex_Add_Range_Contour_Sum_on_Tree
+  - 2025 南京
+  - 2025 沈阳
+  - 78 cf_beta70 -ak
+  - 79 cf_beta71 -ak
+  - 83 cf_beta72 -ak
+  - 84 cf_beta72 -ak
+  - 87 cf_beta73 -ak
+  - 88 cf_beta73 -ak
+  - 89 cf_beta74 -ak
+  - 90 cf_beta74 -ak
+  - 91 cf_beta75 -D
+  - 92 cf_beta75 -ak
+  - 93 cf_beta76 -ak
+  - 94 cf_beta76 -ak
+  - 95 cf_beta77 -ak
+  - 96 cf_beta77 -ak
+  - HNCPC2025
 - 2025/11/10
   - 2020 沈阳
   - 2022 杭州
