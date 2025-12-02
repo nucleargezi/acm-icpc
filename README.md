@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2025/12/02   problems: 3185;
 - 2025/11/25   problems: 3156;
 - 2025/10/18   problems: 3106;
 - 2025/09/26   problems: 3039;
@@ -17,6 +18,10 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/12/02
+  - 98 cf beta78 -ak
+  - 99 cf beta78 -ak
+  - P13014 P1552 P2152 P2473 P2596 P3201 P3338 P3387 P3527 P3629 P3648 P3967 P4051 P4072 P4196 P4360 P4767 P5494 P6178 P6577
 - 2025/11/25
   - P1048 P1537 P2444 P3327 P3391 P4036 P5906 P6329
   - Library_checker Vertex_Add_Range_Contour_Sum_on_Tree

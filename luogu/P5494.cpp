@@ -1,50 +1,50 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/dynamic_seg_bin.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/seg/dynamic_seg.hpp"
+#include "YRS/ds/monoid/add.hpp"
+#include "YRS/ds/seg/dynamic_seg.hpp"
 
-// #define tests
-using mono = monoid_add<ll>;
-using Seg = dynamic_seg_with_bin<mono>;
-using np = Seg::np;
+#define tests 0
+#define fl 0
+#define DB 10
+using MX = monoid_add<ll>;
+using DS = dynamic_seg<MX, 0, int>;
+using np = DS::np;
 void Yorisou() {
-  LL(n, q);
-  VEC(ll, dat, n);
-  Seg seg(6'000'000, 0, n);
-  np tcl = seg.new_root();
-  FOR(i, n) seg.set(tcl, i, 0);
-  vector<np> t(q + 1);
-  int tot = 0;
-  t[tot++] = seg.new_node(dat);
-  FOR(q) {
-    LL(op);
+  INT(N, Q);
+  VEC(ll, a, N);
+  DS seg(0, N);
+  vc<np> rt(Q + 1);
+  int t = 0;
+  rt[t++] = seg.newnode(a);
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      LL(p, l, r);
-      --p, --l; 
-      t[tot++] = seg.split(t[p], l, r);
-    } else if (op == 1) {
-      LL(to, frm);
-      --to, --frm;
-      seg.merge<false>(t[to], t[frm]);
-    } else if (op == 2) {
-      LL(p, x, q);
-      --p, --q;
-      seg.apply(t[p], q, x);
-    } else if (op == 3) {
-      LL(p, l, r);
+      INT(p, l, r);
       --p, --l;
-      UL(seg.prod(t[p], l, r));
+      rt[t] = seg.spl(rt[t], rt[p], l, r);
+      ++t;
+    } else if (op == 1) {
+      INT(t, f);
+      --t, --f;
+      rt[t] = seg.merge_to(rt[t], rt[f], MX::op);
+    } else if (op == 2) {
+      INT(p, x, q);
+      --p, --q;
+      rt[p] = seg.multiply(rt[p], q, x);
+    } else if (op == 3) {
+      INT(p, l, r);
+      --p, --l;
+      print(seg.prod(rt[p], l, r));
     } else {
-      LL(p, k);
+      INT(p, K);
       --p;
-      if (seg.prod(t[p], 0, n) < k) {
-        UL(-1);
-      } else {
-        UL(seg.max_right(t[p], [&](ll s) -> bool {
-          iroha s < k;
-        }, 0) + 1);
-      }
+      if (seg.prod(rt[p], 0, N) < K) print(-1);
+      else print(seg.max_right(rt[p], [&](ll s)  { return s < K; }, 0) + 1);
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/Z_H/main.hpp"

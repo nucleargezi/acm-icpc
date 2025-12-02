@@ -1,46 +1,36 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/scc.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+// #include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/graph/Apck/scc.hpp"
+#include "YRS/ds/basic/queue.hpp"
 
-void before() {}
-
-// #define tests
-NAME MeIoN_is_UMP45() {
-    INT(n, m);
-    VEC(int, a, n);
-    graph<int, true> v(n);
-    v.read_graph(m);
-    
-    meion [cnt, id] = scc(v);
-    graph g = scc_dag(v, cnt, id);
-    
-    vector<ll> w(cnt);
-    FOR(i, n) w[id[i]] += a[i];
-    vector in = g.deg_array_inout().first;
-    
-    vector<ll> dp(cnt);
-    queue<int> q;
-    FOR(i, cnt) if (not in[i]) q.emplace_back(i);
-    while (not q.empty()) {
-        int n = q.pop();
-        dp[n] += w[n];
-        for (meion &&[f, i, a, b] : g[n]) {
-            chmax(dp[i], dp[n]);
-            if (not --in[i]) q.emplace_back(i);
-        }
+#define tests 0
+#define fl 0
+#define DB 10
+void Yorisou() {
+  INT(N, M);
+  VEC(int, a, N);
+  graph<int, 1> g(N);
+  g.read_graph(M);
+  Z [c, id] = scc_id(g);
+  Z ng = scc_dag(g, c, id);
+  vc<int> in = ng.deg_array_inout().fi;
+  queue<int> q;
+  vc<ll> na(c), f(c);
+  FOR(i, N) na[id[i]] += a[i];
+  FOR(i, c) if (in[i] == 0) q.eb(i);
+  ll ans = -1;
+  while (not q.empty()) {
+    int n = pop(q);
+    f[n] += na[n];
+    chmax(ans, f[n]);
+    for (Z &&e : ng[n]) {
+      chmax(f[e.to], f[n]);
+      if (--in[e.to] == 0) q.eb(e.to);
     }
-    UL(qmax(dp));
+  }
+  print(ans);
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    INT(t); FOR(t)
-#endif
-    MeIoN_is_UMP45();
-    iroha 0;
-}
+#include "YRS/Z_H/main.hpp"
