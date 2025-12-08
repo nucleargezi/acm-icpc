@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2025/12/02   problems: 3185;
+- 2025/12/09   problems: 3199;
 - 2025/11/25   problems: 3156;
 - 2025/10/18   problems: 3106;
 - 2025/09/26   problems: 3039;
@@ -18,6 +18,9 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/12/09
+  - loj_2625
+  - P10689 P11620 P14513 P1527 P1912 P2178 P3232 P3292 P3515 P3810 P3980 P4197 P4254 P4839 P5503
 - 2025/12/02
   - 98 cf beta78 -ak
   - 99 cf beta78 -ak
