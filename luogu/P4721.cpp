@@ -1,28 +1,22 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/mod/fps_inv.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/po/fps_inv.hpp"
 
-void before() {}
-
-// #define tests
-using mint = modint<mod99>;
-NAME MeIoN_is_UMP45() {
-  INT(n);
-  VEC(mint, a, n - 1);
-  for (meion &x : a) x = -x;
-  a.insert(a.begin(), 1);
-  UL(fps_inv(a));
+#define tests 0
+#define fl 0
+#define DB 10
+using mint = M99;
+void Yorisou() {
+  INT(N);
+  vc<mint> f(N);
+  f[0] = 1;
+  FOR(i, 1, N) {
+    INT(x);
+    f[i] = -x;
+  }
+  print(fps_inv(f));
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-  std::cin.tie(nullptr)->sync_with_stdio(false);
-  std::cout << std::fixed << std::setprecision(12);
-  // freopen("in","r",stdin);
-  // freopen("outt","w",stdout);
-  before();
-#ifdef tests
-  LL(t); FOR(t)
-#endif
-  MeIoN_is_UMP45();
-  iroha 0;
-}
+#include "YRS/aa/main.hpp"

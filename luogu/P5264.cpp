@@ -1,12 +1,17 @@
-// #include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/poly/fps_sin_cos.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/po/fps_trig.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 10
 using mint = M99;
 void Yorisou() {
-  INT(n, op);
-  VEC(mint, a, n);
-  UL(not op ? fps_sin(a) : fps_cos(a));
+  INT(N, op);
+  VEC(mint, f, N);
+  print(op ? fps_cos(f) : fps_sin(f));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

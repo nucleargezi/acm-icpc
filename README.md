@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2026/01/01   problems: 3276;
 - 2025/12/09   problems: 3199;
 - 2025/11/25   problems: 3156;
 - 2025/10/18   problems: 3106;
@@ -18,6 +19,15 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2025/01/01
+  - Library_checker Min_Plus_Convolution_Convex_and_Arbitrary.cpp | Min_Plus_Convolution_Convex_and_Convex.cpp | Point_Set_Range_Sort_Range_Composite.cpp | Bell_Number.cpp | Bernoulli_Number.cpp | Composition_of_Formal_Power_Series.cpp | Composition_of_Formal_Power_Series_Large.cpp | Compositional_Inverse_of_Formal_Power_Series.cpp | Compositional_Inverse_of_Formal_Power_Series_Large.cpp | Division_of_Polynomials.cpp | Exp_of_Formal_Power_Series.cpp | Find_Linear_Recurrence.cpp | Inv_of_Formal_Power_Series.cpp | Inv_of_Polynomials.cpp | Kth_term_of_Linearly_Recurrent_Sequence.cpp | Log_of_Formal_Power_Series.cpp | Many_Factorials.cpp | Multipoint_Evaluation.cpp | Multipoint_Evaluation_Geometric_Sequence.cpp | Polynomial_Interpolation.cpp | Polynomial_Interpolation_Geometric_Sequence.cpp | Polynomial_Root_Finding_Mod_998244353.cpp | Polynomial_Taylor_Shift.cpp | Pow_of_Formal_Power_Series.cpp | Product_of_Polynomial_Sequence.cpp | Sqrt_of_Formal_Power_Series.cpp | p_p_p_Subset_Sum.cpp
+  - yokicoder No_1145 No_42
+  - P10249 P11175 P14802 P1776 P2000 P2590 P2871 P3165 P3321 P3377 P3803 P3871 P4008 P4146 P4389 P4402 P4451 P4482 P4491 P4512 P4567 P4721 P4723 P4781 P4841 P5050 P5110 P5158 P5264 P5265 P5277 P5282 P5338 P5349 P5373 P5383 P5393 P5394 P5395 P5396 P5408 P5409 P5488 P5491 P5641 P5667 P5748 P5809 P5824 P6012 P6613 P6800 P6828 P7364
+  - THUPC 2025
+  - cf 2174 -DE
+  - cf 2178 -IH
+  - cf 2180 -CFGH
+  - loj_162 loj_164
 - 2025/12/09
   - loj_2625
   - P10689 P11620 P14513 P1527 P1912 P2178 P3232 P3292 P3515 P3810 P3980 P4197 P4254 P4839 P5503

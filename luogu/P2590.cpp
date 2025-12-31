@@ -1,43 +1,50 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/tr/gbt/gbt_monoid_commute.hpp"
 
-#include "MeIoN_Lib/graph/Tree/tree_monoid_lazy.hpp"
-#include "MeIoN_Lib/ds/a_monoid/sum_cov.hpp"
-#include "MeIoN_Lib/ds/a_monoid/max_cov.hpp"
-
-NAME MeIoN_is_UMP45() {
-    int n;
-    std::cin >> n;
-    graph g(n);
-    g.read_tree();
-    tree v(g);
-    vector<int> w(n);
-    std::cin >> w;
-    Lazy_Tree_Monoid<tree<graph<int>>, a_monoid_sum_cov<int>> seg_sum(v, w);
-    Lazy_Tree_Monoid<tree<graph<int>>, a_monoid_max_cov<int>> seg_max(v, w);
-    
-    int m;
-    std::cin >> m;
-    for (int i{}, x, y; i < m; ++i) {
-        string op;
-        std::cin >> op;
-        if (op == "QMAX") {
-            std::cin >> x >> y;
-            std::cout << seg_max.prod_path(--x, --y) << '\n';
-        } else if (op == "QSUM") {
-            std::cin >> x >> y;
-            std::cout << seg_sum.prod_path(--x, --y) << '\n';
-        } else {
-            std::cin >> x >> y, --x;
-            seg_sum.set(x, y);
-            seg_max.set(x, y);
-        }
+#define tests 0
+#define fl 0
+#define DB 10
+struct MX {
+  using X = struct {
+    ll s, mx;
+  };
+  static constexpr X op(const X &L, const X &R) {
+    return {L.s + R.s, max(L.mx, R.mx)};
+  }
+  static constexpr X unit() {
+    return {0, -inf<ll>};
+  }
+  static constexpr bool commute = true;
+};
+void Yorisou() {
+  INT(N);
+  graph g(N);
+  g.read_tree();
+  VEC(int, a, N);
+  vc<MX::X> dat(N);
+  FOR(i, N) dat[i] = {a[i], a[i]};
+  tree v(g);
+  GBT_monoid_commute<decltype(v), MX> seg(v, dat);
+  INT(Q);
+  FOR(Q) {
+    STR(op);
+    if (op == "QMAX") {
+      INT(x, y);
+      --x, --y;
+      print(seg.prod(x, y).mx);
+    } else if (op == "QSUM") {
+      INT(x, y);
+      --x, --y;
+      print(seg.prod(x, y).s);
+    } else {
+      INT(x, y);
+      --x;
+      seg.set(x, {y, y});
     }
+  }
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    MeIoN_is_UMP45();
-    iroha 0;
-}
+#include "YRS/aa/main.hpp"

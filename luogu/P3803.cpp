@@ -1,13 +1,18 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/poly/convolution.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/po/convolution.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 1000
 using mint = M99;
 void Yorisou() {
-  LL(n, m);
-  VEC(mint, a, n + 1);
-  VEC(mint, b, m + 1);
-  UL(convolution(a, b));
+  INT(N, M);
+  VEC(mint, a, N + 1);
+  VEC(mint, b, M + 1);
+  print(convolution(a, b));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

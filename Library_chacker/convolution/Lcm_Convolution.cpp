@@ -1,7 +1,6 @@
-#include "YRS/Z_H/MeioN.hpp"
-#include "YRS/MeIoN_all.hpp"
-#include "YRS/math/mod/modint.hpp"
-#include "YRS/math/PR/convolution_lcm.hpp"
+#include "YRS/all.hpp"
+#include "YRS/mod/modint.hpp"
+#include "YRS/pr/convolution_lcm.hpp"
 
 // #define tests
 using mint = M99;
@@ -13,6 +12,5 @@ void Yorisou() {
   b.insert(b.begin(), 0);
   vector ans = convolution_lcm(a, b);
   ans.erase(ans.begin());
-  UL(ans);
+  print(ans);
 }
-#include "YRS/Z_H/main.hpp"

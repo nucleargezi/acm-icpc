@@ -1,15 +1,20 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/poly/poly_divmod.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+// #include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/po/poly_divmod.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 10
 using mint = M99;
 void Yorisou() {
-  LL(n, m);
-  VEC(mint, a, n + 1);
-  VEC(mint, b, m + 1);
-  meion [x, y] = poly_divmod(a, b);
-  UL(x);
-  UL(y);
+  INT(N, M);
+  VEC(mint, f, N + 1);
+  VEC(mint, g, M + 1);
+  Z [a, b] = poly_divmod(f, g);
+  print(a);
+  print(b);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

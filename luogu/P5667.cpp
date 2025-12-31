@@ -1,12 +1,17 @@
-// #include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/mod/lag.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+// #include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/po/lag.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 10
 using mint = M99;
 void Yorisou() {
-  LL(n, c);
-  VEC(mint, a, n + 1);
-  UL(lagrange_interpolate_iota<mint>(a, c, n + 1));
+  INT(N, M);
+  VEC(mint, a ,N + 1);
+  print(lag_inte_iota<mint>(a, M, N + 1));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

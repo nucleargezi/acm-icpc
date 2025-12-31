@@ -1,12 +1,17 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/poly/chirp_z_transfrom.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/po/chirp_z.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 1000
 using mint = M99;
 void Yorisou() {
   INT(n, c, m);
-  VEC(mint, a, n);
-  UL(chirp_z_transform<mint>(a, c, m));
+  VEC(mint, f, n);
+  print(chirp_z_transform<mint>(f, c, m));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"
