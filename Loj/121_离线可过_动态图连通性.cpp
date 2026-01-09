@@ -1,5 +1,5 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/rollback_dsu.hpp"
+#include "YRS/all.hpp"
+#include "YRS/ds/rollback/rollback_dsu.hpp"
 
 void before() {}
 
@@ -7,46 +7,46 @@ void before() {}
 using dsu = rollback_dsu;
 void Yorisou() {
   INT(n, m);
-  map<pair<int, int>, int> M;
-  vector<T4<int>> go;
-  vector<vector<pair<int, int>>> q(m);
+  map<PII, int> M;
+  vc<T4<int>> go;
+  vc<vc<PII>> q(m);
   FOR(i, m) {
     INT(op, x, y);
     --x, --y;
-    if (x > y) std::swap(x, y);
+    if (x > y) swap(x, y);
     if (op == 0) {
       M[{x, y}] = i;
     } else if (op == 1) {
-      go += {M[{x, y}], i, x, y};
+      go.ep(M[{x, y}], i, x, y);
       M.extract({x, y});
     } else {
-      q[i] += {x, y};
+      q[i].ep(x, y);
     }
   }
-  for (meion [p, l] : M) {
-    go += {l, m, p.first, p.second};
+  for (Z [p, l] : M) {
+    go.ep(l, m, p.fi, p.se);
   }
-  vector<int> I(len(go));
-  std::iota(I.begin(), I.end(), 0);
+  vc<int> I(len(go));
+  iota(I.begin(), I.end(), 0);
   dsu fa(n);
-  meion f = [&](meion &f, int l, int r, const vector<int> &I) -> void {
-    if (l > r - 1) iroha;
+  Z f = [&](Z &f, int l, int r, const vc<int> &I) -> void {
+    if (l > r - 1) return;
     int t{fa.time()};
-    int m = l + r >> 1;
-    vector<int> L, R;
+    int m = (l + r) >> 1;
+    vc<int> L, R;
     for (int id : I) {
-      meion [pl, pr, x, y] = go[id];
+      Z [pl, pr, x, y] = go[id];
       if (pl < l + 1 and pr > r - 1) {
         fa.merge(x, y);
       } else {
-        if (pl < m) L += id;
-        if (pr > m) R += id;
+        if (pl < m) L.ep(id);
+        if (pr > m) R.ep(id);
       }
     }
     if (l == r - 1) {
-      for (meion [x, y] : q[l]) {
-        UL(fa[x] == fa[y] ? 'Y' : 'N');
-        std::cout.flush();
+      for (Z [x, y] : q[l]) {
+        print(fa[x] == fa[y] ? 'Y' : 'N');
+        cout.flush();
       }
     } else {
       f(f, l, m, L), f(f, m, r, R);
@@ -54,18 +54,4 @@ void Yorisou() {
     fa.rollback(t);
   };
   f(f, 0, m, I);
-}
-
-// 日々を貪り尽くしてきた
-int main() {
-  std::cin.tie(nullptr)->sync_with_stdio(false);
-  std::cout << std::fixed << std::setprecision(12);
-  // freopen("in","r",stdin);
-  // freopen("outt","w",stdout);
-  before();
-#ifdef tests
-  LL(t); FOR(t)
-#endif
-  Yorisou();
-  iroha 0;
 }

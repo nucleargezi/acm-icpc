@@ -1,7 +1,5 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-// #include "MeIoN_Lib/IO/fmt.hpp"
-#include "MeIoN_Lib/math/seaweed_doubling.hpp"
+#include "YRS/all.hpp"
+#include "YRS/nt/seaweed_doubling.hpp"
 
 // #define tests
 void Yorisou() {
@@ -10,8 +8,7 @@ void Yorisou() {
   VEC(int, b, n);
   FOR(i, n) --a[i];
   FOR(i, n) --b[i];
-  vector<int> res = subunit_monge_dmul(a, b);
+  vc<int> res = subunit_monge_dmul(a, b);
   FOR(i, n) ++res[i];
-  UL(res);
+  print(res);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"

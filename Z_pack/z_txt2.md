@@ -1,5 +1,8 @@
 
 #### History (since 2025/03/12)
+- 2025/01/09
+  - P10283 P1912 P3045 P3476 P3515 P3546 P3564 P3763 P3765 P3988 P4013 P4117 P4197 P4214 P4309 P4334 P4390 P4463 P4553 P4572 P4592 P4609 P4735 P4743 P4767 P4847 P4980 P4983 P5028 P5231 P5308 P5432 P5574 P5808 P5825 P5896 P6021 P6062 P6078 P6246 P6378 P7456 P7834 P8021 P9062
+  - loj_6074
 - 2025/01/01
   - Library_checker Min_Plus_Convolution_Convex_and_Arbitrary.cpp | Min_Plus_Convolution_Convex_and_Convex.cpp | Point_Set_Range_Sort_Range_Composite.cpp | Bell_Number.cpp | Bernoulli_Number.cpp | Composition_of_Formal_Power_Series.cpp | Composition_of_Formal_Power_Series_Large.cpp | Compositional_Inverse_of_Formal_Power_Series.cpp | Compositional_Inverse_of_Formal_Power_Series_Large.cpp | Division_of_Polynomials.cpp | Exp_of_Formal_Power_Series.cpp | Find_Linear_Recurrence.cpp | Inv_of_Formal_Power_Series.cpp | Inv_of_Polynomials.cpp | Kth_term_of_Linearly_Recurrent_Sequence.cpp | Log_of_Formal_Power_Series.cpp | Many_Factorials.cpp | Multipoint_Evaluation.cpp | Multipoint_Evaluation_Geometric_Sequence.cpp | Polynomial_Interpolation.cpp | Polynomial_Interpolation_Geometric_Sequence.cpp | Polynomial_Root_Finding_Mod_998244353.cpp | Polynomial_Taylor_Shift.cpp | Pow_of_Formal_Power_Series.cpp | Product_of_Polynomial_Sequence.cpp | Sqrt_of_Formal_Power_Series.cpp | p_p_p_Subset_Sum.cpp
   - yokicoder No_1145 No_42

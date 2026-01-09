@@ -25,4 +25,3 @@ void Yorisou() {
     }
   }
 }
-#include "YRS/Z_H/main.hpp"

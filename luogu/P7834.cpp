@@ -49,13 +49,17 @@ void Yorisou() {
   h = rearrange(h, t);
   I = rearrange(I, t);
   wave_matrix_sim wm(h);
+  int ans = 0;
   FOR(Q) {
     INT(x, lm, K);
+    x = (x ^ ans) % N + 1;
+    lm = lm ^ ans;
+    K = (K ^ ans) % N + 1;
     --x;
     x = v.max_path([&](int x) { return val[x] <= lm; }, x, nt - 1);
     int l = lb(I, v.L[x]), r = lb(I, v.R[x]);
-    if (r - l < K) print(-1);
-    else print(wm.kth(l, r, r - l - K));
+    if (r - l < K) print(-1), ans = 0;
+    else print(ans = wm.kth(l, r, r - l - K));
   }
 }
 #include "YRS/aa/main.hpp"
