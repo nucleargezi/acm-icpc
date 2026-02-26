@@ -1,14 +1,19 @@
+#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/math/mod/modint.hpp"
-#include "YRS/math/set/subset_convolution.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/mod/mint.hpp"
+#include "YRS/sps/conv.hpp"
 
-// #define tests
-using mint = modint<1'000'000'000 + 9>;
+#define tests 0
+#define fl 0
+#define DB 10
+using mint = mint_t<1'000'000'009>;
 void Yorisou() {
-  INT(n);
-  const int N = 1 << n;
-  VEC(mint, a, N);
-  VEC(mint, b, N);
-  print(subset_convolution(a, b));
+  INT(N);
+  VEC(mint, a, 1 << N);
+  VEC(mint, b, 1 << N);
+  print(sps_conv(a, b));
 }
-#include "YRS/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

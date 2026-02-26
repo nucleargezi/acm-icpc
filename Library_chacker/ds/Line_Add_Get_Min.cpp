@@ -1,35 +1,31 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/lichao_tree.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/ds/sl/cht.hpp"
 
-// #define tests
-using line = Line<ll>;
 void Yorisou() {
-  LL(n, q);
-  vector<T3<ll>> quis;
-  FOR(n) {
-    LL(x, y);
-    quis.emplace_back(0, x, y);
+  INT(N, Q);
+  cht<ll, 0> f;
+  FOR(N) {
+    LL(a, b);
+    f.add(a, b);
   }
-  vector<ll> pos;
-  FOR(q) {
-    LL(op);
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      LL(x, y);
-      quis.emplace_back(0, x, y);
+      LL(a, b);
+      f.add(a, b);
     } else {
       LL(x);
-      pos.emplace_back(x);
-      quis.emplace_back(1, x, x);
-    }
-  }
-  lichao_tree<line, 1, 1> seg(pos, {0, inf<ll>});
-  for (meion [op, x, y] : quis) {
-    if (op == 0) {
-      seg.chmin_line({x, y});
-    } else {
-      UL(seg.quis(x).first);
+      print(f(x));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

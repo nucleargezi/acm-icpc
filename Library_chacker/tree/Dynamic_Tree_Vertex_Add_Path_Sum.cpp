@@ -1,37 +1,42 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/lct/LCT.hpp"
-#include "MeIoN_Lib/ds/lct/node_monoid.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/al/m/add.hpp"
+// #include "YRS/ds/lct/lct_monoid.hpp"
+#include "YRS/ds/lct/lct.hpp"
 
-// #define tests
-using mono = monoid_add<ll>;
-using node = lct_node_monoid<mono>;
-using LCT = Link_Cut_Tree<node>;
+using DS = lct_mono_t<monoid_add<ll>>;
 void Yorisou() {
-  LL(n, q);
-  LCT seg(n);
-  FOR(i, n) {
-    LL(x);
-    seg.set(i, x);
+  INT(N, q);
+  DS ds(N);
+  FOR(i, N) {
+    INT(x);
+    ds[i]->mx = x;
   }
-  FOR(n - 1) {
-    LL(x, y);
-    seg.link(x, y);
+  FOR(N - 1) {
+    INT(x, y);
+    ds.link(x, y);
   }
   FOR(q) {
-    LL(op);
+    INT(op);
     if (op == 0) {
-      LL(a, b, c, d);
-      seg.cut(a, b);
-      seg.link(c, d);
+      INT(a, b, c, d);
+      ds.cut(a, b);
+      ds.link(c, d);
     } else if (op == 1) {
-      LL(p, x);
-      seg.set(p, seg.prod_path(p, p) + x);
+      INT(p, x);
+      ds.set(p, ds.prod(p, p) + x);
     } else {
-      LL(x, y);
-      UL(seg.prod_path(x, y));
+      INT(x, y);
+      print(ds.prod(x, y));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

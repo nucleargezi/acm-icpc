@@ -1,13 +1,18 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/set/subset_exp.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/mod/mint.hpp"
+#include "YRS/sps/exp.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 10
 using mint = M99;
 void Yorisou() {
-  INT(n);
-  VEC(mint, a, 1 << n);
-  UL(subset_exp(a));
+  INT(N);
+  VEC(mint, a, 1 << N);
+  print(sps_exp(a));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

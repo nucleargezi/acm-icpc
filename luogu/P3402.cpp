@@ -1,29 +1,35 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/dynamic_dsu.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/ds/unionfind/dynamic_dsu.hpp"
 
-void before() {}
-
-// #define tests
-using dsu = dynamic_dsu<1>;
+#define tests 0
+#define fl 0
+#define DB 10
+using DS = dynamic_dsu<1, 1 << 19>;
+using np = DS::np;
 void Yorisou() {
-  LL(n, q);
-  dsu g(n);
-  vector<dsu::np> rt(q + 1);
-  rt[0] = g.new_root();
-  FOR(i, 1, q + 1) {
-    LL(op);
+  INT(N, Q);
+  DS g;
+  vc<np> t(Q + 1);
+  t[0] = nullptr;
+  FOR(i, 1, Q + 1) {
+    INT(op);
     if (op == 1) {
-      LL(x, y);
-      rt[i] = g.merge(rt[i - 1], --x, --y).first;
+      INT(x, y);
+      --x, --y;
+      t[i] = g.merge(t[i - 1], x, y).fi;
     } else if (op == 2) {
-      LL(k);
-      rt[i] = rt[k];
+      INT(k);
+      t[i] = t[k];
     } else {
-      rt[i] = rt[i - 1];
-      LL(x, y);
-      UL(g.same(rt[i], --x, --y));
+      t[i] = t[i - 1];
+      INT(x, y);
+      --x, --y;
+      print(g.same(t[i], x, y));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"

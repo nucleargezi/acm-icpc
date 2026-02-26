@@ -1,14 +1,18 @@
-#include "YRS/Z_H/MeioN.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-#include "YRS/ds/seg/lazy_seg_base.hpp"
-#include "YRS/ds/a_monoid/min_add.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/ds/seg/range_min_add.hpp"
 
-// #define tests
 void Yorisou() {
   INT(N, Q);
   VEC(ll, a, N);
-  lazy_seg<a_monoid_min_add<ll>> seg(a);
+  range_min_add<ll> seg(a);
   FOR(Q) {
     INT(op, l, r);
     if (op == 0) {
@@ -19,4 +23,5 @@ void Yorisou() {
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

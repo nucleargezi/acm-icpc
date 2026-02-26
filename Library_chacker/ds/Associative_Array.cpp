@@ -1,22 +1,27 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/hashmap.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/ds/basic/hashmap.hpp"
 
-void before() {}
-
-// #define tests
 void Yorisou() {
-  LL(q);
-  hash_map<ull> m;
-  FOR(q) {
-    LL(op);
+  INT(Q);
+  hashmap<ll> a(Q);
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      LL(x, v);
-      m[x] = v;
+      LL(x, y);
+      a[x] = y;
     } else {
       LL(x);
-      UL(m.get(x, 0));
+      print(a.get(x, 0));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

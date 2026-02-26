@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2026/02/27   problems: 3579;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
 - 2025/11/25   problems: 3156;
@@ -19,6 +20,129 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/02/27
+  - yukicoder No_3
+- 2026/02/26
+  - Library_checker
+    - Discrete_Logarithm_Fixed_Mod        | Dynamic_Graph_Vertex_Add_Component_Sum | Dynamic_Tree_Vertex_Add_Path_Sum
+    - Dynamic_Tree_Vertex_Add_Subtree_Sum | Dynamic_Tree_Vertex_Set_Path_Composite | Enumerate_Quotients             
+    - Line_Add_Get_Min                    | Log_of_Set_Power_Series               
+  - Luogu P11175
+  - 2025ICPConline1 - K
+- 2026/02/25
+  - Library_checker
+    - Associative_Array  | Point_Set_Range_Frequency | Range_Add_Range_Min
+    - Static_Convex_Hull
+- 2026/02/24
+  - Library_checker
+    - Convex_Layers                          | Enumerate_Primes       | Factorial         
+    - Many_Factorials                        | Number_of_Subsequences | Partition_Function
+    - Shift_of_Sampling_Points_of_Polynomial
+  - Luogu P5667
+  - yukicoder No_148 No_149
+- 2026/02/23
+  - yukicoder No_139 No_140 No_141 No_142 No_143 No_144 No_145 No_146 No_147
+- 2026/02/22
+  - Luogu P2197 P4980
+  - ucup1-7 - E G H I K
+  - yukicoder No_102 No_114 No_122 No_125 No_126 No_127 No_128 No_129 No_130 No_131 No_132 No_133 No_134 No_135 No_136 No_137 No_138 No_90
+- 2026/02/21
+  - Library_checker
+    - Polynomial_Composite_Set_Power_Series
+  - Luogu P10461 P12230 P12231 P12232 P6097 P6329
+  - yukicoder No_119 No_120 No_121 No_123 No_124
+- 2026/02/20
+  - yukicoder No_100 No_101 No_103 No_104 No_105 No_106 No_107 No_108 No_109 No_110 No_111 No_112 No_113 No_115 No_116 No_117 No_118 No_94 No_95 No_96 No_97 No_98 No_99
+- 2026/02/19
+  - at fps_24 - B D F_matpow H J L N O
+  - yukicoder No_81 No_82 No_83 No_84 No_85 No_86 No_87 No_88 No_89 No_91 No_92 No_93
+- 2026/02/18
+  - yukicoder No_65 No_66 No_67 No_68 No_69 No_70 No_71 No_72 No_73 No_74 No_75 No_76 No_77 No_78 No_79 No_80
+- 2026/02/17
+  - at fps_24 - S
+  - yukicoder No_61 No_62 No_63 No_64
+- 2026/02/16
+  - yukicoder No_16 No_28 No_29 No_30 No_41 No_42 No_43 No_44 No_45 No_46 No_47 No_48 No_49 No_50 No_51 No_52 No_53 No_54 No_55 No_56 No_57 No_58 No_59 No_60
+- 2026/02/14
+  - Luogu P5900 P6613
+- 2026/02/13
+  - Luogu P3261
+- 2026/02/12
+  - Luogu P14302
+- 2026/02/11
+  - yukicoder No_31 No_32 No_33 No_34 No_35 No_36 No_37 No_38 No_39 No_40
+- 2026/02/09
+  - yukicoder No_12 No_13 No_14 No_15 No_17 No_18 No_19 No_20 No_21 No_22 No_23 No_24 No_25 No_26 No_27
+- 2026/02/07
+  - yukicoder No_10 No_11
+- 2026/02/06
+  - Loj L150 L150
+  - at fps_24 - S_ofps
+  - Uoj U50
+- 2026/02/01
+  - 2020CCPCfinal - E L
+- 2026/01/31
+  - 2020CCPCfinal - F
+- 2026/01/29
+  - Library_checker
+    - Min_of_Mod_of_Linear
+- 2026/01/27
+  - Luogu P2764 P3355 P7368
+  - 2022CCPCfinal - D F H
+- 2026/01/26
+  - Luogu P4198 P4560 P5490 P8024
+- 2026/01/25
+  - Luogu P3402
+- 2026/01/24
+  - 2021ECfinal - A D I L
+  - ucup3-37 - A
+- 2026/01/23
+  - at fps_24 - A C E F G I K M P Q R T
+- 2026/01/21
+  - Luogu P1012 P5607
+  - 2023CCPCfinal - D G H
+- 2026/01/20
+  - Loj L6268
+  - Luogu P4071
+  - ICPC2022ECfinal - H I J
+- 2026/01/18
+  - Luogu P4705
+  - CCPC2025final - C
+- 2026/01/17
+  - Luogu P2767 P5219
+  - 2025CCPC济南 - E F
+- 2026/01/16
+  - Luogu P5827 P5828 P6295
+- 2026/01/15
+  - ucup1-7 - M
+- 2026/01/14
+  - Luogu P2157
+  - ucup1-6 - H J L
+- 2026/01/13
+  - Luogu P2056 P3426 P4103 P4135 P4655
+  - ucup1-6 - A B C D G I M
+- 2026/01/12
+  - Luogu P2605 P3586 P3723 P5356
+- 2026/01/11
+  - Loj L5032
+  - cf_2183 hello2026 - H
+  - Luogu P12736 P2839 P3295 P3302 P3825
+  - ucup1-3 - M
+- 2026/01/10
+  - ucup1-3 - K
+  - ucup1-4 - A B D E F G I J K
+- 2026/01/09
+  - 2022HK - D
+- 2026/01/05
+  - ucup1-3 - A B C D G I
+- 2026/01/03
+  - 2022HK - I
+- 2026/01/02
+  - 2022HK - A B C E F H K L
+- 2025/12/21
+  - Library_checker
+    - Binomial_Coefficient_Prime_Mod     | Stirling_Number_of_the_First_Kind          | Stirling_Number_of_the_First_Kind_Fixed_K
+    - Stirling_Number_of_the_Second_Kind | Stirling_Number_of_the_Second_Kind_Fixed_K
 - 2025/01/09
   - P10283 P1912 P3045 P3476 P3515 P3546 P3564 P3763 P3765 P3988 P4013 P4117 P4197 P4214 P4309 P4334 P4390 P4463 P4553 P4572 P4592 P4609 P4735 P4743 P4767 P4847 P4980 P4983 P5028 P5231 P5308 P5432 P5574 P5808 P5825 P5896 P6021 P6062 P6078 P6246 P6378 P7456 P7834 P8021 P9062
   - loj_6074

@@ -1,14 +1,19 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
-#include "MeIoN_Lib/math/set/subset_poly_compose.hpp"
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+#include "YRS/mod/mint.hpp"
+#include "YRS/sps/comp.hpp"
 
-// #define tests
+#define tests 0
+#define fl 0
+#define DB 10
 using mint = M99;
 void Yorisou() {
-  INT(n);
-  VEC(mint, f, 1 << n);
-  VEC(mint, g, n + 1);
-  UL(subset_poly_compose(f, g));
+  INT(N);
+  VEC(mint, f, 1 << N);
+  VEC(mint, g, N + 1);
+  print(sps_comp(g, f));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+#include "YRS/aa/main.hpp"
