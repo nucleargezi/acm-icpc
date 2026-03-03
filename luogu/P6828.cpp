@@ -1,17 +1,19 @@
 #define YRSD
+// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
 #include "YRS/IO/fast_io.hpp"
 // #include "YRS/random/rng.hpp"
-#include "YRS/po/chirp_z.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+#include "YRS/poly/multi_geo.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 1000
 using mint = M17;
+using fps = vc<mint>;
+fps_t<mint> X;
 void Yorisou() {
-  INT(n, c, m);
-  VEC(mint, f, n);
-  print(chirp_z_transform<mint>(f, c, m));
+  INT(N, c, m);
+  VEC(mint, f, N);
+  print(X.eval_geo(f, 1, c, m));
 }
+constexpr int tests = 0, fl = 0, DB = 10;
 #include "YRS/aa/main.hpp"

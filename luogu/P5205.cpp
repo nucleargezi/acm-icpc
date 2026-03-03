@@ -1,26 +1,21 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/mod/fps_sqrt.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/poly/fps_sqrt.hpp"
 
-void before() {}
-
-// #define tests
-using mint = modint<mod99>;
-NAME MeIoN_is_UMP45() {
-  INT(n);
-  VEC(mint, a, n);
-  UL(fps_sqrt(a));
+using mint = M99;
+using fps = vc<mint>;
+fps_t<mint> X;
+void Yorisou() {
+  INT(N);
+  VEC(mint, f, N);
+  print(X.sqrt(f));
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-  std::cin.tie(nullptr)->sync_with_stdio(false);
-  std::cout << std::fixed << std::setprecision(12);
-  // freopen("in","r",stdin);
-  // freopen("outt","w",stdout);
-  before();
-#ifdef tests
-  LL(t); FOR(t)
-#endif
-  MeIoN_is_UMP45();
-  iroha 0;
-}
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

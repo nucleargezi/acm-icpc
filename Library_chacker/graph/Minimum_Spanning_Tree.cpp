@@ -7,14 +7,15 @@
 // #include "YRS/ds/basic/retsu.hpp"
 // #include "YRS/mod/mint.hpp"
 // #include "YRS/aa/def.hpp"
-#include "YRS/poly/cc/label_bipartite.hpp"
+#include "YRS/g/mst_kru.hpp"
 
-using mint = M99;
-using fps = vc<mint>;
-fps_t<mint> X;
 void Yorisou() {
-  fps f = X.count_label_bipartite(1'000'00, 0);
-  FOR(i, 1, 1'000'01) print(f[i]);
+  INT(N, M);
+  graph g(N);
+  g.sc<1, 0>(M);
+  Z [s, es] = mst_kru(g);
+  print(s);
+  print(es);
 }
 constexpr int tests = 0, fl = 0, DB = 10;
 #include "YRS/aa/main.hpp"

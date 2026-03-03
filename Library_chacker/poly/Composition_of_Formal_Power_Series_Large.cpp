@@ -1,18 +1,22 @@
 #define YRSD
+// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
+// #include "YRS/IO/fast_io.hpp"
 // #include "YRS/random/rng.hpp"
-#include "YRS/po/comp.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/poly/comp.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
+using fps = vc<mint>;
+fps_t<mint> X;
 void Yorisou() {
   INT(N);
-  VEC(mint, a, N);
-  VEC(mint, b, N);
-  print(comp(a, b));
+  VEC(mint, f, N);
+  VEC(mint, g, N);
+  print(X.comp(f, g));
 }
+constexpr int tests = 0, fl = 0, DB = 10;
 #include "YRS/aa/main.hpp"

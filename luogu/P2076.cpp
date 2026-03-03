@@ -7,14 +7,21 @@
 // #include "YRS/ds/basic/retsu.hpp"
 // #include "YRS/mod/mint.hpp"
 // #include "YRS/aa/def.hpp"
-#include "YRS/poly/cc/label_bipartite.hpp"
+#include "YRS/ds/un/dsu.hpp"
+#include "YRS/ge/exp/mst.hpp"
 
-using mint = M99;
-using fps = vc<mint>;
-fps_t<mint> X;
+using P = point<ll>;
 void Yorisou() {
-  fps f = X.count_label_bipartite(1'000'00, 0);
-  FOR(i, 1, 1'000'01) print(f[i]);
+  INT(N);
+  VEC(P, a, N);
+  dsu g(N);
+  ll s = 0;
+  vc<PII> es;
+  for (Z [w, x, y] : manhattan_mst(a)) {
+    if (g.merge(x, y)) s += w, es.ep(x + 1, y + 1);
+  }
+  print(s);
+  for (Z x : es) print(x);
 }
 constexpr int tests = 0, fl = 0, DB = 10;
 #include "YRS/aa/main.hpp"

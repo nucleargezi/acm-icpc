@@ -1,39 +1,62 @@
 #define YRSD
+#include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/graph/Tree/near_kinbo.hpp"
-#include "YRS/ds/fenw/fenw.hpp"
-#include "YRS/ds/monoid/add.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/tr/near_kinbo.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
+#ifdef VIEW
+constexpr int sz = 10;
+#else
+constexpr int sz = 4'000'000;
+#endif
+int N;
+ll a[sz];
+constexpr int B = 1 << 5;
+
+void build(const vc<ll> &s) {
+  N = len(s);
+  FOR(i, N) a[i + N] = s[i];
+  for (uint i = (N << 1) - 1; i >= 1; --i) a[i / B] += a[i];
+}
+
+void add(uint i, ll x) {
+  a[i += N] += x;
+  while (i /= B) a[i] += x;
+}
+
+ll prod(uint l, uint r) {
+  l += N, r += N;
+  ll s = 0;
+  while (l / B != r / B) {
+    while (l & (B - 1)) s += a[l++];
+    while (r & (B - 1)) s += a[--r];
+    l /= B, r /= B;
+  }
+  for (uint i = l; i < r; ++i) s += a[i];
+  return s;
+}
 void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
   graph g(N);
-  FOR(N - 1) {
-    INT(x, y);
-    g.add(x, y);
-  }
-  g.build();
-  near_kinbo seg(g);
-  vector<ll> s(len(seg));
-  FOR(i, N) for (int x : seg.vs(i)) s[x] += a[i];
-  fenw<monoid_add<ll>> bit(s);
+  g.sc<0, 0>();
+  near_kinbo ds(g);
+  vc<ll> dat(ds.tt);
+  FOR(i, N) for (int x : ds.vs(i)) dat[x] += a[i];
+  build(dat);
   FOR(Q) {
     INT(op);
     if (op == 0) {
       INT(x, y);
-      for (int i : seg.vs(x)) bit.multiply(i, y);
+      for (int i : ds.vs(x)) add(i, y);
     } else {
       INT(x, l, r);
       ll s = 0;
-      for (Z [l, r] : seg.range(x, l, r)) s += bit.prod(l, r);
+      for (Z [l, r] : ds.range(x, l, r)) s += prod(l, r);
       print(s);
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

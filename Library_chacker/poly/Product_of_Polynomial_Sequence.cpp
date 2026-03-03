@@ -1,22 +1,23 @@
 #define YRSD
+// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
 #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/conv_all.hpp"
+#include "YRS/poly/conv_all.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
+using fps = vc<mint>;
+fps_t<mint> X;
 void Yorisou() {
   INT(N);
-  vc<vc<mint>> f(N);
+  vc<fps> a(N);
   FOR(i, N) {
-    INT(sz);
-    f[i].resize(sz + 1);
-    IN(f[i]);
+    INT(N);
+    ++N;
+    VEC(mint, f, N);
+    a[i] = std::move(f);
   }
-  print(conv_all(f));
+  print(X.conv_all(a));
 }
+constexpr int tests = 0, fl = 0, DB = 10;
 #include "YRS/aa/main.hpp"

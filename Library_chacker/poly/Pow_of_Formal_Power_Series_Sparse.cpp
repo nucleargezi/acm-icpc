@@ -1,16 +1,21 @@
+#define YRSD
+// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-#include "YRS/math/poly/fps_pow.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/poly/fps_pow.hpp"
 
-// #define tests
 using mint = M99;
+using fps = vc<mint>;
+fps_t<mint> X;
 void Yorisou() {
-  LL(N, K, M);
-  vector<mint> a(N);
-  FOR(K) {
-    INT(i, x);
-    a[i] = x;
-  }
-  print(fps_pow(a, M));
+  LL(N, K);
+  VEC(mint, f, N);
+  print(X.pow(f, K));
 }
-#include "YRS/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

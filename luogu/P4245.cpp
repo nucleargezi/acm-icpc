@@ -1,15 +1,24 @@
-// #include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/mod/modint_d.hpp"
-#include "MeIoN_Lib/math/poly/convolution.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint.hpp"
+// #include "YRS/aa/def.hpp"
+#include "YRS/poly/fps.hpp"
+#include "YRS/mod/dmint_t.hpp"
 
-// #define tests
 using mint = dmint;
+using fps = vc<mint>;
 void Yorisou() {
-  LL(n, m, mod);
-  mint::set_mod(mod);
-  VEC(mint, a, n + 1);
-  VEC(mint, b, m + 1);
-  UL(convolution(a, b));
+  INT(N, M, P);
+  mint::set_mod(P);
+  fps_t<mint> X;
+  VEC(mint, a, N + 1);
+  VEC(mint, b, M + 1);
+  print(X.conv(a, b));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

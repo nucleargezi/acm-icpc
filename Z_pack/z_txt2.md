@@ -1,5 +1,23 @@
 
 #### History (since 2025/03/12)
+- 2026/03/04
+  - Library_checker
+    - Multipoint_Evaluation_Geometric_Sequence | Product_of_Polynomial_Sequence
+  - Luogu P4726 P5264 P5265 P5383 P5394 P5809 P5827 P5828 P7364
+- 2026/03/03
+  - Library_checker
+    - Composition_of_Formal_Power_Series_Large | Compositional_Inverse_of_Formal_Power_Series_Large | Inv_of_Formal_Power_Series          
+    - Kth_term_of_Linearly_Recurrent_Sequence  | Sqrt_of_Formal_Power_Series                        | Vertex_Add_Range_Contour_Sum_on_Tree
+  - Luogu P10249 P15107 P2076 P3803 P4238 P4245 P4512 P4723 P4725 P5050 P5282 P5393 P6329
+- 2026/03/02
+  - Library_checker
+    - Composition_of_Formal_Power_Series | Convolution                                 | Exp_of_Formal_Power_Series
+    - Log_of_Formal_Power_Series         | Polynomial_Interpolation_Geometric_Sequence | Polynomial_Taylor_Shift   
+  - Luogu P14993 P5158 P6800 P6828
+- 2026/03/01
+  - Library_checker
+    - Minimum_Spanning_Tree | Pow_of_Formal_Power_Series
+  - Luogu P5205
 - 2026/02/28
   - yukicoder No_173 No_174 No_175 No_176 No_178 No_179 No_180 No_181
 - 2026/02/27
