@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/03/04   problems: 3615;
+- 2026/03/05   problems: 3636;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
@@ -21,7 +21,13 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/03/05
+  - Library_checker
+    - Multiplication_of_Big_Integers
+  - Luogu P1919 P4245
+  - yukicoder No_182 No_183 No_184 No_185 No_186 No_187 No_188 No_189 No_190 No_191 No_192 No_193 No_194 No_195 No_196 No_197 No_198 No_199 No_200
 - 2026/03/04
+  - Luogu P12044 P14420 P3374 P4151
   - Library_checker
     - Multipoint_Evaluation_Geometric_Sequence | Product_of_Polynomial_Sequence
   - Luogu P4726 P5264 P5265 P5383 P5394 P5809 P5827 P5828 P7364

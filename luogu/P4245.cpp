@@ -5,13 +5,11 @@
 #include "YRS/IO/fast_io.hpp"
 // #include "YRS/random/rng.hpp"
 // #include "YRS/ds/basic/retsu.hpp"
-// #include "YRS/mod/mint.hpp"
-// #include "YRS/aa/def.hpp"
-#include "YRS/poly/fps.hpp"
-#include "YRS/mod/dmint_t.hpp"
+// #include "YRS/mod/binom.hpp"
+#include "YRS/poly/c/bs.hpp"
+#include "YRS/mod/modint_d.hpp"
 
 using mint = dmint;
-using fps = vc<mint>;
 void Yorisou() {
   INT(N, M, P);
   mint::set_mod(P);

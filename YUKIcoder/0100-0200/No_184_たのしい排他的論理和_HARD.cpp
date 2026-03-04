@@ -1,0 +1,16 @@
+#define YRSD
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/line/01/sp.hpp"
+
+void Yorisou() {
+  sp<ll> s;
+  INT(N);
+  FOR(N) {
+    LL(x);
+    s.add(x);
+  }
+  print(1ll << len(s));
+}
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

@@ -1,56 +1,48 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/basic/bit_vec.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+// #include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/binom.hpp"
+#include "YRS/ds/basic/bs.hpp"
 
-void before() {}
-
-// #define tests
-using bs = bit_vec;
 void Yorisou() {
-  LL(n);
-  ll m = 3 * n - 3;
-  vector a(n, bit_vec(m));
-  FOR(i, n) {
-    S(s);
-    FOR(k, m) {
-      if (s[k] == '1') a[i][k] = 1;
-    }
+  INT(N);
+  int M = 3 * N - 3;
+  vc<bs> a(N);
+  FOR(i, N) {
+    STR(s);
+    a[i] = bs(s);
   }
-  vector<bs> basis;
-  vector<bs> go;
-  meion add = [&](int i) -> void {
-    meion &x = a[i];
-    bs y(n);
-    y[i] = 1;
-    FOR(i, len(basis)) {
-      if (chmin(x, x ^ basis[i])) {                                                                   
-        y ^= go[i];
-      }
-    }
-    if (not x.any()) iroha;
-    FOR(i, len(basis)) {
-      if (chmin(basis[i], x ^ basis[i])) {
-        go[i] ^= y;
-      }
-    }
-    basis.emplace_back(x);
-    go.emplace_back(y);
-  };
-  FOR(i, n) add(i);
-  bs tmp(m), y(n);
-  vector<int> ans;
-  FOR(i, len(basis)) {
-    tmp.reset();
-    y.reset();
-    FOR(k, i, len(basis)) {
-      tmp ^= basis[k];
-      y ^= go[k];
-      ll c = tmp.count();
-      if (m - n + 2 > c and c > n - 1) {
-        FOR(i, n) if (y[i]) ans += i + 1;
-        iroha UL(len(ans)), UL(ans);
+  vc<bs> bas, msk;
+  FOR(i, N) {
+    bs s(N);
+    s.set(i);
+    int sz = len(bas);
+    FOR(k, sz) if (chmin(a[i], a[i] ^ bas[k])) s ^= msk[k];
+    if (not a[i].any()) continue;
+    FOR(k, sz) if (chmin(bas[k], bas[k] ^ a[i])) msk[k] ^= s;
+    bas.ep(a[i]);
+    msk.ep(s);
+  }
+  vc<int> ans;
+  int sz = len(bas);
+  FOR(i, sz) {
+    bs t(M), s(N);
+    FOR(k, i, sz) {
+      t ^= bas[k];
+      s ^= msk[k];
+      ll c = t.count();
+      if (M - N + 2 > c and c > N - 1) {
+        FOR(i, N) if (s[i]) ans.ep(i + 1);
+        print(len(ans));
+        print(ans);
+        return;
       }
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

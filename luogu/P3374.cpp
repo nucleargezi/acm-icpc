@@ -1,24 +1,30 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/fenw/fenw.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#define YRSD
+// #include "YRS/aa/fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/debug.hpp"
+#include "YRS/IO/fast_io.hpp"
+// #include "YRS/random/rng.hpp"
+// #include "YRS/ds/basic/retsu.hpp"
+// #include "YRS/mod/mint_t.hpp"
+// #include "YRS/mod/binom.hpp"
+#include "YRS/ds/seg/range_sum_point_add.hpp"
+#include "YRS/al/m/add.hpp"
 
-// #define tests
+using DS = range_sum_point_add<monoid_add<ll>, 1 << 4>;
 void Yorisou() {
-  LL(n, q);
-  VEC(ll, a, n);
-  fenw_tree<monoid_add<ll>> seg(a);
-  FOR(q) {
-    LL(op);
+  INT(N, Q);
+  VEC(ll, a, N);
+  DS seg(a);
+  FOR(Q) {
+    INT(op, x, y);
     if (op == 1) {
-      LL(x, v);
       --x;
-      seg.multiply(x, v);
+      seg.multiply(x, y);
     } else {
-      LL(l, r);
-      --l;
-      UL(seg.prod(l, r));
+      --x;
+      print(seg.prod(x, y));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"
