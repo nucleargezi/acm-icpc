@@ -1,5 +1,11 @@
 
 #### History (since 2025/03/12)
+- 2026/03/06
+  - Loj L5079
+  - Luogu P12771 P3278
+  - yukicoder No_212 No_213 No_214 No_215
+- 2026/03/05
+  - yukicoder No_201 No_202 No_203 No_204 No_205 No_206 No_207 No_208 No_209 No_210 No_211
 - 2026/03/05
   - Library_checker
     - Multiplication_of_Big_Integers
