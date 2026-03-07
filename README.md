@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/03/06   problems: 3654;
+- 2026/03/08   problems: 3670;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
@@ -21,6 +21,14 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/03/08
+  - Luogu P1500 P2387 P3324 P4234 P4971
+- 2026/03/07
+  - Loj L2718 L3520 L3948 L4831 
+  - Luogu P4602 P4768 P6619 P7803 P9120 P9622 P9625 P12913
+  - Library_checker
+    - Incremental_Minimum_Spanning_Forest
+  - Uoj U3
 - 2026/03/06
   - Loj L5079
   - Luogu P12771 P3278

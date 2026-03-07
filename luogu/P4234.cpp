@@ -1,42 +1,30 @@
+#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
 #include "YRS/IO/fast_io.hpp"
-#include "YRS/ds/dsu.hpp"
-#include "YRS/ds/lct/lct_monoid.hpp"
-#include "YRS/ds/monoid/min_idx.hpp"
+#include "YRS/tr/inc_mst.hpp"
+#include "YRS/ds/heap/erase_heap.hpp"
 
-// #define tests
-using LCT = LCT_monoid_commute<monoid_min_idx<int>>;
 void Yorisou() {
   INT(N, M);
-  VEC(T3<int>, e, M);
-  for (Z &[x, y, w] : e) {
-    --x, --y;
-    swap(x, w);
+  VEC(T3<int>, es, M);
+  for (Z &[x, y, c] : es) {
+    --x, --y, swap(x, c);
   }
-  sort(e);
-  dsu g(N);
-  LCT lct(N + M);
-  FOR(i, N + M) lct[i]->mx = {inf<int>, i};
-  int ans = inf<int>;
-  multiset<int> se;
+  sort(es);
+  min_erase_heap<int> q;
+  int c = N, s = inf<int>;
+  inc_mst<int> ds(N);
   FOR(i, M) {
-    Z [w, x, y] = e[i];
-    if (x == y) continue;
-    lct.a[i + N].mx.fi = w;
-    if (g[x] == g[y]) {
-      Z [min, id] = lct.prod(x, y);
-      Z [ww, xx, yy] = e[id - N];
-      lct.cut(xx, id);
-      lct.cut(yy, id);
-      se.extract(ww);
+    Z [w, x, y] = es[i];
+    int id = ds.add(x, y, -w, i);
+    if (id == -1){
+      --c, q.eb(w);
+    } else if (id != i) {
+      q.pop(get<0>(es[id])), q.eb(w);
     }
-    g.merge(x, y);
-    se.eb(w);
-    lct.link(x, i + N);
-    lct.link(y, i + N);
-    if (g.count() == 1) chmin(ans, w - *se.begin());
+    if (c == 1) chmin(s, w - q.top());
   }
-  print(ans);
+  print(s);
 }
-#include "YRS/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"
