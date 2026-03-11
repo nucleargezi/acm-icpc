@@ -1,5 +1,15 @@
 
 #### History (since 2025/03/12)
+- 2026/03/11
+  - Luogu P13813 P13814
+  - ucup8 - I J
+- 2026/03/10
+  - Luogu P13805 P13806 P6626
+  - ucup8 - A B C D E F G K L
+- 2026/03/09
+  - Library_checker
+    - Dirichlet_Convolution_and_Prefix_Sums | Dirichlet_Inverse_and_Prefix_Sums | Kth_Root_Integer
+  - Luogu P2442 P9875
 - 2026/03/08
   - Luogu P1500 P2387 P3324 P4234 P4971
 - 2026/03/07
