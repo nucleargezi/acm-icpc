@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/03/11   problems: 3691;
+- 2026/03/13   problems: 3706;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
@@ -21,6 +21,8 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/03/12
+  - yukicoder No_216 No_217 No_218 No_219 No_220 No_221 No_222 No_223 No_224 No_225 No_226 No_227 No_228 No_229 No_230
 - 2026/03/11
   - Luogu P13813 P13814
   - ucup8 - I J
