@@ -86,12 +86,11 @@ std::string FormatLocalMonth(std::chrono::system_clock::time_point tp) {
 }
 
 bool StartsWith(const std::string& s, const std::string& prefix) {
-  return s.size() >= prefix.size() &&
-         s.compare(0, prefix.size(), prefix) == 0;
+  return s.size() >= prefix.size() && s.compare(0, prefix.size(), prefix) == 0;
 }
 
 bool UpdateSummaryText(const fs::path& path, const std::string& today,
-                       const std::string& month, std::uint64_t total) {
+    const std::string& month, std::uint64_t total) {
   std::ifstream ifs(path);
   std::vector<std::string> before;
   if (ifs) {
@@ -100,17 +99,19 @@ bool UpdateSummaryText(const fs::path& path, const std::string& today,
       before.push_back(line + '\n');
     }
     if (!ifs.good() && !ifs.eof()) {
-      std::cerr << "[error] failed while reading summary text: " << path << "\n";
+      std::cerr << "[error] failed while reading summary text: " << path
+                << "\n";
       return false;
     }
   }
 
   const std::string header = "#### Summary (since 2024/12)\n";
-  const std::string new_line = "- " + today + "   problems: " +
-                               std::to_string(total) + ";\n";
-  const bool has_month = std::any_of(
-      before.begin(), before.end(),
-      [&](const std::string& line) { return line.find(month) != std::string::npos; });
+  const std::string new_line =
+      "- " + today + "   problems: " + std::to_string(total) + ";\n";
+  const bool has_month =
+      std::any_of(before.begin(), before.end(), [&](const std::string& line) {
+        return line.find(month) != std::string::npos;
+      });
 
   std::vector<std::string> out;
   out.push_back(header);
@@ -257,7 +258,8 @@ int main() {
 
   std::ofstream ofs(json_output_path);
   if (!ofs) {
-    std::cerr << "[error] cannot open output file: " << json_output_path << "\n";
+    std::cerr << "[error] cannot open output file: " << json_output_path
+              << "\n";
     return 1;
   }
 
@@ -282,8 +284,8 @@ int main() {
   ofs << "}\n";
 
   if (not ofs.good()) {
-    std::cerr << "[error] failed while writing output file: " << json_output_path
-              << "\n";
+    std::cerr << "[error] failed while writing output file: "
+              << json_output_path << "\n";
     return 1;
   }
   ofs.close();
