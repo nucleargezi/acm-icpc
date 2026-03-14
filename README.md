@@ -1,6 +1,6 @@
 # Programming Problem Statistics
 
-![Problem Statistics Chart](Z_pack/chart.png)
+![Problem Statistics Chart](Z_pack/chart.svg)
 
 ## Platform Statistics
 #### Summary (since 2024/12)
