@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/03/13   problems: 3706;
+- 2026/03/14   problems: 3720;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
@@ -21,6 +21,9 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/03/14
+  - project_euler 1 | 2
+  - yukicoder No_177 No_231 No_232 No_233 No_234 No_235 No_236 No_237 No_238 No_239 No_240 No_241 No_242 No_243
 - 2026/03/12
   - yukicoder No_216 No_217 No_218 No_219 No_220 No_221 No_222 No_223 No_224 No_225 No_226 No_227 No_228 No_229 No_230
 - 2026/03/11
