@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/03/14   problems: 3714;
+- 2026/03/15   problems: 3803;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
@@ -20,6 +20,7 @@
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
+
 #### History (since 2025/03/12)
 - 2026/03/14
   - project_euler 1 | 2
