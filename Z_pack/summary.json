@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-03-15 01:38:14",
+  "updated_at": "2026-03-18 18:40:33",
   "root": "/home/yorisou/Yorisou_record",
-  "total": 3803,
+  "total": 3826,
   "platforms": {
     "Aizu": 24,
     "BJTU_training": 150,
@@ -9,13 +9,13 @@
     "Loj": 24,
     "Prov": 252,
     "Regional": 151,
-    "YUKIcoder": 244,
+    "YUKIcoder": 264,
     "atcoder": 863,
     "camp_like": 84,
     "codeforces": 1151,
-    "luogu": 470,
+    "luogu": 472,
     "problemset": 74,
-    "project_euler": 2,
+    "project_euler": 3,
     "qoj": 65,
     "ucup": 79,
     "uoj": 2
