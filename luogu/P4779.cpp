@@ -1,27 +1,13 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/dijkstra.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/g/dijkstra_fheap.hpp"
 
-void before() {}
-
-// #define tests
-NAME MeIoN_is_UMP45() {
-    int n, m, s;
-    std::cin >> n >> m >> s, --s;
-    graph<int, true> v(n);
-    v.read_graph(m);
-    std::cout << dijkstra(v, s).first << '\n';
+void Yorisou() {
+  INT(N, M, s);
+  --s;
+  graph<int, 1> g(N);
+  g.sc<1>(M);
+  print(dijkstra_fheap_dis<ll, int, 1>(g, s));
 }
-
-// 日々を貪り尽くしてきた
-int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    std::cin >> T;
-#endif
-    while (T--) { MeIoN_is_UMP45(); }
-    iroha 0;
-}
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

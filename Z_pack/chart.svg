@@ -71,8 +71,8 @@
   <g transform="translate(1147.97,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">problemset</text>
   </g>
-  <rect x="1203.82" y="668.816" width="71.4188" height="1.184" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1239.53" y="660.816" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">3</text>
+  <rect x="1203.82" y="665.659" width="71.4188" height="4.34133" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1239.53" y="657.659" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">11</text>
   <g transform="translate(1239.53,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">project_euler</text>
   </g>
@@ -81,8 +81,8 @@
   <g transform="translate(1331.09,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">qoj</text>
   </g>
-  <rect x="1386.95" y="638.821" width="71.4188" height="31.1787" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1422.66" y="630.821" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">79</text>
+  <rect x="1386.95" y="635.269" width="71.4188" height="34.7307" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1422.66" y="627.269" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">88</text>
   <g transform="translate(1422.66,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">ucup</text>
   </g>
