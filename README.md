@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/03/18   problems: 3826;
+- 2026/03/24   problems: 3826;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
 - 2025/12/09   problems: 3199;
@@ -22,6 +22,14 @@
 - 2024/12/31   problems: 485;
 
 #### History (since 2025/03/12)
+- 2026/03/23
+  - project_euler 10 | 11 | 4 | 5 | 6 | 7 | 8 | 9
+- 2026/03/22
+  - ucup4-ex-4 - J M
+- 2026/03/21
+  - Luogu P4779
+- 2026/03/19
+  - ucup1-9 - C D E F J L M
 - 2026/03/18
   - Luogu P5487
   - yukicoder No_261 No_262 No_263
