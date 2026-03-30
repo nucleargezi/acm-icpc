@@ -1,26 +1,27 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/lazy_dynamic_seg.hpp"
-#include "MeIoN_Lib/ds/a_monoid/sum_affine.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/mod/mint_t.hpp"
+#include "YRS/ds/seg/segdl_t.hpp"
+#include "YRS/al/am/sum_affine.hpp"
 
-void before() {}
-
-// #define tests
 using mint = M99;
+using AM = a_monoid_sum_affine<mint>;
+using DS = segdl_t<AM, 0, int>;
+using np = DS::np;
 void Yorisou() {
-  LL(n, q);
-  lazy_dynamic_seg<a_monoid_sum_affine<mint>, 0> seg(q << 5, 0, n);
-  meion rt = seg.new_root();
-  FOR(q) {
-    LL(op);
+  INT(N, Q);
+  DS seg(0, N);
+  np t{};
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      LL(l, r, c, d);
-      seg.apply(rt, l, r, {c, d});
+      INT(l, r, a, b);
+      t = seg.apply(t, l, r, {a, b});
     } else {
-      LL(l, r);
-      UL(seg.prod(rt, l, r));
+      INT(l, r);
+      print(seg.prod(t, l, r));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+constexpr int tests = 0, fl = 0, DB = 10;
+#include "YRS/aa/main.hpp"

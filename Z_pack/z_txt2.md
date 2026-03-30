@@ -1,6 +1,26 @@
 
 #### History (since 2025/03/12)
+- 2026/03/31
+  - Luogu P4244
+- 2026/03/30
+  - Luogu P11278 P1411 P14551 P15461 P1691 P1797 P3219
+  - yukicoder No_270
+  - Library_checker
+    - Nim_Product_F_264_mathbb_F_2_64_F_264
+- 2026/03/29
+  - Uoj U419
+- 2026/03/28
+  - Luogu P14578 P14579 P14580
+- 2026/03/27
+  - Library_checker
+    - Stern_Brocot_Tree
+  - Luogu P1222 P1819 P3856
+- 2026/03/26
+  - Library_checker
+    - Range_Affine_Range_Sum_Large_Array
+  - yukicoder No_271 No_272 No_273 No_274 No_275 No_276 No_277 No_278 No_279 No_280 No_281 No_282
 - 2026/03/25
+  - yukicoder No_267 No_268 No_269
   - project_euler 12 | 13 | 14 | 15 | 16 | 17
 - 2026/03/24
   - yukicoder No_264 No_265 No_266
