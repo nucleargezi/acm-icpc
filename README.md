@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2026/04/01   problems: 3891;
 - 2026/03/31   problems: 3885;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
@@ -23,7 +24,7 @@
 
 #### History (since 2025/03/12)
 - 2026/03/31
-  - Luogu P4244
+  - Luogu P12197 P1400 P1752 P1791 P3059 P4244 P9401
 - 2026/03/30
   - Luogu P11278 P1411 P14551 P15461 P1691 P1797 P3219
   - yukicoder No_270
