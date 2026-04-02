@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/04/01   problems: 3891;
+- 2026/04/02   problems: 3891;
 - 2026/03/31   problems: 3885;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
