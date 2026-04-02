@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/04/02   problems: 3891;
+- 2026/04/03   problems: 3892;
 - 2026/03/31   problems: 3885;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
@@ -21,8 +21,13 @@
 - 2025/02/28   problems: 1096;
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
-
 #### History (since 2025/03/12)
+- 2026/04/03
+  ```sh
+  └── yukicoder
+      └── 0200-0300
+          └── No_283_スライドパズルと魔方陣.cpp
+  ```
 - 2026/03/31
   - Luogu P12197 P1400 P1752 P1791 P3059 P4244 P9401
 - 2026/03/30
