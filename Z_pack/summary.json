@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-04-03 07:25:27",
+  "updated_at": "2026-04-04 17:44:27",
   "root": "/home/yorisou/Yorisou_record",
-  "total": 3892,
+  "total": 3904,
   "platforms": {
     "aizu": 24,
     "atcoder": 863,
@@ -19,6 +19,6 @@
     "train": 0,
     "ucup": 88,
     "uoj": 3,
-    "yukicoder": 284
+    "yukicoder": 296
   }
 }
