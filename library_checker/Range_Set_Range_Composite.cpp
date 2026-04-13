@@ -1,25 +1,31 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/range_assign_seg.hpp"
-#include "MeIoN_Lib/ds/monoid/affine.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fast_io.hpp"
+#include "YRS/mod/mint_t.hpp"
+#include "YRS/ds/seg/range_assign_seg.hpp"
+#include "YRS/al/m/affine.hpp"
 
-// #define tests
 using mint = M99;
-using mono = monoid_affine<mint>;
+using MX = monoid_affine<mint>;
+using DS = range_assign_seg<MX>;
 void Yorisou() {
-  LL(n, q);
-  VEC(mono::X, a, n);
-  range_assign_seg<mono> seg(a);
-  while (q--) {
-    INT(op, l, r);
+  INT(N, Q);
+  DS seg(N, [&](int i) -> MX::X {
+    INT(a, b);
+    return {a, b};
+  });
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      INT(c, d);
-      seg.assign(l, r, {c, d});
+      INT(l, r, b, c);
+      seg.assign(l, r, {b, c});
     } else {
-      INT(x);
-      UL(mono::eval(seg.prod(l, r), x));
+      INT(l, r, x);
+      print(seg.prod(l, r).eval(x));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

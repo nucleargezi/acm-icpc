@@ -1,29 +1,16 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/primtable.hpp"
+#include "YRS/all.hpp"
+#include "YRS/pr/ptable.hpp"
 
-void before() {}
-
-// #define tests
-NAME MeIoN_is_UMP45() {
-    int n, q;
-    std::cin >> n >> q;
-    vector a = primtable(n);
-    for (int i{}, x; i < q; ++i) {
-        std::cin >> x;
-        std::cout << a[--x] << '\n';
-    }
+void Yorisou() {
+  INT(N, Q);
+  vc<int> t = ptable(N);
+  FOR(Q) {
+    INT(x);
+    print(t[x - 1]);
+  }
 }
 
-// 日々を貪り尽くしてきた
 int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    std::cin >> T;
-#endif
-    while (T--) { MeIoN_is_UMP45(); }
-    iroha 0;
+  Yorisou();
+  return 0;
 }

@@ -1,14 +1,17 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/dominator_tree.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/g/dominator_tree.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m, s);
-  graph<bool, 1> g(n);
-  g.read_graph<0, 0>(m);
-  meion res = dominator_tree(g, s);
-  res[s] = s;
-  UL(res);
+  INT(N, M, t);
+  graph<int, 1> g(N);
+  g.sc<0, 0>(M);
+  vc<int> fa = dominator(g, t);
+  fa[t] = t;
+  print(fa);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

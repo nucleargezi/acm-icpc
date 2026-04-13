@@ -1,4 +1,52 @@
 #### History (since 2025/03/12)
+- 2026/04/13
+  ```sh
+  ├── library_checker
+  │   └── Bernoulli_Number.cpp [cover] | Connected_Components_of_Complement_Graph.cpp | Cycle_Detection_Directed.cpp [cover] | Cycle_Detection_Undirected.cpp [cover] | Dominator_Tree.cpp [cover] | Enumerate_Cliques.cpp [cover] | Enumerate_Triangles.cpp [cover] | Eulerian_Trail_Directed.cpp [cover] | Eulerian_Trail_Undirected.cpp [cover] | Incremental_Minimum_Spanning_Forest.cpp [cover] | K_Shortest_Walk.cpp [cover] | Matching_on_General_Graph.cpp [cover] | Maximum_Independent_Set.cpp [cover] | Minimum_Cost_b_flow.cpp [cover] | Minimum_Spanning_Tree.cpp [cover] | Minimum_Steiner_Tree.cpp [cover] | Shortest_Path.cpp [cover] | Static_Rectangle_Add_Rectangle_Sum.cpp | Strongly_Connected_Components.cpp | Two_Edge_Connected_Components.cpp [cover]
+  └── luogu
+      └── P4043.cpp [cover]
+  ```
+- 2026/04/12
+  ```sh
+  ├── library_checker
+  │   └── Biconnected_Components.cpp | Static_Range_Inversions_Query.cpp [cover] | Static_Range_LIS_Query.cpp [cover]
+  └── luogu
+      └── P2075.cpp [cover]
+  ```
+- 2026/04/11
+  ```sh
+  ├── library_checker
+  │   └── Rectangle_Add_Point_Get.cpp [cover]
+  └── yukicoder
+      ├── 0200-0300
+      │   └── No_296_n度寝.cpp | No_297_カードの数式.cpp | No_298_話の伝達.cpp | No_299_蟻本が読めない.cpp
+      └── 0300-0400
+          └── No_300_平方数.cpp | No_301_サイコロで確率問題_1.cpp | No_302_サイコロで確率問題_2.cpp | No_303_割れません.cpp
+  ```
+- 2026/04/10
+  ```sh
+  └── library_checker
+      └── Persistent_Range_Affine_Range_Sum.cpp [cover] | Persistent_Unionfind.cpp | Range_Set_Range_Composite.cpp [cover] | Rectangle_Add_Point_Get.cpp
+  ```
+- 2026/04/09
+  ```sh
+  ├── loj
+  │   └── 3800_HEOI_2013_Segment.cpp
+  └── luogu
+      └── P10602.cpp
+  ```
+- 2026/04/08
+  ```sh
+  ├── library_checker
+  │   └── Dynamic_Sequence_Range_Affine_Range_Sum.cpp
+  └── luogu
+      └── P3383.cpp [cover] | P4097.cpp [cover]
+  ```
+- 2026/04/05
+  ```sh
+  └── luogu
+      └── P3052.cpp | P3098.cpp
+  ```
 - 2026/04/04
   ```sh
   └── yukicoder

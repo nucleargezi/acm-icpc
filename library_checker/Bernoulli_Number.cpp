@@ -1,16 +1,15 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/f/bernoulli.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/poly/f/bernoulli.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
+fps_t<mint> X;
 void Yorisou() {
   INT(N);
-  print(bernoulli<mint>(N));
+  print(X.bernoulli(N));
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

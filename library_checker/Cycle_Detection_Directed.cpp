@@ -1,15 +1,18 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/find_cycle_directed.hpp" 
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/g/find_min_cycle.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m);
-  graph<bool, 1> g(n);
-  g.read_graph<0, 0>(m);
-  meion [vs, es] = find_cycle_directed(g);
-  if (es.empty()) iroha UL(-1);
-  UL(len(es));
-  for (int x : es) UL(x);
+  INT(N, M);
+  graph<int, 1> g(N);
+  g.sc<0, 0>(M);
+  Z [vs, es] = find_min_cycle(g);
+  if (es.empty()) return print(-1);
+  print(si(es));
+  for (int i : es) print(i);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -1,18 +1,18 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/Z_H/FH.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/IO/fmt.hpp"
-#include "MeIoN_Lib/IO/fast_io.hpp"
-#include "MeIoN_Lib/ds/off_line/range_quis/range_inverse_count.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/range/range_inv.hpp"
 
-// #define tests
 void Yorisou() {
-  LL(n, q);
-  VEC(int, a, n);
-  range_inverse_count seg(a);
-  seg.read_quis<0>(q);
-  for (ll x : seg.count()) {
-    UL(x);
-  }
+  INT(N, Q);
+  VEC(int, a, N);
+  vc<int> f = a;
+  unique(f);
+  for (int &x : a) x = lb(f, x);
+  VEC(PII, q, Q);
+  for (ll x : range_inv{}.f(a, q)) print(x);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

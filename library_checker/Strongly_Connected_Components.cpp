@@ -1,16 +1,14 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/g/bcc_e.hpp"
+#include "YRS/g/scc.hpp"
 
 void Yorisou() {
   INT(N, M);
-  graph g(N);
+  graph<int, 1> g(N);
   g.sc<0, 0>(M);
-  Z [T, id] = bcc_e(g);
-  vc<vc<int>> a(T);
-  FOR(i, N) a[id[i]].ep(i);
+  Z [T, id] = scc(g);
   print(T);
-  FOR(i, T) print(si(a[i]), a[i]);
+  for (Z a : get_scc_group(T, id)) print(si(a), a);
 }
 
 int main() {

@@ -1,22 +1,20 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/flow/flower.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m);
-  flower FL(n);
-  while (m--) {
+  INT(N, M);
+  flower g(N);
+  FOR(M) {
     INT(x, y);
-    FL.add(x, y);
+    g.add(x, y);
   }
-  int ans = FL.solve();
-  vector<int> matching = FL.match;
-  UL(ans);
-  FOR(i, n) {
-    if (matching[i] < i) {
-      UL(matching[i], i);
-    }
-  }
+  print(g.sol());
+  var m = g.m;
+  FOR(i, N) if (m[i] != N and i < m[i]) print(i, m[i]);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

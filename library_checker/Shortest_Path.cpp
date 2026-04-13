@@ -1,21 +1,23 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/dijkstra.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/g/dijkstra.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m, s, t);
-  graph<ll, 1> g(n);
-  g.read_graph<1, 0>(m);
-  meion [dis, fa] = dijkstra(g, s);
-  if (dis[t] == inf<ll>) iroha UL(-1);
-  vector<int> path;
+  INT(N, M, s, t);
+  graph<int, 1> g(N);
+  g.sc<1, 0>(M);
+  Z [d, f] = dijkstra<ll>(g, s);
+  if (d[t] == inf<ll>) return print(-1);
   int x = t;
-  while (x != -1) path.emplace_back(x), x = fa[x];
-  reverse(path);
-  UL(dis[t], len(path) - 1);
-  FOR(i, len(path) - 1) {
-    UL(path[i], path[i + 1]);
-  }
+  vc<int> pa;
+  while (x != -1) pa.ep(x), x = f[x];
+  reverse(pa);
+  int sz = si(pa);
+  print(d[t], sz - 1);
+  FOR(i, sz - 1) print(pa[i], pa[i + 1]);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -31,23 +31,23 @@
   <g transform="translate(396.618,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">camp_like</text>
   </g>
-  <rect x="449.185" y="215.739" width="67.2176" height="454.261" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="482.794" y="207.739" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">1151</text>
+  <rect x="449.185" y="215.344" width="67.2176" height="454.656" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="482.794" y="207.344" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">1152</text>
   <g transform="translate(482.794,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">codeforces</text>
   </g>
-  <rect x="535.362" y="602.907" width="67.2176" height="67.0933" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="568.971" y="594.907" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">170</text>
+  <rect x="535.362" y="600.144" width="67.2176" height="69.856" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="568.971" y="592.144" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">177</text>
   <g transform="translate(568.971,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">library_checker</text>
   </g>
-  <rect x="621.538" y="660.528" width="67.2176" height="9.472" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="655.147" y="652.528" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">24</text>
+  <rect x="621.538" y="660.133" width="67.2176" height="9.86667" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="655.147" y="652.133" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">25</text>
   <g transform="translate(655.147,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">loj</text>
   </g>
-  <rect x="707.715" y="475.824" width="67.2176" height="194.176" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="741.324" y="467.824" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">492</text>
+  <rect x="707.715" y="474.64" width="67.2176" height="195.36" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="741.324" y="466.64" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">495</text>
   <g transform="translate(741.324,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">luogu</text>
   </g>
@@ -91,8 +91,8 @@
   <g transform="translate(1430.74,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">uoj</text>
   </g>
-  <rect x="1483.3" y="553.179" width="67.2176" height="116.821" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1516.91" y="545.179" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">296</text>
+  <rect x="1483.3" y="550.021" width="67.2176" height="119.979" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1516.91" y="542.021" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">304</text>
   <g transform="translate(1516.91,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">yukicoder</text>
   </g>

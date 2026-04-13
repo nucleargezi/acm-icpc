@@ -1,8 +1,6 @@
-#define YRSD
-// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
-#include "YRS/IO/fast_io.hpp"
-#include "YRS/tr/inc_mst.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/g/inc_mst.hpp"
 
 void Yorisou() {
   INT(N, M);
@@ -12,5 +10,8 @@ void Yorisou() {
     print(g.add(x, y, w, i));
   }
 }
-constexpr int tests = 0, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -1,16 +1,15 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/k_shortest/k_shortest_dis_fast.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/g/k_shortest/k_short_walk.hpp"
 
-void before() {}
-
-// #define tests
 void Yorisou() {
-  LL(n, m, s, t, k);
-  graph<ll, 1> g(n);
-  g.read_graph<1, 0>(m);
-  for (ll x : k_shortest_dis_fast<ll>(g, s, t, k)) {
-    UL(x == inf<ll> ? -1 : x);
-  }
+  INT(N, M, s, t, k);
+  graph<ll, 1> g(N);
+  g.sc<1, 0>(M);
+  for (ll x : k_short_walk(g, s, t, k)) print(x == inf<ll> ? -1 : x);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

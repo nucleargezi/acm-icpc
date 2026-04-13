@@ -1,16 +1,21 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/euler_walk.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/g/euler_walk.hpp"
 
-#define tests
 void Yorisou() {
-  INT(n, m);
-  graph<bool, 1> g(n);
-  g.read_graph<0, 0>(m);
-  meion [vs, es] = euler_walk(g);
-  if (vs.empty()) iroha No();
-  Yes();
-  UL(vs);
-  UL(es);
+  INT(N, M);
+  graph<int, 1> g(N);
+  g.sc<0, 0>(M);
+  vc<int> v = euler_walk(g);
+  if (v.empty()) return print("No");
+  print("Yes");
+  vc<int> es = vs_to_es(g, v);
+  print(v);
+  print(es);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}

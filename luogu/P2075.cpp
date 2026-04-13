@@ -1,19 +1,17 @@
-// #include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-// #include "MeIoN_Lib/IO/fmt.hpp"
-#include "MeIoN_Lib/IO/fast_io.hpp"
-#include "MeIoN_Lib/ds/online_range_q/range_lis_query.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/range/range_lis.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, q);
-  VEC(int, a, n);
-  FOR(i, n) --a[i];
-  range_lis_quis g(a);
-  while (q--) {
-    INT(l, r);
-    --l;
-    UL(g.prod(l, r));
-  }
+  INT(N, Q);
+  VEC(int, a, N);
+  for (int &x : a) --x;
+  VEC(PII, q, Q);
+  for (Z &x : q) x.fi -= 1;
+  for (int x : range_lis(a, q).f()) print(x);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -1,21 +1,24 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/enumerate_clique.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/mod/mint_t.hpp"
+#include "YRS/g/enumerate_clique.hpp"
 
-// #define tests
 using mint = M99;
 void Yorisou() {
-  INT(n, m);
-  VEC(mint, a, n);
-  graph g(n);
-  g.read_graph<0, 0>(m);
-  mint ans;
-  enumerate_cliques(g, [&](const vector<int> &v) {
-    mint ad = 1;
-    for (int x : v) ad *= a[x];
-    ans += ad;
+  INT(N, M);
+  VEC(int, a, N);
+  graph g(N);
+  g.sc<0, 0>(M);
+  mint s;
+  enumerate_cliques(g, [&](var v) {
+    mint t = 1;
+    for (int x : v) t *= a[x];
+    s += t;
   });
-  UL(ans);
+  print(s);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

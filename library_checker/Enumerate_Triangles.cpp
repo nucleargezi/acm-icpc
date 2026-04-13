@@ -1,19 +1,20 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Apck/enumerate_cyc3.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/mod/mint_t.hpp"
+#include "YRS/g/enumerate_c3.hpp"
 
-// #define tests
 using mint = M99;
 void Yorisou() {
-  INT(n, m);
-  VEC(mint, a, n);
-  graph g(n);
-  g.read_graph<0, 0>(m);
-  mint ans;
-  enumerate_cyc_3(g, [&](int i, int k, int j) -> void {
-    ans += a[i] * a[k] * a[j];
-  });
-  UL(ans);
+  INT(N, M);
+  VEC(mint, a, N);
+  graph g(N);
+  g.sc<0, 0>(M);
+  mint s;
+  enumerate_c3(g, [&](int i, int k, int j) { s += a[i] * a[k] * a[j]; });
+  print(s);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

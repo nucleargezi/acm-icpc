@@ -1,23 +1,30 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/flow/min_cost_flow_lower.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/flow/min_cost_bflow.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m);
-  min_cost_flow<ll, ll> FL(n);
-  FOR(i, n) {
-    LL(x);
-    FL.add_source(i, x);
+  INT(N, M);
+  min_cost_bflow<ll, i128> g(N);
+  FOR(i, N) {
+    LL(b);
+    g.add(i, b);
   }
-  FOR(i, m) {
-    LL(f, t, l, r, c);
-    FL.add(f, t, l, r, c);
+  FOR(i, M) {
+    INT(s, t);
+    LL(l, r, c);
+    g.add(s, t, l, r, c);
   }
-  meion [ok, cost] = FL.solve();
-  if (not ok) iroha UL("infeasible");
-  UL(cost);
-  for (meion &&p : FL.get_potential()) UL(p);
-  for (meion &&e : FL.get_edges()) UL(e.flow());
+  Z s = g.flow();
+  if (s) {
+    print(*s);
+    for (Z x : g.get_pot()) print(x);
+    for (Z &&e : g.get_es()) print(e.fl);
+  } else {
+    print("infeasible");
+  }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
