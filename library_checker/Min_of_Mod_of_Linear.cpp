@@ -1,15 +1,15 @@
-#define YRSD
+// https://icpc.bjtu.edu.cn/problem/11381
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/pr/min_line.hpp"
 
-#define tests 1
-#define fl 0
-#define DB 10
 void Yorisou() {
-  INT(N, M, a, b);
-  print(min_line(0, N, a, b, M).se);
+  LL(N, p, a, b);
+  print(min_line(0, N, a, b, p).se);
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}

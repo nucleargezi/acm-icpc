@@ -1,25 +1,30 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Tree/tree_monoid.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/tr/hld_mono.hpp"
+#include "YRS/al/m/add.hpp"
 
-// #define tests
+using MX = monoid_add<ll>;
+using DS = hld_mono<int, MX, 0>;
 void Yorisou() {
-  LL(n, q);
-  VEC(ll, a, n);
-  graph g(n);
-  g.read_tree<0, 0>();
-  tree v(g);
-  tree_monoid<decltype(v), monoid_add<ll>> seg(v, a);
-  FOR(q) {
-    LL(op);
+  INT(N, Q);
+  VEC(ll, a, N);
+  graph g(N);
+  g.sc<0, 0>();
+  hld v(g);
+  DS seg(v, a);
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      LL(p, x);
-      seg.multiply(p, x);
+      INT(i, x);
+      seg.multiply(i, x);
     } else {
-      LL(x, y);
-      UL(seg.prod_path(x, y));
+      INT(x, y);
+      print(seg.prod(x, y));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

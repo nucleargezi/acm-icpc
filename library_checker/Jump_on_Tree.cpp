@@ -1,16 +1,20 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Tree/Basic.hpp"
+// https://icpc.bjtu.edu.cn/problem/11430
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/tr/hld.hpp"
 
-// #define tests
 void Yorisou() {
-  LL(n, q);
-  graph g(n);
-  g.read_tree<0, 0>();
-  tree v(g);
-  FOR(q) {
-    LL(x, y, k);
-    UL(v.jump(x, y, k));
+  INT(N, Q);
+  graph g(N);
+  g.sc<0, 0>();
+  hld v(g);
+  FOR(Q) {
+    INT(x, y, k);
+    print(v.jump(x, y, k));
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

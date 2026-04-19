@@ -1,11 +1,14 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/Z_H/fast_io.hpp"
-#include "MeIoN_Lib/math/PR/prims_test.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/pr/ptest.hpp"
 
-#define tests
 void Yorisou() {
-  LL(n);
-  Yes(primetest(n));
+  LL(x);
+  Yes(ptest(x));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}

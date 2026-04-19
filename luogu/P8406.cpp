@@ -1,42 +1,38 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/string/pam_deque.hpp"
-#include "YRS/ds/dsu.hpp"
+#include "YRS/ds/un/dsu.hpp"
 
-// #define tests
-struct dat {
-  fast_deque<char> s;
-  pam_deque<2> pam;
-};
 void Yorisou() {
-  INT(n);
-  S(s);
-  dsu g(n);
-  vector<dat> pam(n);
-  for (int i = 0; i < n; ++i) {
-    pam[i].pam.push_back(pam[i].s, s[i]);
-  }
-  for (int i = 1; i < n; ++i) {
+  INT(N);
+  STR(s);
+  FOR(i, N) s[i] -= '0';
+  dsu g(N);
+  vc<pam_deque<2>> pam(N);
+  FOR(i, N) pam[i].pb(s[i]);
+  FOR(N - 1) {
     INT(a, b);
     --a, --b;
-    int fa = g[a], fb = g[b];
-    if (fa == fb) {
-      UL(pam[fa].pam.keis());
-      continue;
-    }
-    if (pam[fa].s.size() >= pam[fb].s.size()) {
-      for (char c : pam[fb].s.enumerate()) {
-        pam[fa].pam.push_back(pam[fa].s, c);
-      }
-      g.merge_f(fa, fb);
-      UL(pam[fa].pam.keis());
+    a = g[a], b = g[b];
+    if (a == b) {
+      print(pam[a].ke());
     } else {
-      for (char c : reversed(pam[fa].s.enumerate())) {
-        pam[fb].pam.push_front(pam[fb].s, c);
+      if (g.size(a) > g.size(b)) {
+        for (char x : pam[b].s.get_all()) pam[a].pb(x);
+        g.set(a, b);
+        print(pam[a].ke());
+      } else {
+        string s = pam[a].s.get_all();
+        reverse(s);
+        for (char x : s) pam[b].pf(x);
+        g.set(b, a);
+        print(pam[b].ke());
       }
-      g.merge_f(fb, fa);
-      UL(pam[fb].pam.keis());
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

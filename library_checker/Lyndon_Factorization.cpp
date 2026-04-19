@@ -1,10 +1,13 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/string/lyndon.hpp"
 
-// #define tests
 void Yorisou() {
   STR(s);
-  UL(lyndon(s));
+  print(lyndon(s));
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

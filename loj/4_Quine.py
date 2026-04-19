@@ -1,0 +1,1 @@
+input(*open(__file__))

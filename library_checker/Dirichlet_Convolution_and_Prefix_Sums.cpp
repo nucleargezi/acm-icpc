@@ -1,7 +1,5 @@
-#define YRSD
-// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
-#include "YRS/IO/fast_io.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/mod/mint_t.hpp"
 #include "YRS/pr/diri.hpp"
 
@@ -17,5 +15,9 @@ void Yorisou() {
   f.erase(bg(f));
   print(f);
 }
-constexpr int tests = 1, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}

@@ -1,14 +1,16 @@
-#include "YRS/Z_H/MeioN.hpp"
-#include "YRS/MeIoN_all.hpp"
-#include "YRS/math/PR/factors.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/pr/factors.hpp"
 
-#define tests
 void Yorisou() {
-  LL(n);
-  vector<ll> ans;
-  for (meion [e, p] : factor(n)) {
-    while (p--) ans.emplace_back(e);
-  }
-  UL(len(ans), ans);
+  LL(x);
+  vc<ll> s;
+  for (var [a, b] : factor(x)) FOR(b) s.ep(a);
+  print(si(s), s);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  INT(T); 
+  FOR(T) Yorisou();
+  return 0;
+}

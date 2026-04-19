@@ -1,12 +1,20 @@
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/flow/max_flow.hpp"
 
-void yorisou() {
+void Yorisou() {
   INT(N, M, s, t);
-  max_flow<ll> FL(N, --s, --t);
+  --s, --t;
+  max_flow<ll> g(N, s, t);
   FOR(M) {
-    INT(x, y, w);
-    FL.add(--x, --y, w);
+    INT(f, t, w);
+    --f, --t;
+    g.add(f, t, w);
   }
-  print(FL.flow());
+  print(g.flow());
+}
+
+int main() {
+  Yorisou();
+  return 0;
 }

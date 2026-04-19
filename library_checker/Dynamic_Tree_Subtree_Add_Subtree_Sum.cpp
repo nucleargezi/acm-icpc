@@ -1,34 +1,37 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/ds/a_monoid/sum_add.hpp"
-#include "YRS/IO/fast_io.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/ds/toptree/satt.hpp"
+#include "YRS/al/am/sum_add.hpp"
 
-// #define tests
+using am = a_monoid_sum_add<ll>;
 void Yorisou() {
   INT(N, Q);
-  SATT<a_monoid_sum_add<ll>> satt(N);
+  satt<am> g(N);
   FOR(i, N) {
     INT(x);
-    satt.set(i, x);
+    g.set(i, x);
   }
   FOR(N - 1) {
     INT(x, y);
-    satt.link(x, y);
+    g.link(x, y);
   }
   FOR(Q) {
     INT(op);
     if (op == 0) {
       INT(x, y, a, b);
-      satt.cut(x, y);
-      satt.link(a, b);
+      g.cut(x, y);
+      g.link(a, b);
     } else if (op == 1) {
       INT(p, rt, x);
-      satt.apply_sub(p, rt, x);
+      g.apply_sub(p, rt, x);
     } else {
       INT(x, f);
-      print(satt.prod_sub(x, f));
+      print(g.prod_sub(x, f));
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

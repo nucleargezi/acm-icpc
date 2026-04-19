@@ -1,15 +1,17 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
-#include "YRS/IO/fmt.hpp"
-#include "YRS/string/SA.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/string/SA/SA.hpp"
 
-// #define tests
 void Yorisou() {
   STR(s);
-  const ll N = len(s);
-  SA<0> sa(s);
-  ll ans = N * (N + 1) / 2;
-  ans -= SUM<ll>(sa.lcp);
-  print("{}", ans);
+  ll rs = si(s);
+  rs = rs * (rs + 1) / 2;
+  SA sa(s);
+  rs -= SUM<ll>(sa.lcp);
+  print(rs);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

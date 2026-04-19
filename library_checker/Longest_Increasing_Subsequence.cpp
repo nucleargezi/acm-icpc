@@ -1,13 +1,16 @@
-#include "YRS/Z_H/MeioN.hpp"
-#include "YRS/MeIoN_all.hpp"
-#include "YRS/ds/lis.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/seq/lis.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n);
-  VEC(int, a, n);
-  vector ans = lis(a);
-  UL(len(ans));
-  UL(ans);
+  INT(N);
+  VEC(int, a, N);
+  vc<int> s = lis(a);
+  print(si(s));
+  print(s);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -1,12 +1,19 @@
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/flow/mcf.hpp"
 
-void yorisou() {
+void Yorisou() {
   INT(N, M);
-  mcf FL(N);
+  mcf<ll, ll> g(N);
   FOR(M) {
-    INT(x, y, c, w);
-    FL.add(--x, --y, c, w);
+    INT(x, y, f, c);
+    --x, --y;
+    g.add(x, y, f, c);
   }
-  print(FL.flow(0, N - 1));
+  print(g.flow(0, N - 1));
+}
+
+int main() {
+  Yorisou();
+  return 0;
 }

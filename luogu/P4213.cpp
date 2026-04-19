@@ -1,26 +1,15 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/du.hpp"
+#include "YRS/all.hpp"
+#include "YRS/pr/du.hpp"
 
-void before() {}
-
-#define tests
-pre_phi_sum X;
-pre_mu_sum Y;
-NAME MeIoN_is_UMP45() {
-    LL(n);
-    UL(X(n), Y(n));
+phi_sum<ll> a;
+mu_sum<ll> b;
+void Yorisou() {
+  INT(N);
+  print(a[N], b[N]);
 }
 
-// 日々を貪り尽くしてきた
 int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    INT(t); FOR(t)
-#endif
-    MeIoN_is_UMP45();
-    iroha 0;
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
 }

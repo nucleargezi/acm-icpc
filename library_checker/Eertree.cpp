@@ -1,20 +1,23 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/string/pam.hpp"
 
-// #define tests
 void Yorisou() {
   STR(s);
-  PAM<26> seg(s);
-  const int N = len(seg.nodes);
-  vector<int> fa(N, -1);
-  FOR(i, N) for (int x : seg.nodes[i].TO) {
-    if (x != -1) fa[x] = i;
-  }
+  int N = si(s);
+  FOR(i, N) s[i] -= 'a';
+  pam<26> g(s);
+  N = si(g.a);
+  vc<int> fa(N, -1);
+  FOR(i, N) for (int x : g.a[i].to) if (x != -1) fa[x] = i;
   print(N - 2);
-  FOR(i, 2, N) print(fa[i] - 1, seg.nodes[i].link - 1);
-  vector<int> ans{seg.path.begin() + 1, seg.path.end()};
-  for (int &x : ans) --x;
-  print(ans);
+  FOR(i, 2, N) print(fa[i] - 1, g.a[i].lk - 1);
+  vc<int> pa{bg(g.pa) + 1, ed(g.pa)};
+  for (int &x : pa) --x;
+  print(pa);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -36,18 +36,18 @@
   <g transform="translate(482.794,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">codeforces</text>
   </g>
-  <rect x="535.362" y="600.144" width="67.2176" height="69.856" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="568.971" y="592.144" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">177</text>
+  <rect x="535.362" y="595.803" width="67.2176" height="74.1973" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="568.971" y="587.803" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">188</text>
   <g transform="translate(568.971,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">library_checker</text>
   </g>
-  <rect x="621.538" y="660.133" width="67.2176" height="9.86667" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="655.147" y="652.133" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">25</text>
+  <rect x="621.538" y="646.715" width="67.2176" height="23.2853" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="655.147" y="638.715" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">59</text>
   <g transform="translate(655.147,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">loj</text>
   </g>
-  <rect x="707.715" y="474.64" width="67.2176" height="195.36" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="741.324" y="466.64" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">495</text>
+  <rect x="707.715" y="473.456" width="67.2176" height="196.544" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="741.324" y="465.456" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">498</text>
   <g transform="translate(741.324,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">luogu</text>
   </g>

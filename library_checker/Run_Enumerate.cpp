@@ -1,8 +1,7 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/string/runs.hpp"
 
-// #define tests
 void Yorisou() {
   STR(s);
   Z res = runs(s);
@@ -11,9 +10,13 @@ void Yorisou() {
     swap(l, r);
   }
   sort(res);
-  print(len(res));
+  print(si(res));
   for (Z [p, l, r] : res) {
     print(p, l, r);
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

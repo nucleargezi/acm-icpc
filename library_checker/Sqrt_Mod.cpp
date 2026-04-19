@@ -1,11 +1,14 @@
-#include "YRS/Z_H/MeioN.hpp"
-#include "YRS/MeIoN_all.hpp"
-#include "YRS/math/mod/mod_sqrt.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/mod/mod_sqrt.hpp"
 
-#define tests
 void Yorisou() {
-  LL(x, p);
-  ll r = mod_sqrt(x, p);
-  UL(r * r % p == x ? r : -1);
+  INT(x, p);
+  print(mod_sqrt(x, p));
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}

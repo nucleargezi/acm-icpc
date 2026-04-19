@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/04/13   problems: 3924;
+- 2026/04/20   problems: 3972;
 - 2026/03/31   problems: 3885;
 - 2026/02/28   problems: 3610;
 - 2026/01/09   problems: 3332;
@@ -22,6 +22,54 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/04/20
+  ```sh
+  └── loj
+      └── 101_最大流.cpp [cover] | 102_最小费用流.cpp [cover] | 103_子串查找.cpp | 104_普通平衡树.cpp | 105_文艺平衡树.cpp | 108_多项式乘法.cpp | 109_并查集.cpp | 110_乘法逆元.cpp | 111_后缀排序.cpp | 112_三维偏序.cpp | 113_最大异或和.cpp | 114_k_大异或和.cpp | 115_无源汇有上下界可行流.cpp | 116_有源汇有上下界最大流.cpp | 117_有源汇有上下界最小流.cpp | 118_正则表达式.cpp | 119_单源最短路.cpp | 123_最小生成树.cpp | 124_除数函数求和_1.cpp | 129_Lyndon_分解.cpp | 130_树状数组_1_单点修改_区间查询.cpp | 131_树状数组_2_区间修改_单点查询.cpp | 132_树状数组_3_区间修改_区间查询.cpp | 133_二维树状数组_1_单点修改_区间查询.cpp | 134_二维树状数组_2_区间修改_单点查询.cpp | 136_最小瓶颈路.cpp | 137_最小瓶颈路_加强版.cpp | 139_树链剖分.cpp | 143_质数判定.cpp | 144_DFS_序_1.cpp
+  ```
+- 2026/04/19
+  ```sh
+  ├── library_checker
+  │   └── Jump_on_Tree.cpp [cover] | Lowest_Common_Ancestor.cpp | Point_Set_Tree_Path_Composite_Sum.cpp | Point_Set_Tree_Path_Composite_Sum_Fixed_Root.cpp | Rooted_Tree_Isomorphism_Classification.cpp [cover] | Rooted_Tree_Topological_Order_with_Minimum_Inversions.cpp | Vertex_Add_Path_Sum.cpp [cover] | Vertex_Set_Path_Composite.cpp [cover]
+  └── loj
+      └── 100_矩阵乘法.cpp | 11_Shared_Memory_Test.cpp | 161_乘法逆元_2.cpp | 4_Quine.py | 7_Input_Test.cpp
+  ```
+- 2026/04/19
+  ```sh
+  └── library_checker
+      └── Dynamic_Tree_Vertex_Add_Subtree_Sum.cpp [cover] | Dynamic_Tree_Vertex_Set_Path_Composite.cpp [cover]
+  ```
+- 2026/04/18
+  ```sh
+  └── library_checker
+      └── Dynamic_Tree_Vertex_Add_Path_Sum.cpp [cover]
+  ```
+- 2026/04/17
+  ```sh
+  ├── library_checker
+  │   └── Cartesian_Tree.cpp | Dynamic_Tree_Subtree_Add_Subtree_Sum.cpp [cover] | Eertree.cpp [cover] | Enumerate_Palindromes.cpp [cover] | Longest_Common_Substring.cpp [cover] | Lyndon_Factorization.cpp [cover] | Number_of_Substrings.cpp [cover] | Palindromes_in_Deque.cpp [cover] | Prefix_Substring_LCS.cpp [cover] | Run_Enumerate.cpp [cover] | Sqrt_Mod.cpp [cover]
+  ├── loj
+  │   └── 2230_BJOI_2014_大融合.cpp
+  └── luogu
+      └── P5854.cpp | P8406.cpp [cover]
+  ```
+- 2026/04/16
+  ```sh
+  └── library_checker
+      └── Consecutive_Terms_of_Linear_Recurrent_Sequence.cpp | Kth_term_of_Linearly_Recurrent_Sequence.cpp [cover] | Longest_Increasing_Subsequence.cpp [cover]
+  ```
+- 2026/04/15
+  ```sh
+  ├── library_checker
+  │   └── Dirichlet_Convolution_and_Prefix_Sums.cpp [cover] | Discrete_Logarithm_Fixed_Mod.cpp [cover] | Enumerate_Quotients.cpp [cover] | Factorize.cpp [cover] | Kth_Root_Integer.cpp [cover] | Min_of_Mod_of_Linear.cpp [cover] | Primality_Test.cpp [cover] | Rational_Approximation.cpp | Sum_of_Floor_of_Linear.cpp | Sum_of_Multiplicative_Function.cpp | Sum_of_Totient_Function.cpp | Tetration_Mod.cpp
+  └── luogu
+      └── P11175.cpp [cover] | P3846.cpp | P4195.cpp [cover] | P5325.cpp
+  ```
+- 2026/04/14
+  ```sh
+  └── luogu
+      └── P4213.cpp [cover]
+  ```
 - 2026/04/13
   ```sh
   ├── library_checker
