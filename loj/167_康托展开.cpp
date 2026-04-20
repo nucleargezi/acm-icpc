@@ -1,13 +1,13 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/mod/pow_fast.hpp"
+#include "YRS/nt/cantor.hpp"
 
+using mint = M99;
 void Yorisou() {
-  INT(x, N);
-  pow_fast<998244352> pw(x);
+  INT(N);
   VEC(int, a, N);
-  for (int &x : a) x = pw[x];
-  print(a);
+  FOR(i, N) --a[i];
+  print(cantor<mint>(a) + 1);
 }
 
 int main() {
