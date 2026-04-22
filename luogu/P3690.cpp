@@ -1,37 +1,36 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/ds/lct/lct_monoid.hpp"
-#include "YRS/ds/monoid/xor.hpp"
-#include "YRS/IO/fast_io.hpp"
+#include "YRS/al/m/xor.hpp"
 
-// #define tests
-using mono = monoid_xor<int>;
-using LCT = LCT_monoid_commute<mono>;
 void Yorisou() {
   INT(N, Q);
-  VEC(int, a, N);
-  LCT lct(N);
-  FOR(i, N) lct.set(i, a[i]);
+  lct_mono<monoid_xor<int>> g(N);
+  FOR(i, N) IN(g[i]->mx);
   FOR(Q) {
     INT(op);
     if (op == 0) {
       INT(x, y);
       --x, --y;
-      print(lct.prod(x, y));
+      print(g.prod(x, y));
     } else if (op == 1) {
       INT(x, y);
       --x, --y;
-      if (lct.get_rt(x) != lct.get_rt(y)) lct.link(x, y);
+      if (g.get_rt(x) != g.get_rt(y)) g.link(x, y);
     } else if (op == 2) {
       INT(x, y);
       --x, --y;
-      lct.evert(x);
-      if (lct.get_fa(y) == x) lct.cut(x, y);
+      g.evert(x);
+      if (g.get_fa(y) == x) g.cut(x, y);
     } else {
       INT(x, y);
       --x;
-      lct.set(x, y);
+      g.set(x, y);
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
