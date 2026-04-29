@@ -1,13 +1,16 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/range_mex_query.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/range/range_mex.hpp"
 
-// #define tests
 void Yorisou() {
-  LL(n, q);
-  VEC(int, a, n);
-  range_mex_query seg(a);
-  seg.read_quis(q);
-  for (int x : seg.keisan()) UL(x);
+  INT(N, Q);
+  VEC(int, a, N);
+  VEC(PII, q, Q);
+  for (Z &[l, r] : q) --l;
+  for (int x : range_mex(a, q)) print(x);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

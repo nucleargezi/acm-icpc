@@ -1,4 +1,25 @@
 #### History (since 2025/03/12)
+- 2026/04/30
+  ```sh
+  ├── library_checker
+  │   └── Dynamic_Graph_Vertex_Add_Component_Sum.cpp [cover] | Three_Edge_Connected_Components.cpp
+  └── luogu
+      └── P5247.cpp | P6658.cpp
+  ```
+- 2026/04/29
+  ```sh
+  └── loj
+      └── 122_强制在线_动态图连通性.cpp
+  ```
+- 2026/04/27
+  ```sh
+  ├── loj
+  │   └── 191_无向图四元环计数.cpp | 193_线段树历史和.cpp
+  └── luogu
+      ├── B
+      │   └── B3611.cpp | B3656.cpp | B3694.cpp | B3861.cpp
+      └── P13270.cpp | P13825.cpp | P2406.cpp | P2424.cpp | P4137.cpp [cover] | P6815.cpp | P7173.cpp | P9611.cpp
+  ```
 - 2026/04/22
   ```sh
   ├── loj
