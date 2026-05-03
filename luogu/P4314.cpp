@@ -1,33 +1,39 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/lazy_seg_base.hpp"
-#include "MeIoN_Lib/ds/a_monoid/his_max_add_assign.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/seg/segl_t.hpp"
+#include "YRS/al/am/his_max_add_set.hpp"
 
-void before() {}
-
-// #define tests
+using AM = am_his_max_add_set<int>;
 void Yorisou() {
-  LL(n);
-  VEC(ll, a, n);
-  lazy_seg<a_monoid_his_max_add_assign<ll>> seg(n, [&](int i) {
-    iroha pair{a[i], a[i]};
+  INT(N);
+  segl_t<AM> seg(N, [&](int) -> PII {
+    INT(x);
+    return {x, x};
   });
-  meion tag = decltype(seg)::MA::Tag;
-  LL(q);
-  FOR(q) {
+  INT(Q);
+  FOR(Q) {
     CH(op);
-    LL(l, r);
     if (op == 'Q') {
-      UL(seg.prod(--l, r).first);
+      INT(l, r);
+      --l;
+      print(seg.prod(l, r).fi);
     } else if (op == 'A') {
-      UL(seg.prod(--l, r).second);
+      INT(l, r);
+      --l;
+      print(seg.prod(l, r).se);
     } else if (op == 'P') {
-      LL(x);
-      seg.apply(--l, r, {x, tag, MAX(x, 0ll), tag});
+      INT(l, r, x);
+      --l;
+      seg.apply(l, r, AM::add(x));
     } else {
-      LL(x);
-      seg.apply(--l, r, {0, x, 0, x});
+      INT(l, r, x);
+      --l;
+      seg.apply(l, r, AM::set(x));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

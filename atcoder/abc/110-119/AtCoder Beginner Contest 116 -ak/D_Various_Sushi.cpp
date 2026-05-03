@@ -1,56 +1,38 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
 
-void before() {}
-
-// #define tests
-NAME MeIoN_is_UMP45() {
-    int n, k;
-    std::cin >> n >> k;
-    vector<pair<ll, ll>> a(n);
-    for (meion &[val, kind] : a) {
-        std::cin >> kind >> val;
-        --kind;
+void Yorisou() {
+  INT(N, K);
+  vc<PII> a(N);
+  for (Z &[k, w] : a) {
+    IN(k, w);
+    --k;
+    swap(k, w);
+  }
+  sort(a, greater());
+  min_heap<PII> q;
+  ll s = 0, c = 0, sz = 0, rs = 0;
+  vc<int> v(N);
+  for (var [w, k] : a) {
+    c += v[k] == 0;
+    if (c > K) break;
+    ++sz;
+    s += w;
+    v[k] += 1;
+    q.eb(w, k);
+    while (sz > K) {
+      var [w, k] = pop(q);
+      if (v[k] == 1) continue;
+      --sz;
+      --v[k];
+      s -= w;
     }
-    sort(a, greater());
-    priority_queue<pair<ll, ll>> q;
-    vector<int> c(n);
-    ll all{}, s{}, ans{}, kds{};
-    for (meion [val, kind] : a) {
-        if (all > k - 1) {
-            while (not q.empty()) {
-                meion[v, kd] = q.top();
-                q.pop(); 
-                if (c[kd] == 1) {
-                    continue;
-                } else {
-                    --c[kd];
-                    --all;
-                    s += v;
-                    break;
-                }
-            }
-        }
-        if (all < k) {
-            s += val;
-            kds += c[kind]++ == 0;
-            ++all;
-            q.emplace(-val, kind);
-        }
-        chmax(ans, s + kds * kds);
-    }
-    std::cout << ans << '\n';
+    chmax(rs, s + c * c);
+  }
+  print(rs);
 }
 
-// 日々を貪り尽くしてきた
 int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    std::cout << std::fixed << std::setprecision(12);
-    // freopen("in","r",stdin);
-    // freopen("outt","w",stdout);
-    before();
-#ifdef tests
-    std::cin >> T;
-#endif
-    while (T--) { MeIoN_is_UMP45(); }
-    iroha 0;
+  Yorisou();
+  return 0;
 }
