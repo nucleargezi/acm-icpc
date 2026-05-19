@@ -5,22 +5,20 @@
 
 void Yorisou() {
   INT(N, Q);
-  VEC(int, y, N);
-  vc<int> f(N), x(N), s(N, 1);
-  FOR(i, N) f[--y[i]] = i;
-  iota(all(x), 0);
-  bit2<monoid_add<int>> bit(x, y, s);
-  ll inv = 0;
-  FOR(i, 1, N) inv += bit.prod(0, i, y[i], N);
-
+  VEC(int, a, N);
+  vc<int> f(N);
+  FOR(i, N) f[--a[i]] = i;
+  bit2<Add<int>> bit(N, [&](int i) -> T3<int> { return {i, a[i], 1}; });
+  ll s = 0;
+  FOR(i, 1, N) s += bit.prod(0, i, a[i], N);
   FOR(Q) {
-    print(inv);
+    print(s);
     INT(x);
     --x;
     int i = f[x];
-    inv -= bit.prod(0, i, x + 1, N);
-    inv -= bit.prod(i + 1, N, 0, x);
-    bit.multiply(i, x, -1);
+    s -= bit.prod(0, i, x + 1, N);
+    s -= bit.prod(i + 1, N, 0, x);
+    bit.add(i, x, -1);
   }
 }
 

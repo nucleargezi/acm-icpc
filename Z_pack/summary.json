@@ -1,24 +1,24 @@
 {
-  "updated_at": "2026-05-04 02:05:41",
+  "updated_at": "2026-05-20 01:52:05",
   "root": "/home/yorisou/Yorisou_record",
-  "total": 4039,
+  "total": 4116,
   "platforms": {
     "aizu": 24,
-    "atcoder": 863,
+    "atcoder": 871,
     "bjtu_training": 150,
     "camp_like": 84,
-    "codeforces": 1152,
+    "codeforces": 1162,
     "library_checker": 189,
-    "loj": 96,
-    "luogu": 527,
+    "loj": 106,
+    "luogu": 554,
     "problemset": 74,
     "project_euler": 17,
     "prov": 252,
     "qoj": 65,
     "regional": 151,
     "train": 0,
-    "ucup": 88,
+    "ucup": 104,
     "uoj": 3,
-    "yukicoder": 304
+    "yukicoder": 310
   }
 }

@@ -1,31 +1,25 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/splay/splay_sequence.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/spl/splay_set.hpp"
 
-void before() {}
-
-// #define tests
-using Splay = splay_sequence<int>;
+using DS = splay_set<int>;
+using np = DS::np;
 void Yorisou() {
-  constexpr int N = 1'0'000'000;
-  Splay seg(N);
-  LL(q);
-  FOR(q) {
-    LL(op);
-    LL(x);
-    if (op == 1) {
-      seg.insert(x);
-    } else if (op == 2) {
-      seg.del(x);
-    } else if (op == 3) {
-      UL(seg.get_rank(x) + 1);
-    } else if (op == 4) {
-      UL(*seg.kth(--x));
-    } else if (op == 5) {
-      UL(*seg.pre(x));
-    } else {
-      UL(*seg.nxt(x));
-    }
+  INT(Q);
+  DS g;
+  np t = 0;
+  FOR(Q) {
+    INT(op, x);
+    if (op == 1) g.ins(t, x);
+    if (op == 2) g.del(t, x);
+    if (op == 3) print(g.rank(t, x) + 1);
+    if (op == 4) print(g.kth(t, x - 1));
+    if (op == 5) print(g.prev(t, x));
+    if (op == 6) print(g.next(t, x));
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

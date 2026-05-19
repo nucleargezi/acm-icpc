@@ -1,24 +1,22 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/Wavelet_Matrix.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/bit/bit2.hpp"
+#include "YRS/al/m/add.hpp"
 
-void before() {}
-
-// #define tests
+using DS = bit2<Add<int>, int>;
 void Yorisou() {
-  LL(n, q);
-  VEC(PLL, ps, n);
-  sort(ps);
-  constexpr int INF = inf<int> >> 1;
-  ps += PLL(INF, INF);
-  vector<ll> a(n + 1);
-  FOR(i, n + 1) a[i] = ps[i].second;
-  Wavelet_Matrix seg(a);
-  FOR(q) {
-    LL(l, d, r, u);
-    l = lower_bound(ps, PLL(l, -INF));
-    r = upper_bound(ps, PLL(r + 1, -INF));
-    UL(seg.count(l, r, d, u + 1));
+  INT(N, Q);
+  vc<int> a(N), b(N), w(N, 1);
+  FOR(i, N) IN(a[i], b[i]);
+  DS bit(a, b, w);
+  FOR(Q) {
+    INT(l, c, r, d);
+    ++r, ++d;
+    print(bit.prod(l, r, c, d));
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

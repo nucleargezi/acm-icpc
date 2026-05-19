@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/05/04   problems: 4039;
+- 2026/05/20   problems: 4116;
 - 2026/04/30   problems: 4025;
 - 2026/03/31   problems: 3885;
 - 2026/02/28   problems: 3610;
@@ -23,6 +23,140 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/05/19
+  ```sh
+  ├── codeforces
+  │   └── beta_round
+  │       └── 70-79
+  │           ├── 101 cfbeta79 -ak
+  │           │   └── 101A.cpp | 101B.cpp | 101C.cpp | 101D.cpp | 101E.cpp
+  │           └── 102 cfbeta79 -ak
+  │               └── 102A.cpp | 102B.cpp | 102C.cpp | 102D.cpp | 102E.cpp
+  └── luogu
+      └── P1253.cpp | P2163.cpp [cover]
+  ```
+- 2026/05/18
+  ```sh
+  └── luogu
+      └── P1967.cpp | P3195.cpp [cover] | P3215.cpp | P3628.cpp | P4655.cpp [cover]
+  ```
+- 2026/05/17
+  ```sh
+  ├── loj
+  │   └── 104_普通平衡树.cpp [cover] | 3019_CQOI_2017_小_Q_的草稿.cpp
+  └── luogu
+      └── P1452.cpp [cover] | P15180.cpp | P1908.cpp | P3157.cpp [cover] | P3369.cpp [cover] | P3699.cpp | P6136.cpp [cover]
+  ```
+- 2026/05/16
+  ```sh
+  ├── loj
+  │   └── 3625_USACO_2022_1_Platinum_Multiple_Choice_Test.cpp
+  ├── luogu
+  │   └── P4557.cpp [cover] | P7134.cpp | P8101.cpp
+  └── yukicoder
+      └── 0300-0400
+          └── No_304_鍵_1.cpp | No_305_鍵_2.cpp | No_306_さいたま_2008.cpp | No_307_最近色塗る問題多くない.cpp | No_308_素数は通れません.cpp
+  ```
+- 2026/05/13
+  ```sh
+  └── luogu
+      └── P4868.cpp
+  ```
+- 2026/05/12
+  ```sh
+  ├── loj
+  │   └── 2042_CQOI_2016_不同的最小割.cpp
+  ├── luogu
+  │   └── P3329.cpp | P3810.cpp [cover] | P4123.cpp | P4897.cpp
+  └── yukicoder
+      └── 1200-1300
+          └── No_1211_円環はお断り.cpp
+  ```
+- 2026/05/11
+  ```sh
+  └── luogu
+      └── P1484.cpp | P3620.cpp
+  ```
+- 2026/05/09
+  ```sh
+  └── luogu
+      ├── B
+      │   └── B3637.cpp
+      └── P1091.cpp | P3902.cpp
+  ```
+- 2026/05/08
+  ```sh
+  └── luogu
+      └── P1886.cpp | P4947.cpp | P5478.cpp | P5633.cpp
+  ```
+- 2026/05/07
+  ```sh
+  ├── atcoder
+  │   └── abc
+  │       └── 250-259
+  │           └── abc256-ak
+  │               └── abc256a.cpp | abc256b.cpp | abc256c.cpp | abc256d.cpp | abc256e.cpp | abc256f.cpp | abc256g.cpp | abc256h.cpp
+  ├── loj
+  │   └── 6029_雅礼集训_2017_Day_1_市场.cpp
+  ├── luogu
+  │   └── P10639.cpp [cover] | P4145.cpp [cover]
+  └── ucup
+      └── 3
+          ├── ucup3-31
+          │   └── E.cpp | F.cpp
+          └── ucup3-39
+              └── G.cpp
+  ```
+- 2026/05/06
+  ```sh
+  ├── loj
+  │   └── 10162_一本通_5_2_练习_5_骑士.cpp | 3795_ZJOI_2008_骑士.cpp | 5138_IOI_2016_外星人.cpp
+  └── luogu
+      └── P2607.cpp | P4381.cpp | P5896.cpp [cover]
+  ```
+- 2026/05/05
+  ```sh
+  ├── luogu
+  │   └── P3603.cpp
+  └── ucup
+      └── 3
+          └── ucup3-39
+              └── B.cpp | Q.cpp
+  ```
+- 2026/05/04
+  ```sh
+  ├── loj
+  │   └── 10050_一本通_2_3_例_2_The_XOR_Largest_Pair.cpp | 3620_COCI_2022_1_Izbori.cpp | 3801_HEOI_2013_ALO.cpp
+  ├── luogu
+  │   └── P4098.cpp | P4247.cpp
+  └── ucup
+      └── 3
+          ├── ucup3-33
+          │   └── H.cpp
+          └── ucup3-34
+              └── N.cpp
+  ```
+- 2026/05/03
+  ```sh
+  └── ucup
+      └── 3
+          └── ucup3-33
+              └── C.cpp | J.cpp | N.cpp
+  ```
+- 2026/05/01
+  ```sh
+  └── ucup
+      └── 3
+          └── ucup3-32
+              └── A.cpp | H.cpp | L.cpp | M.cpp
+  ```
+- 2026/04/30
+  ```sh
+  └── ucup
+      └── 3
+          └── ucup3-31
+              └── C.cpp | L.cpp
+  ```
 - 2026/05/04
   ```sh
   └── luogu

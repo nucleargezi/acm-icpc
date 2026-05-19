@@ -1,33 +1,31 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/ds/seg/beats_sum_minmax_chminmax.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/al/beats/sum_add_ch.hpp"
 
-// #define tests
+using MX = Sum_add_ch<ll>;
 void Yorisou() {
   INT(N);
-  VEC(ll, a, N);
-  beats_sum_minmax_chminmax<ll> seg(a);
+  AngleBeats<MX> seg(N, [&](int i) {
+    LL(x);
+    return MX::sing(x);
+  });
+
   INT(Q);
+  int op, l, r, x;
   FOR(Q) {
-    INT(op);
-    if (op == 1) {
-      INT(l, r, x);
-      --l;
-      seg.add(l, r, x);
-    } else if (op == 2) {
-      INT(l, r, x);
-      --l;
-      seg.chmax(l, r, x);
-    } else if (op == 3) {
-      INT(l, r, x);
-      --l;
-      seg.chmin(l, r, x);
-    } else {
-      INT(l, r);
-      --l;
-      Z [s, mn, mx] = seg.prod(l, r);
-      print(op == 4 ? s : op == 5 ? mx : mn);
-    }
+    IN(op, l, r);
+    if (op <= 3) IN(x);
+    --l;
+    if (op == 1) seg.apply(l, r, MX::add(x));
+    else if (op == 2) seg.apply(l, r, MX::cmax(x));
+    else if (op == 3) seg.apply(l, r, MX::cmin(x));
+    else if (op == 4) print(seg.prod(l, r).s);
+    else if (op == 5) print(seg.prod(l, r).mx);
+    else if (op == 6) print(seg.prod(l, r).mn);
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

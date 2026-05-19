@@ -1,25 +1,24 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/ds/sl/cht.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 void Yorisou() {
   INT(N);
   VEC(ll, h, N);
-  VEC(ll, w, N);
-  FOR(i, 1, N) w[i] += w[i - 1];
-  cht<ll, 0> f;
-  vc<ll> dp(N);
-  f.add(-2 * h[0], h[0] * h[0] - w[0]);
+  VEC(ll, s, N);
+  s = pre_sum(s);
+  vc<ll> f(N);
+  f[0] = 0;
+  cht<ll, 0> g;
+  g.add(-2 * h[0], f[0] + h[0] * h[0] - s[1]);
   FOR(i, 1, N) {
-    dp[i] = f(h[i]) + h[i] * h[i] + w[i - 1];
-    f.add(-2 * h[i], h[i] * h[i] - w[i] + dp[i]);
+    f[i] = g(h[i]) + s[i] + h[i] * h[i];
+    g.add(-2 * h[i], f[i] + h[i] * h[i] - s[i + 1]);
   }
-  print(dp[N - 1]);
+  print(f[N - 1]);
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

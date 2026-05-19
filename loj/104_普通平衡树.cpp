@@ -1,45 +1,21 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/treap/treap_base.hpp"
+#include "YRS/ds/spl/splay_set.hpp"
 
-using DS = treap_base<int>;
+using DS = splay_set<int>;
 using np = DS::np;
 void Yorisou() {
   INT(Q);
   DS g;
   np t = 0;
   FOR(Q) {
-    INT(op);
-    if (op == 1) {
-      INT(x);
-      Z [l, r] = g.split_max_right(t, [&](int t) { return t < x; });
-      t = g.merge(l, g.newnode(x), r);
-    } else if (op == 2) {
-      INT(x);
-      Z [l, rs] = g.split_max_right(t, [&](int t) { return t < x; });
-      Z [m, r] = g.spl(rs, 1);
-      t = g.merge(l, r);
-    } else if (op == 3) {
-      INT(x);
-      Z [l, r] = g.split_max_right(t, [&](int t) { return t < x; });
-      print(l ? l->sz + 1 : 1);
-      t = g.merge(l, r);
-    } else if (op == 4) {
-      INT(x);
-      print(g.get(t, x - 1));
-    } else if (op == 5) {
-      INT(x);
-      Z [ls, r] = g.split_max_right(t, [&](int t) { return t < x; });
-      Z [l, m] = g.spl(ls, ls->sz - 1);
-      print(m->mx);
-      t = g.merge(l, m, r);
-    } else {
-      INT(x);
-      Z [l, rs] = g.split_max_right(t, [&](int t) { return t <= x; });
-      Z [m, r] = g.spl(rs, 1);
-      print(m->mx);
-      t = g.merge(l, m, r);
-    }
+    INT(op, x);
+    if (op == 1) g.ins(t, x);
+    if (op == 2) g.del(t, x);
+    if (op == 3) print(g.rank(t, x) + 1);
+    if (op == 4) print(g.kth(t, x - 1));
+    if (op == 5) print(g.prev(t, x));
+    if (op == 6) print(g.next(t, x));
   }
 }
 

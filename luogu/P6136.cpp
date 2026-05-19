@@ -1,37 +1,31 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/splay/splay_sequence.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/spl/splay_mset.hpp"
+#include "YRS/string/run_length.hpp"
 
-void before() {}
-
-// #define tests
-using Splay = splay_sequence<int>;
+using DS = splay_mset<int, int, 20>;
+using np = DS::np;
 void Yorisou() {
-  constexpr int N = 1'0'000'000;
-  Splay seg(N);
-  LL(n, q);
-  VEC(int, a, n);
+  INT(N, Q);
+  VEC(int, a, N);
   sort(a);
-  seg.rt = seg.new_node(a);
-  int last = 0, ans = 0;
-  FOR(q) {
-    LL(op, x);
-    x ^= last;
-    if (op == 1) {
-      seg.insert(x);
-    } else if (op == 2) {
-      seg.del(x);
-    } else if (op == 3) {
-      last = seg.get_rank(x) + 1;
-    } else if (op == 4) {
-      last = *seg.kth(--x);
-    } else if (op == 5) {
-      last = *seg.pre(x);
-    } else {
-      last = *seg.nxt(x);
-    }
-    if (op > 2) ans ^= last;
+  DS g;
+  np t = g.newnode(run_length(a));
+  int ls = 0, s = 0;
+  FOR(Q) {
+    INT(op, x);
+    x ^= ls;
+    if (op == 1) g.ins(t, x);
+    if (op == 2) g.del(t, x);
+    if (op == 3) ls = g.rank(t, x) + 1, s ^= ls;
+    if (op == 4) ls = g.kth(t, x - 1), s ^= ls;
+    if (op == 5) ls = g.prev(t, x), s ^= ls;
+    if (op == 6) ls = g.next(t, x), s ^= ls;
   }
-  UL(ans);
+  print(s);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
