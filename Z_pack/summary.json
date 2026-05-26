@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-05-20 01:52:05",
+  "updated_at": "2026-05-27 01:38:25",
   "root": "/home/yorisou/Yorisou_record",
-  "total": 4116,
+  "total": 4167,
   "platforms": {
     "aizu": 24,
     "atcoder": 871,
     "bjtu_training": 150,
     "camp_like": 84,
-    "codeforces": 1162,
+    "codeforces": 1206,
     "library_checker": 189,
     "loj": 106,
     "luogu": 554,
@@ -17,7 +17,7 @@
     "qoj": 65,
     "regional": 151,
     "train": 0,
-    "ucup": 104,
+    "ucup": 111,
     "uoj": 3,
     "yukicoder": 310
   }

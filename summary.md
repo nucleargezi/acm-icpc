@@ -1,4 +1,74 @@
 #### History (since 2025/03/12)
+- 2026/05/27
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              └── 111 cfbeta85 -E
+                  └── 111A.cpp | 111B.cpp | 111C.cpp | 111D.cpp
+  ```
+- 2026/05/26
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              ├── 106 cfbeta82 -ak
+              │   └── 106A.cpp | 106B.cpp | 106C.cpp | 106D.cpp | 106E.cpp
+              ├── 109 cfbeta84 -ak
+              │   └── 109A.cpp | 109B.cpp | 109C.cpp | 109D.cpp | 109E.cpp
+              └── 110 cfbeta84 -ak
+                  └── 110A.cpp | 110B.cpp | 110C.cpp | 110D.cpp | 110E.cpp
+  ```
+- 2026/05/22
+  ```sh
+  ├── codeforces
+  │   └── beta_round
+  │       └── 80-89
+  │           └── 107 cfbeta83 -ak
+  │               └── 107E.cpp
+  └── ucup
+      └── 1
+          └── ucup1-12
+              └── E.cpp
+  ```
+- 2026/05/21
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              ├── 105 cfbeta81 -ak
+              │   └── 105E.cpp
+              ├── 107 cfbeta83 -ak
+              │   └── 107A.cpp | 107B.cpp | 107C.cpp | 107D.cpp
+              └── 108 cfbeta83 -ak
+                  └── 108A.cpp | 108B.cpp | 108C.cpp | 108D.cpp | 108E.cpp
+  ```
+- 2026/05/20
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              ├── 103 cfbeta80 -ak
+              │   └── 103A.cpp | 103B.cpp | 103C.cpp | 103D.cpp | 103E.cpp
+              ├── 104 cfbeta80 -ak
+              │   └── 104A.cpp | 104B.cpp | 104C.cpp | 104D.cpp | 104E.cpp
+              └── 105 cfbeta81 -ak
+                  └── 105A.cpp | 105B.cpp | 105C.cpp | 105D.cpp
+  ```
+- 2026/05/14
+  ```sh
+  └── ucup
+      └── 1
+          └── ucup1-12
+              └── A.cpp | G.cpp | M.cpp | N.cpp
+  ```
+- 2026/05/13
+  ```sh
+  └── ucup
+      └── 1
+          └── ucup1-12
+              └── B.cpp | J.cpp
+  ```
 - 2026/05/19
   ```sh
   ├── codeforces
