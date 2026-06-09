@@ -2,17 +2,13 @@
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
 #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/ds/seg/lazy_seg_sprase.hpp"
-#include "YRS/ds/a_monoid/xor_or.hpp"
+#include "YRS/ds/seg/segl_sparse_t.hpp"
+#include "YRS/al/am/xor_or.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 constexpr ull lm = 2'000'000'000ull;
 ull N;
-inline static ull L(ull i) { return i > lm ? N + 1 : min(N + 1, i * (i - 1) / 2 + 2); }
-inline static ull R(ull i) { return i > lm ? N : min(N, i * (i + 1) / 2 + 1); }
+ull L(ull i) { return i > lm ? N + 1 : min(N + 1, i * (i - 1) / 2 + 2); }
+ull R(ull i) { return i > lm ? N : min(N, i * (i + 1) / 2 + 1); }
 void Yorisou() {
   IN(N);
   INT(Q);
@@ -36,8 +32,8 @@ void Yorisou() {
     }
   }
   unique(f);
-  lazy_seg_sprase<a_monoid_xor_or<ull>> seg(f);
-  for (Z [x, w] : ops) {
+  segl_sprase_t<Xor_or<ull>> seg(f);
+  for (var [x, w] : ops) {
     if (w == 0) {
       ull s = seg.prod(x, x + 1), l = x, r = x;
       while (1) {
@@ -57,4 +53,8 @@ void Yorisou() {
     }
   }
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

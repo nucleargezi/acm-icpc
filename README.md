@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2026/06/10   problems: 4260;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
 - 2026/03/31   problems: 3885;
@@ -23,6 +24,121 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/06/10
+  ```sh
+  ├── loj
+  │   └── 6053_简单的函数.cpp | 6565_最假女选手.cpp
+  └── luogu
+      └── P5277.cpp [cover]
+  ```
+- 2026/06/09
+  ```sh
+  └── luogu
+      └── P7368.cpp [cover]
+  ```
+- 2026/06/07
+  ```sh
+  └── luogu
+      └── P2532.cpp | P5879.cpp
+  ```
+- 2026/06/06
+  ```sh
+  └── camp_like
+      └── thucamp
+          └── 2026
+              └── pr_online
+                  └── 696681A.cpp | 696681B.cpp | 696681E.cpp | 696681G.cpp
+  ```
+- 2026/06/05
+  ```sh
+  ├── camp_like
+  │   └── thucamp
+  │       └── 2026
+  │           └── pr
+  │               └── 696487A.cpp | 696487B.cpp | 696487C.cpp | 696487D.cpp | 696487E.cpp
+  ├── codeforces
+  │   └── div2
+  │       └── 1823 cf868 -ak
+  │           └── 1823A.cpp | 1823B.cpp | 1823C.cpp | 1823D.cpp | 1823E.cpp | 1823F.cpp
+  └── luogu
+      └── P11872.cpp
+  ```
+- 2026/06/05
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 90-99
+              ├── 123 cfbeta92 -ak
+              │   └── 123A.cpp | 123B.cpp
+              └── 124 cfbeta92 -ak
+                  └── 124A.cpp | 124B.cpp | 124C.cpp | 124D.cpp | 124E.cpp
+  ```
+- 2026/06/04
+  ```sh
+  ├── codeforces
+  │   ├── beta_round
+  │   │   └── 90-99
+  │   │       ├── 121 cfbeta91 -ak
+  │   │       │   └── 121A.cpp | 121B.cpp | 121C.cpp | 121D.cpp
+  │   │       ├── 122 cfbeta91 -ak
+  │   │       │   └── 122A.cpp | 122B.cpp | 122C.cpp | 122D.cpp | 122E.cpp
+  │   │       └── 123 cfbeta92 -ak
+  │   │           └── 123C.cpp | 123D.cpp | 123E.cpp
+  │   └── oth
+  │       └── 125 testing2 -ak
+  │           └── 125A.cpp | 125B.cpp | 125C.cpp | 125D.cpp | 125E.cpp
+  └── luogu
+      └── P3808.cpp
+  ```
+- 2026/06/03
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 90-99
+              ├── 119 cfbeta90 -ak
+              │   └── 119A.cpp | 119B.cpp | 119C.cpp | 119D.cpp
+              └── 121 cfbeta91 -ak
+                  └── 121E.cpp
+  ```
+- 2026/06/01
+  ```sh
+  ├── atcoder
+  │   └── abc
+  │       └── 460-469
+  │           └── abc460 -ak
+  │               └── abc460a.cpp | abc460b.cpp | abc460c.cpp | abc460d.cpp | abc460e.cpp | abc460f.cpp | abc460g.cpp
+  └── codeforces
+      └── beta_round
+          └── 90-99
+              └── 119 cfbeta90 -ak
+                  └── 119E.cpp
+  ```
+- 2026/05/28
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              ├── 117 cfbeta88 -ak
+              │   └── 117A.cpp | 117B.cpp | 117C.cpp | 117D.cpp | 117E.cpp
+              └── 118 cfbeta89 -ak
+                  └── 118A.cpp | 118B.cpp | 118C.cpp | 118D.cpp | 118E.cpp
+  ```
+- 2026/05/27
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              ├── 112 cfbeta85 -ak
+              │   └── 112A.cpp | 112B.cpp | 112C.cpp | 112D.cpp | 112E.cpp
+              ├── 113 cfbeta86 -ak
+              │   └── 113A.cpp | 113B.cpp | 113C.cpp | 113D.cpp | 113E.cpp
+              ├── 114 cfbeta86 -ak
+              │   └── 114A.cpp | 114B.cpp | 114C.cpp | 114D.cpp | 114E.cpp
+              ├── 115 cfbeta87 -ak
+              │   └── 115A.cpp | 115B.cpp | 115C.cpp | 115D.cpp | 115E.cpp
+              └── 116 cfbeta87 -ak
+                  └── 116A.cpp | 116B.cpp | 116C.cpp | 116D.cpp | 116E.cpp
+  ```
 - 2026/05/27
   ```sh
   └── codeforces

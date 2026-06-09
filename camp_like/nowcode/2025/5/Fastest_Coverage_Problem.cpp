@@ -62,7 +62,6 @@ void Yorisou() {
       for (meion [x, y] : ps) {
         if ((x + y) & 1) go.emplace_back(mkp(x, y, mid));
         else go.emplace_back(mkp(x, y, mid - 1));
-
       }
       bool f = 0, ok = 1;
       dat x = go[0];

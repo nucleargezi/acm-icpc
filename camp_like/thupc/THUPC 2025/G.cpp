@@ -1,15 +1,9 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
+#include "YRS/IO/fast_io.hpp"
 
-#define tests 1
-#define fl 0
-#define DB 10
 using T = string;
 bool cmp(const T &s, const T &t) {
-  if (len(s) != len(t)) return len(s) < len(t);
+  if (si(s) != si(t)) return si(s) < si(t);
   return s < t;
 }
 void Yorisou() {
@@ -18,7 +12,7 @@ void Yorisou() {
   FOR(i, N) s[i] -= '0';
   vc<int> pos;
   FOR(i, N) if (s[i]) pos.ep(i);
-  int sz = len(pos);
+  int sz = si(pos);
   if (not sz) return print(0);
   int re = bina([&](int m) -> bool {
     return m == 0 or N - pos[m - 1] >= m;
@@ -38,16 +32,21 @@ void Yorisou() {
       c = (a + b + c) / 2;
     }
     if (c) g.ep(1);
-    while (len(g) and not g.back()) pop(g);
+    while (si(g) and not g.back()) pop(g);
     T s(all(g));
     return reverse(s), s;
   };
-  T ans = gen(g[0]);
-  FOR(i, 1, len(g)) {
+  T rs = gen(g[0]);
+  FOR(i, 1, si(g)) {
     T t = gen(g[i]);
-    if (cmp(t, ans)) ans = t;
+    if (cmp(t, rs)) rs = t;
   }
-  for (Z &c : ans) c += '0';
-  print(ans);
+  for (Z &c : rs) c += '0';
+  print(rs);
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}
