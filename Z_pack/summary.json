@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-10 06:32:50",
+  "updated_at": "2026-06-11 06:51:01",
   "root": "/home/yorisou/Yorisou_record",
-  "total": 4260,
+  "total": 4295,
   "platforms": {
     "aizu": 24,
     "atcoder": 878,
@@ -13,7 +13,7 @@
     "luogu": 558,
     "problemset": 74,
     "project_euler": 17,
-    "prov": 252,
+    "prov": 287,
     "qoj": 65,
     "regional": 151,
     "train": 0,

@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/06/10   problems: 4260;
+- 2026/06/11   problems: 4295;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
 - 2026/03/31   problems: 3885;
@@ -24,6 +24,71 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/06/11
+  ```sh
+  └── prov
+      └── 2026
+          └── JLCPC2026
+              └── B_Japanese_Digits.cpp | C_Map_1_e.cpp | D_Hidden_kk_Tuples.cpp | E_Roco_Kingdom_World.cpp | I_Koishi_Is_Number_One.cpp | J_Reverse_Inversion.cpp | L_Straight.cpp | M_Crystal_Castle.cpp
+  ```
+- 2026/06/10
+  ```sh
+  └── prov
+      └── 2026
+          └── JLCPC2026
+              └── A_Manhattan_Cycle.cpp
+  ```
+- 2026/05/30
+  ```sh
+  └── prov
+      └── 2026
+          └── JXCPC2026 2
+              └── 106554K.cpp
+  ```
+- 2026/05/29
+  ```sh
+  └── prov
+      └── 2026
+          ├── JXCPC2026 2
+          │   └── 106554A.cpp | 106554C.cpp | 106554D.cpp | 106554E.cpp | 106554G.cpp | 106554H.cpp | 106554I.cpp | 106554J.cpp | 106554L.cpp | 106554M.cpp
+          └── SDCPC2026
+              └── H.cpp
+  ```
+- 2026/05/27
+  ```sh
+  └── prov
+      └── 2026
+          └── SDCPC2026
+              └── L.cpp
+  ```
+- 2026/05/26
+  ```sh
+  └── prov
+      └── 2026
+          └── SDCPC2026
+              └── C.cpp | K.cpp
+  ```
+- 2026/05/25
+  ```sh
+  └── prov
+      └── 2026
+          └── SDCPC2026
+              └── E.cpp | G.cpp | I.cpp | J.cpp
+  ```
+- 2026/05/19
+  ```sh
+  └── prov
+      └── 2026
+          └── JXCPC2026
+              └── A.cpp
+  ```
+- 2026/05/18
+  ```sh
+  └── prov
+      └── 2026
+          └── JXCPC2026
+              └── B.cpp | C.cpp | D.cpp | H.cpp | I.cpp | J.cpp
+  ```
 - 2026/06/10
   ```sh
   ├── loj

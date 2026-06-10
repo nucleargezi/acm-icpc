@@ -61,8 +61,8 @@
   <g transform="translate(913.676,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">project_euler</text>
   </g>
-  <rect x="966.244" y="570.544" width="67.2176" height="99.456" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="999.853" y="562.544" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">252</text>
+  <rect x="966.244" y="556.731" width="67.2176" height="113.269" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="999.853" y="548.731" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">287</text>
   <g transform="translate(999.853,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">prov</text>
   </g>
