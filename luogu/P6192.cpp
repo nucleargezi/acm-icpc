@@ -1,16 +1,22 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-// #include "MeIoN_Lib/IO/fmt.hpp"
-#include "MeIoN_Lib/graph/Apck/steiner.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/steiner.hpp"
 
-// #define tests
 void Yorisou() {
-  LL(n, m, k);
-  graph g(n);
-  g.read_graph<1>(m);
-  VEC(int, a, k);
-  FOR(i, k) --a[i];
-  meion [ans, vs, es] = steiner_tree<ll>(g, a);
-  UL(ans);
+  INT(N, M, K);
+  vc<vc<edge_id_w<int>>> g(N);
+  FOR(i, M) {
+    INT(a, b, c);
+    --a, --b;
+    g[a].ep(b, i, c);
+    g[b].ep(a, i, c);
+  }
+  VEC(int, s, K);
+  for (int &x : s) --x;
+  print(get<0>(steiner(g, s)));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

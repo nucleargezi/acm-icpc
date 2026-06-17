@@ -1,45 +1,47 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/g/steiner.hpp"
-#include "YRS/ds/unionfind/dsu.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/un/dsu.hpp"
+#include "YRS/gg/steiner.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 void Yorisou() {
   INT(N, M, K);
-  graph<int> g(N);
-  g.sc<1>(M);
+  vc<vc<edge_id_w<int>>> g(N);
+  vc<T3<int>> es(M);
+  FOR(i, M) {
+    INT(a, b, c);
+    --a, --b;
+    es[i] = {c, a, b};
+    g[a].ep(b, i, c);
+    g[b].ep(a, i, c);
+  }
   VEC(int, s, K);
   FOR(i, K) --s[i];
-  if (len(s) <= 15) return print(get<0>(steiner_tree(g, s)));
+  if (si(s) <= 15) return print(get<0>(steiner(g, s)));
   
-  vc<u8> is(N);
+  vc<char> is(N);
   for (int x : s) is[x] = 1;
   vc<int> n;
   FOR(i, N) if (is[i] == 0) n.ep(i);
-
-  int sz = len(n), ans = inf<int>;
-  Z es = g.es;
-  sort(es, [&](Z &a, Z &b) { return a.w < b.w; });
-  
+  int sz = si(n), rs = inf<int>;
+  sort(es);
   FOR(m, 1 << sz) {
     fill(all(is), 0);
     FOR(i, sz) if (m >> i & 1) is[n[i]] = 1;
     for (int x : s) is[x] = 1;
     dsu g(N);
     int sm = 0;
-    for (Z &&e : es) {
-      if (is[e.f] and is[e.to] and g.merge(e.f, e.to)) sm += e.w;
-      if (sm >= ans) break; 
+    for (var [w, f, t] : es) {
+      if (is[f] and is[t] and g.merge(f, t)) sm += w;
+      if (sm >= rs) break; 
     }
     bool o = 1;
     FOR(i, 1, K) o &= g[s[i]] == g[s[i - 1]];
-    if (o) chmin(ans, sm);
+    if (o) chmin(rs, sm);
   }
-  print(ans);
+  print(rs);
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

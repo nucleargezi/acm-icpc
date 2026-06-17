@@ -1,16 +1,28 @@
 #include "YRS/all.hpp"
-#include "YRS/g/cactus_diameter.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/cactus/diameter.hpp"
 
 void Yorisou() {
   INT(N, r);
-  graph<int> g(N);
+  vc<vc<edge_id_w<int>>> g(N);
+  vc<int> p;
+  p.reserve(N);
+  int ei = 0;
   FOR(r) {
     INT(sz);
-    VEC(int, p, sz);
-    FOR(i, sz - 1) g.add(p[i] - 1, p[i + 1] - 1);
+    sh(p, sz);
+    for (int &x : p) IN(x), --x;
+    FOR(i, sz - 1) {
+      int a = p[i], b = p[i + 1];
+      g[a].ep(b, ei, 1);
+      g[b].ep(a, ei, 1);
+      ++ei;
+    }
   }
-  g.build();
-  print(cactus_diameter(g).ans());
+  print(cactus_diameter<int>(g));
 }
-constexpr int tests = 0, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

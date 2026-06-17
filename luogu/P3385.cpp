@@ -1,18 +1,21 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
-#include "YRS/graph/Apck/bellman_ford.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/sht/bellman_ford.hpp"
 
-#define tests
 void Yorisou() {
-  INT(n, m);
-  graph<ll, 1> g(n);
-  while (m--) {
-    INT(x, y, w);
-    --x, --y;
-    g.add(x, y, w);
-    if (w >= 0) g.add(y, x, w);
+  INT(N, M);
+  vc<vc<edge_w<ll>>> g(N);
+  FOR(M) {
+    INT(a, b, c);
+    --a, --b;
+    g[a].ep(b, c);
+    if (c >= 0) g[b].ep(a, c);
   }
-  g.build();
-  YES(bellman_ford(g, 0).first.empty());
+  YES(bellman_ford<ll>(g, 0).fi.empty());
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+  return 0;
+}

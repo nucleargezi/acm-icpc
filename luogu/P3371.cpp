@@ -3,18 +3,15 @@
 #include "YRS/gg/sht/bellman_ford.hpp"
 
 void Yorisou() {
-  INT(N, M);
-  vc<vc<edge_w<ll>>> g(N + 1);
-  FOR(i, N) g[N].ep(i, 0);
+  INT(N, M, s);
+  --s;
+  vc<vc<edge_w<int>>> g(N);
   FOR(M) {
     INT(a, b, c);
     --a, --b;
-    g[b].ep(a, c);
+    g[a].ep(b, c);
   }
-  Z d = bellman_ford<ll>(g, N).fi;
-  if (d.empty()) return NO();
-  pop(d);
-  print(d);
+  print(bellman_ford<int>(g, s).fi);
 }
 
 int main() {

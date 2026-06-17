@@ -1,16 +1,25 @@
 #include "YRS/all.hpp"
-#include "YRS/graph/Apck/cactus.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/cactus/dist.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m, q);
-  graph<ll> g(n);
-  g.read_graph<1>(m);
-  cactus seg(g);
-  while (q--) {
-    INT(x, y);
-    --x, --y;
-    UL(seg.dist(x, y));
+  INT(N, M, Q);
+  vc<vc<edge_w<int>>> g(N);
+  FOR(M) {
+    INT(a, b, c);
+    --a, --b;
+    g[a].ep(b, c);
+    g[b].ep(a, c);
+  }
+  cactus_dist<ll, int> v(g);
+  FOR(Q) {
+    INT(a, b);
+    --a, --b;
+    print(v.dist(a, b));
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

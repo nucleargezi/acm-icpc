@@ -1,23 +1,29 @@
-#include "YRS/Z_H/MeIoN_H.hpp"
-#include "YRS/Z_H/MeioN.hpp"
+// https://www.luogu.com.cn/problem/P5905
 #include "YRS/all.hpp"
-#include "YRS/graph/Apck/johnson.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/sht/johnson.hpp"
 
-// #define tests
-using GT = graph<ll, 1>;
-using T = GT::cost_type;
 void Yorisou() {
-  INT(n, m);
-  graph<ll, 1> g(n);
-  g.read_graph<1>(m);
-  meion dis = johnson(g);
-  if (dis.empty()) iroha UL(-1);
-  for (const meion &v : dis) {
-    ll ans = 0;
-    FOR(i, n) {
-      ans += std::min(v[i], 1'000'000'000ll) * (i + 1);
+  INT(N, M);
+  vc<vc<edge_w<int>>> g(N);
+  FOR(M) {
+    INT(a, b, c);
+    --a, --b;
+    g[a].ep(b, c);
+  }
+  Z d = johnson<ll>(g);
+  if (d.N == 0) return print(-1);
+  FOR(i, N) {
+    ll s = 0;
+    FOR(k, N) {
+      if (d[i][k] == inf<ll> / 2) d[i][k] = 1'000'000'000;
+      s += d[i][k] * (k + 1);
     }
-    UL(ans);
+    print(s);
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
