@@ -5,12 +5,11 @@
 void Yorisou() {
   INT(N);
   STR(s);
+  if (QMAX(s) == QMIN(s)) return print(ll(N + 2) * (N - 1));
   for (char &c : s) c -= 'a';
   sam ss(si(s));
   ss.build(s);
-  ll rs = 0;
-  FOR(i, 1, si(ss)) rs += ss[i].sz - ss[ss[i].fa].sz;
-  print(rs);
+  print(ss.count() - 2 + ll(N + 1) * N / 2);
 }
 
 int main() {

@@ -1,18 +1,21 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/string/SAM_umap.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/string/sam_map.hpp"
 
-// #define tests
 void Yorisou() {
   INT(N);
-  VEC(int, s, N);
-  ll ans = 0;
-  sam seg(N << 1);
-  int p = 0;
-  FOR(i, N) {
-    p = seg.add(p, s[i]);
-    ans += seg[p].sz - seg[seg[p].fa].sz;
-    print(ans);
+  sam_map ss(N);
+  int x = 0;
+  ll rs = 0;
+  FOR(N) {
+    INT(c);
+    x = ss.add(x, c);
+    rs += ss[x].sz - ss[ss[x].fa].sz;
+    print(rs);
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

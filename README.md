@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/06/17   problems: 4345;
+- 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
 - 2026/03/31   problems: 3885;
@@ -24,6 +24,38 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/06/24
+  ```sh
+  └── luogu
+      └── P11305.cpp | P12729.cpp | P12962.cpp | P3002.cpp | P3181.cpp | P3346.cpp | P4022.cpp | P4081.cpp | P4112.cpp | P4248.cpp [cover] | P5108.cpp | P5212.cpp | P6139.cpp | P6640.cpp | P6793.cpp | P7409.cpp | P9664.cpp
+  ```
+- 2026/06/23
+  ```sh
+  └── loj
+      └── 10189_一本通_5_6_练习_2_仓库建设.cpp
+  ```
+- 2026/06/22
+  ```sh
+  └── atcoder
+      └── other
+          └── AtCoder Library Practice Contest
+              └── practice2a.cpp | practice2b.cpp | practice2c.cpp | practice2d.cpp | practice2e.cpp | practice2f.cpp | practice2g.cpp | practice2h.cpp | practice2i.cpp | practice2j.cpp | practice2k.cpp | practice2l.cpp
+  ```
+- 2026/06/20
+  ```sh
+  └── luogu
+      └── P10420.cpp | P11333.cpp | P5341.cpp | P5346.cpp | P5353.cpp | P5479.cpp | P6095.cpp | P7769.cpp
+  ```
+- 2026/06/19
+  ```sh
+  └── luogu
+      └── P1117.cpp | P2408.cpp [cover] | P2463.cpp | P4070.cpp [cover] | P4770.cpp | P8464.cpp
+  ```
+- 2026/06/17
+  ```sh
+  └── luogu
+      └── P16933.cpp
+  ```
 - 2026/06/17
   ```sh
   ├── codeforces

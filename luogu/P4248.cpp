@@ -1,27 +1,28 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/string/SAM.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/string/sam.hpp"
 
-// #define tests
 void Yorisou() {
   STR(s);
-  int N = len(s);
-  FOR(i, N) s[i] -= 'a';
-  ll ans = ll(N - 1) * N * (N + 1) / 2;
   reverse(s);
-  sam seg(N << 1);
-  vector<int> sz = seg.build(s);
-  N = len(sz);
-  Z g = seg.build_graph();
-  vector<u8> vis(N);
-  for (int x : seg.ed) vis[x] = 1;
-  FOR(i, 1, N) {
-    ll s = vis[i];
-    for (Z &&e : g[i]) {
-      s += sz[e.to];
-      ans -= (s - sz[e.to]) * sz[e.to] * seg[i].sz * 2;
-    }
+  for (char &c : s) c -= 'a';
+  sam ss;
+  Z [sz, V] = ss.slv(s);
+  int N = si(s);
+  ll rs = ll(N - 1) * N * (N + 1) / 2;
+  reverse(V);
+  pop(V);
+  vc<int> f(si(ss));
+  for (int x : ss.en) f[x] = 1;
+  for (int n : V) {
+    int fa = ss[n].fa;
+    rs -= ll(sz[n]) * f[fa] * ss[fa].sz * 2;
+    f[fa] += sz[n];
   }
-  print(ans);
+  print(rs);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
