@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2026/07/05   problems: 4455;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
@@ -24,6 +25,84 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/07/05
+  ```sh
+  ├── prov
+  │   └── 2026
+  │       └── SCCPC 2026
+  │           └── D_那一天的回文字符串.cpp | F_交换余生.cpp
+  └── qoj
+      └── 3913-Query on a Tree
+          └── 14_树与查询_14.cpp | 15_트리와_쿼리_15.cpp | 16_树与查询_16.cpp | 17_树与查询_17.cpp | 22_树与查询_22.cpp | 24_树与查询_24.cpp
+  ```
+- 2026/07/04
+  ```sh
+  └── library_checker
+      └── Frequency_Table_of_Tree_Distance.cpp
+  ```
+- 2026/07/01
+  ```sh
+  └── qoj
+      └── 3913-Query on a Tree
+          └── 10_树与查询_10.cpp | 11_树与查询_11.cpp | 12_树与查询_12.cpp | 13_树与查询_13.cpp | 18_树与查询_18.cpp | 19_树与查询_19.cpp | 1_树与查询_1.cpp | 21_树和查询_21.cpp | 2_树与查询_2.cpp | 3_树与查询_3.cpp | 4_树与查询_4.cpp | 5_树与查询_5.cpp | 6_树与查询_6.cpp | 7_树与查询_7.cpp | 8_树与查询_8.cpp | 9_트리와_쿼리_9.cpp
+  ```
+- 2026/06/29
+  ```sh
+  └── library_checker
+      └── Many_Factorials.cpp [cover] | qqq_Binomial_Coefficient_Prime_Mod.cpp | st_Numbering.cpp
+  ```
+- 2026/06/28
+  ```sh
+  └── luogu
+      └── P4781.cpp [cover] | P5667.cpp [cover]
+  ```
+- 2026/06/27
+  ```sh
+  ├── codeforces
+  │   └── beta_round
+  │       └── 90-99
+  │           ├── 135 cfbeta97 -ak
+  │           │   └── 135A.cpp | 135B.cpp | 135C.cpp | 135D.cpp | 135E.cpp
+  │           ├── 136 cfbeta97 -ak
+  │           │   └── 136A.cpp | 136B.cpp | 136C.cpp | 136D.cpp | 136E.cpp
+  │           └── 137 cfbeta98 -ak
+  │               └── 137A.cpp | 137B.cpp | 137C.cpp | 137D.cpp | 137E.cpp
+  ├── luogu
+  │   └── P3368.cpp [cover] | P3865.cpp [cover] | P6175.cpp
+  └── yukicoder
+      └── 1300-1400
+          └── No_1320_Two_Type_Min_Cost_Cycle.cpp
+  ```
+- 2026/06/26
+  ```sh
+  ├── codeforces
+  │   ├── beta_round
+  │   │   └── 90-99
+  │   │       └── 133 cfbeta96 -ak
+  │   │           └── 133A.cpp | 133B.cpp | 133C.cpp | 133D.cpp | 133E.cpp
+  │   ├── div1
+  │   │   └── 786 cf406 -ak
+  │   │       └── 786A.cpp | 786C.cpp | 786D.cpp
+  │   └── div2
+  │       └── 959 cf473 -ak
+  │           └── 959A.cpp | 959B.cpp | 959C.cpp | 959D.cpp | 959E.cpp | 959F.cpp
+  └── luogu
+      └── P11620.cpp [cover] | P2120.cpp | P4839.cpp [cover]
+  ```
+- 2026/06/25
+  ```sh
+  └── prov
+      └── 2026
+          └── SCCPC 2026
+              └── C_精灵对战.cpp | E_永恒的奥古斯都.cpp | G_禁忌教典的消失咒文.cpp | H_最大权独立集问题.cpp | I_星系观测计划.cpp | K_环基基环树.cpp | L_博德之跃_3.cpp
+  ```
+- 2026/06/22
+  ```sh
+  └── codeforces
+      └── div1
+          └── 786 cf406 -ak
+              └── 786B.cpp | 786E.cpp
+  ```
 - 2026/06/24
   ```sh
   └── luogu

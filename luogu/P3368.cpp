@@ -1,27 +1,31 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/fenw/fenw.hpp"
-#include "MeIoN_Lib/ds/monoid/add.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/bit/dual_bit.hpp"
+#include "YRS/al/m/add.hpp"
 
-// #define tests
 void Yorisou() {
-  LL(n, q);
-  VEC(ll, a, n);
-  FOR_R(i, 1, n) {
-    a[i] -= a[i - 1];
+  INT(N, Q);
+  dual_bit<Add<int>> bit(N);
+  FOR(i, N) {
+    INT(x);
+    bit.apply(i, i + 1, x);
   }
-  fenw_tree<monoid_add<ll>> seg(a);
-  FOR(q) {
-    LL(op);
+
+  FOR(Q) {
+    INT(op);
     if (op == 1) {
-      LL(l, r, x);
+      INT(l, r, x);
       --l;
-      seg.multiply(l, x);
-      seg.multiply(r, -x);
+      bit.apply(l, r, x);
     } else {
-      LL(x);
-      UL(seg.prod(x));
+      INT(x);
+      --x;
+      print(bit[x]);
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
