@@ -1,4 +1,32 @@
 #### History (since 2025/03/12)
+- 2026/07/06
+  ```sh
+  ├── codeforces
+  │   └── div1+2
+  │       └── 379 Good Bye 2013 -ak
+  │           └── 379A.cpp | 379B.cpp | 379C.cpp | 379D.cpp | 379E.cpp | 379G.cpp
+  └── prov
+      └── 2026
+          └── HLJCPC 2026
+              └── A_Kaka_Kill.cpp | B_Maximum_Digit_2.cpp | C_Round_Table_Conference.cpp | E_Lele_s_Apricot_Blossoms.cpp | F_Repeater.cpp | G_Kaka_Number.cpp | H_Tuesday_Member_Day.cpp | J_Crossing_the_Autumn_River.cpp | M_Six_Walnuts.cpp
+  ```
+- 2026/07/05
+  ```sh
+  └── luogu
+      └── P6329.cpp [cover]
+  ```
+- 2026/07/04
+  ```sh
+  └── luogu
+      └── P3806.cpp [cover]
+  ```
+- 2026/06/29
+  ```sh
+  └── codeforces
+      └── div1+2
+          └── 379 Good Bye 2013 -ak
+              └── 379F.cpp
+  ```
 - 2026/07/05
   ```sh
   ├── prov

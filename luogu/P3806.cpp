@@ -1,50 +1,42 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/graph/Tree/centroid_dec.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/bs.hpp"
+#include "YRS/ttr/tree_dec.hpp"
+#include "YRS/ds/basic/hashmap.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, q);
-  graph<ll> g(n);
-  g.read_tree<1>();
-
-  VEC(int, quis, q);
-  vector<u8> ans(q);
-  
-  int mx = QMAX(quis) + 1;
-  vector<int> vis(mx);
-  int tot = 0;
-  centroid_dec seg(g);
-  meion f = [&](int n) -> void {
-    vector<ll> take;
-    meion get_sub = [&](meion &get_sub, int n, int fa, ll dis) -> void {
-      take.emplace_back(dis);
-      for (meion &&e : g[n]) {
-        if (e.to != fa and not seg.dead[e.to] and e.cost + dis < mx) {
-          get_sub(get_sub, e.to, n, e.cost + dis);
-        }
-      }
-    };
-    vis[0] = ++tot;
-    for (meion &&e : g[n]) {
-      if (not seg.dead[e.to]) {
-        take.clear();
-        if (e.cost < mx) get_sub(get_sub, e.to, n, e.cost);
-        for (int d : take) {
-          for (int i = 0; i < q; ++i)
-            if (not ans[i]) {
-              int k = quis[i];
-              if (k >= d and vis[k - d] == tot) ans[i] = 1;
-            }
-        }
-        for (int d : take)
-          if (d < mx) vis[d] = tot;
-      }
-    }
-  };
-  seg.keis(0, f);
-  for (int i = 0; i < q; ++i) {
-    UL(ans[i] ? "AYE" : "NAY");
+  INT(N, Q);
+  vc<vc<edge_w<int>>> g(N);
+  hashmap<int> mp;
+  FOR(N - 1) {
+    INT(a, b, c);
+    --a, --b;
+    if (a > b) swap(a, b);
+    g[a].ep(b, c);
+    g[b].ep(a, c);
+    mp[ull(a) << 32 | b] = c;
   }
+
+  VEC(int, q, Q);
+  vc<char> rs(Q);
+  Z [fa, V] = dec_pr(g);
+  set<int> se;
+  vc<int> dis(N);
+  dec1(fa, V, [&](const vc<int> &fa, const vc<int> &vs, int l, int r, int L, int R) -> void {
+    se.clear();
+    int sz = si(fa);
+    dis.assign(sz, 0);
+    FOR(i, 1, sz) {
+      int x = vs[i], f = fa[i], p = vs[f];
+      dis[i] = dis[f] + mp[ull(min(x, p)) << 32 | max(x, p)];
+    }
+    FOR(i, l, r) se.eb(dis[i]);
+    FOR(i, L, R) FOR(k, Q) if (not rs[k] and se.contains(q[k] - dis[i])) rs[k] = 1;
+  });
+  for (bool f : rs) print(f ? "AYE" : "NAY");
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

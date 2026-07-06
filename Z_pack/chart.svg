@@ -33,8 +33,8 @@
   <g transform="translate(396.618,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">camp_like</text>
   </g>
-  <rect x="449.185" y="273.064" width="67.2176" height="396.936" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="482.794" y="265.064" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">1341</text>
+  <rect x="449.185" y="270.992" width="67.2176" height="399.008" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="482.794" y="262.992" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">1348</text>
   <g transform="translate(482.794,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">codeforces</text>
   </g>
@@ -63,8 +63,8 @@
   <g transform="translate(913.676,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">project_euler</text>
   </g>
-  <rect x="966.244" y="580.016" width="67.2176" height="89.984" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="999.853" y="572.016" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">304</text>
+  <rect x="966.244" y="577.352" width="67.2176" height="92.648" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="999.853" y="569.352" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">313</text>
   <g transform="translate(999.853,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">prov</text>
   </g>
