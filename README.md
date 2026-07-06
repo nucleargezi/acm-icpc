@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/07/06   problems: 4471;
+- 2026/07/06   problems: 4480;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
@@ -25,6 +25,27 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/07/06
+  ```sh
+  └── ucup
+      └── 2
+          └── ucup2-2
+              └── C.cpp
+  ```
+- 2026/05/26
+  ```sh
+  └── ucup
+      └── 2
+          └── ucup2-2
+              └── A.cpp | D.cpp
+  ```
+- 2026/05/15
+  ```sh
+  └── ucup
+      └── 2
+          └── ucup2-2
+              └── B.cpp | G.cpp | I.cpp | J.cpp | K.cpp | L.cpp
+  ```
 - 2026/07/06
   ```sh
   ├── codeforces

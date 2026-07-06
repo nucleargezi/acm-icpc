@@ -83,8 +83,8 @@
   <g transform="translate(1258.38,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">train</text>
   </g>
-  <rect x="1310.95" y="637.144" width="67.2176" height="32.856" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1344.56" y="629.144" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">111</text>
+  <rect x="1310.95" y="634.48" width="67.2176" height="35.52" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1344.56" y="626.48" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">120</text>
   <g transform="translate(1344.56,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">ucup</text>
   </g>
