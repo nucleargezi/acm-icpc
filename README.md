@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/07/06   problems: 4480;
+- 2026/07/08   problems: 4516;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
@@ -25,6 +25,39 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/07/08
+  ```sh
+  └── codeforces
+      ├── div1
+      │   └── 142 cf102 -ak
+      │       └── 142A.cpp | 142B.cpp | 142C.cpp | 142D.cpp | 142E.cpp
+      └── div2
+          ├── 141 cf101 -ak
+          │   └── 141A.cpp | 141B.cpp | 141C.cpp | 141D.cpp | 141E.cpp
+          └── 143 cf102 -ak
+              └── 143A.cpp | 143B.cpp | 143C.cpp | 143D.cpp | 143E.cpp
+  ```
+- 2026/07/07
+  ```sh
+  └── codeforces
+      ├── beta_round
+      │   └── 90-99
+      │       ├── 138 cfbeta99 -ak
+      │       │   └── 138A.cpp | 138B.cpp | 138C.cpp | 138D.cpp | 138E.cpp
+      │       └── 139 cfbeta99 -ak
+      │           └── 139A.cpp | 139B.cpp | 139C.cpp | 139D.cpp | 139E.cpp
+      ├── div1
+      │   └── 140 cf100 -ak
+      │       └── 140A.cpp | 140B.cpp | 140C.cpp | 140D.cpp | 140E.cpp | 140F.cpp
+      └── oth
+          └── 147 testing4 -ak
+              └── 147A.cpp | 147B.cpp
+  ```
+- 2026/07/06
+  ```sh
+  └── luogu
+      └── P1208.cpp | P1223.cpp | P1478.cpp
+  ```
 - 2026/07/06
   ```sh
   └── ucup
