@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/07/08   problems: 4516;
+- 2026/07/15   problems: 4586;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
@@ -25,6 +25,69 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/07/15
+  ```sh
+  └── luogu
+      └── P3317.cpp | P4111.cpp | P4336.cpp | P4455.cpp | P5431.cpp | P6178.cpp [cover] | P6657.cpp | P7736.cpp
+  ```
+- 2026/07/14
+  ```sh
+  ├── library_checker
+  │   └── Directed_MST.cpp
+  ├── loj
+  │   └── 2586_APIO_2018_选圆圈.cpp
+  ├── luogu
+  │   └── P10633.cpp | P13337.cpp | P14312.cpp | P14506.cpp | P2093.cpp | P2479.cpp | P3710.cpp | P4148.cpp | P4631.cpp | P4716.cpp | P5807.cpp | P6224.cpp | P6670.cpp | P6699.cpp | P7561.cpp
+  └── uoj
+      └── 415_APIO_2018_选圈圈.cpp
+  ```
+- 2026/07/13
+  ```sh
+  └── luogu
+      └── P11620.cpp [cover]
+  ```
+- 2026/07/12
+  ```sh
+  ├── codeforces
+  │   ├── div1
+  │   │   └── 150 cf107 -ak
+  │   │       └── 150A.cpp | 150B.cpp | 150C.cpp | 150D.cpp
+  │   └── div2
+  │       ├── 151 cf107 -ak
+  │       │   └── 151A.cpp | 151B.cpp | 151C.cpp | 151D.cpp | 151E.cpp
+  │       └── 152 cf108 -ak
+  │           └── 152A.cpp | 152B.cpp | 152C.cpp | 152D.cpp | 152E.cpp
+  └── luogu
+      └── P4294.cpp
+  ```
+- 2026/07/11
+  ```sh
+  └── luogu
+      └── P1951.cpp
+  ```
+- 2026/07/10
+  ```sh
+  └── luogu
+      └── P1646.cpp | P1861.cpp | P1924.cpp
+  ```
+- 2026/07/09
+  ```sh
+  └── codeforces
+      ├── div1
+      │   ├── 145 cf104 -ak
+      │   │   └── 145A.cpp | 145B.cpp | 145C.cpp | 145D.cpp | 145E.cpp
+      │   └── 150 cf107 -ak
+      │       └── 150E.cpp
+      └── div2
+          ├── 144 cf103 -ak
+          │   └── 144A.cpp | 144B.cpp | 144C.cpp | 144D.cpp | 144E.cpp
+          ├── 146 cf104 -ak
+          │   └── 146A.cpp | 146B.cpp | 146C.cpp | 146D.cpp | 146E.cpp
+          ├── 148 cf105 -ak
+          │   └── 148A.cpp | 148B.cpp | 148C.cpp | 148D.cpp | 148E.cpp
+          └── 149 cf106 -ak
+              └── 149A.cpp | 149B.cpp | 149C.cpp | 149D.cpp | 149E.cpp
+  ```
 - 2026/07/08
   ```sh
   └── codeforces
