@@ -1,6 +1,6 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/g/dynamic_connect.hpp"
+#include "YRS/gg/dynamic_connect.hpp"
 
 void Yorisou() {
   INT(N, Q);

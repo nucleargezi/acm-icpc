@@ -1,21 +1,19 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/string/SA/string_cmp.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/string/range_border.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 void Yorisou() {
   STR(s);
+  range_border ss(s);
   INT(Q);
-  string_cmp sa(s);
   FOR(Q) {
     INT(l, r);
     --l;
-    print(sa.max_border(l, r));
+    print(ss.max_border(l, r));
   }
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

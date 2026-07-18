@@ -8,8 +8,7 @@ void Yorisou() {
   FOR(M) {
     INT(a, b, c);
     --a, --b;
-    g[a].ep(b, c);
-    g[b].ep(a, c);
+    g[a].ep(b, c), g[b].ep(a, c);
   }
   cactus_dist<ll, int> v(g);
   FOR(Q) {

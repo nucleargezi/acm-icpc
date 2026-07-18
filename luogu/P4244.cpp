@@ -14,8 +14,7 @@ void Yorisou() {
     for (int &x : p) IN(x), --x;
     FOR(i, sz - 1) {
       int a = p[i], b = p[i + 1];
-      g[a].ep(b, ei, 1);
-      g[b].ep(a, ei, 1);
+      g[a].ep(b, ei, 1), g[b].ep(a, ei, 1);
       ++ei;
     }
   }

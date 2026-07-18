@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/07/15   problems: 4586;
+- 2026/07/19   problems: 4677;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
 - 2026/04/30   problems: 4025;
@@ -25,6 +25,46 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/07/18
+  ```sh
+  ├── camp_like
+  │   └── nowcode
+  │       └── 2026
+  │           └── 1
+  │               └── Fish_Eating.cpp | Geometry_Textbook.cpp | Substrings_of_Substrings.cpp
+  ├── loj
+  │   └── 140_最小树形图.cpp
+  ├── luogu
+  │   └── P3359.cpp | P4722.cpp [cover] | P4929.cpp
+  └── qoj
+      └── 3936 XXIV 赛前模板训练赛
+          └── 4_C_方程模_2.cpp | 4_D_方程模_3.cpp
+  ```
+- 2026/07/17
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 1
+                  └── 2090_Virus.cpp | Combination_of_Two_Nice_Problems.cpp | Precision_Error.cpp | Show_Hand.cpp
+  ```
+- 2026/07/16
+  ```sh
+  ├── loj
+  │   └── 122_强制在线_动态图连通性.cpp [cover]
+  ├── luogu
+  │   └── P1383.cpp | P14578.cpp [cover] | P14579.cpp [cover] | P14580.cpp [cover] | P2252.cpp | P3381.cpp [cover] | P4008.cpp [cover] | P4196.cpp [cover] | P4244.cpp [cover] | P4250.cpp | P4482.cpp [cover] | P4843.cpp | P5236.cpp [cover] | P5247.cpp [cover] | P6658.cpp [cover] | P7173.cpp [cover] | P7776.cpp
+  ├── qoj
+  │   └── 3936 XXIV 赛前模板训练赛
+  │       └── 10_最小生成树.cpp | 11_桥.cpp | 12_割点.cpp | 13_强连通分量.cpp | 14_X_最大流_2.cpp | 14_最大流_1.cpp | 15_最小费用最大流_随机数据.cpp | 16_a_最短路_1.cpp | 16_b_最短路_2.cpp | 17_支配树.cpp | 18_二分图最大匹配.cpp | 19_一般图最大匹配.cpp | 1_A_一般图最大权匹配.cpp | 1_B_最小树形图.cpp | 1_C_2_SAT_问题.cpp | 1_D_正则二分图匹配.cpp | 1_E_边双连通分量.cpp | 1_F_边三连通分量.cpp | 1_G_三元环枚举.cpp | 1_H_有源汇有上下界最小费用最大流_随机数据.cpp | 1_I_弦图判定.cpp | 1_前缀函数_KMP.cpp | 20_多项式乘法.cpp | 21_多项式求逆.cpp | 22_多项式对数函数.cpp | 23_多项式指数函数.cpp | 24_多项式多点求值.cpp | 25_多项式复合.cpp | 26_多项式复合逆.cpp | 27_常系数齐次线性递推.cpp | 2_Z_函数.cpp | 3_基本子串字典.cpp | 40_a_素性测试.cpp | 40_b_质因数分解.cpp | 41_类欧几里得算法.cpp | 42_BM_算法.cpp | 43_特征多项式.cpp | 45_Nim_Product.cpp | 46_Online_Multiplicative_Inverse_Query.cpp | 48_Primitive_root_原根.cpp | 49_Min_25_筛.cpp | 4_A_Determinant_of_A_Bz.cpp | 4_B_行列式.cpp | 4_后缀自动机.cpp | 52_平面最近点对.cpp | 5_广义后缀自动机.cpp | 60_动态树_简单版.cpp | 61_点分治.cpp | 62_文艺平衡树.cpp | 63_李超树.cpp | 64_Historical_Maximum_Value.cpp | 6_回文自动机.cpp | 7_后缀排序.cpp | 80_凸包检测器.cpp | 81_极角排序.cpp | 82_二维凸包.cpp | 83_旋转卡壳.cpp | 84_点到线段距离.cpp | 8_Manacher_算法.cpp | 90_快速_OR_卷积.cpp | 91_快速_AND_卷积.cpp | 92_快速_XOR_卷积.cpp | 93_子集卷积.cpp | 9_区间本质不同子串.cpp | A_0_树_Hash.cpp | A_字符串匹配问题.cpp | B_Runs.cpp | C_Lyndon_Factorization.cpp
+  └── uoj
+      └── 106_动态仙人掌_IV.cpp
+  ```
+- 2026/07/15
+  ```sh
+  └── luogu
+      └── P1495.cpp | P3373.cpp [cover] | P3835.cpp | P3850.cpp | P4513.cpp [cover] | P4720.cpp | P4777.cpp | P6136.cpp [cover]
+  ```
 - 2026/07/15
   ```sh
   └── luogu

@@ -1,17 +1,20 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
-#include "YRS/flow/max_flow_min_cost.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/flow/mcf.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(n, m, s, t);
+  INT(N, M, s, t);
   --s, --t;
-  mcf_graph<ll> FL(n);
-  while (m--) {
-    INT(f, t, fl, cost);
+  mcf<int, int> g(N);
+  FOR(M) {
+    INT(f, t, c, w);
     --f, --t;
-    FL.add(f, t, fl, cost);
+    g.add(f, t, c, w);
   }
-  UL(FL.flow(s, t));
+  print(g.flow(s, t));
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

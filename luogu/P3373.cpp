@@ -1,30 +1,52 @@
-// #include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/ds/seg/lazy_seg_base.hpp"
-#include "MeIoN_Lib/ds/a_monoid/sum_affine.hpp"
-#include "MeIoN_Lib/math/mod/modint_d.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/avl/avl_sayo.hpp"
+#include "YRS/mod/barrett.hpp"
 
-void before() {}
+barrett md;
+struct MX {
+  using X = int;
+  using A = pair<int, int>;
 
-// #define tests
-using mint = dmint;
+  static X op(X x, X y) { return md(x + y); }
+
+  static X unit() { return 0; }
+
+  static A fu(const A &f, const A &g) {
+    return {md.ml(f.fi, g.fi), md(md.ml(f.se, g.fi) + g.se)};
+  }
+
+  static A id() { return {1, 0}; }
+
+  static X map(X x, const A &a, ll sz) {
+    return md(md.ml(x, a.fi) + md.ml(sz, a.se));
+  }
+
+  static constexpr bool commute = 1;
+};
+
 void Yorisou() {
-  LL(n, q, mod);
-  mint::set_mod(mod);
-  VEC(mint, a, n);
-  lazy_seg<a_monoid_sum_affine<mint>> seg(a);
-  FOR(q) {
-    LL(op, l, r);
+  INT(N, Q, P);
+  md = barrett(P);
+  VEC(int, a, N);
+  avl_sayo<MX> g;
+  Z t = g.newnode(a);
+  FOR(Q) {
+    INT(op, l, r);
     --l;
     if (op == 1) {
-      LL(x);
-      seg.apply(l, r, {x, 0});
+      INT(x);
+      t = g.apply(t, l, r, {x, 0});
     } else if (op == 2) {
-      LL(x);
-      seg.apply(l, r, {1, x});
+      INT(x);
+      t = g.apply(t, l, r, {1, x});
     } else {
-      UL(seg.prod(l, r));
+      print(g.prod(t, l, r));
     }
   }
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

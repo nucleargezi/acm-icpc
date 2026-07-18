@@ -1,41 +1,34 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/ds/treap/treap_base.hpp"
+#include "YRS/ds/avl/avl_base.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
-using DS = treap_base<char>;
 void Yorisou() {
   INT(Q);
+  using DS = avl_base<char>;
+  using np = DS::np;
   DS g;
-  DS::np t = nullptr;
+  np t = 0;
   int sz = 0;
+  string op, str, buf;
   FOR(Q) {
-    STR(op);
+    IN(op);
     if (op[0] == 'M') {
       IN(sz);
     } else if (op[0] == 'I') {
       INT(n);
-      string str, s;
-      cin.ignore();
-      while (len(str) < n) std::getline(cin, s), str += s;
-      Z [l, r] = g.split(t, sz);
-      Z m = g.newnode(vc<char>(all(str)));
-      t = g.merge(l, m, r);
+      str.clear();
+      for (cin.ignore(); si(str) < n; ) getline(cin, buf), str += buf;
+      Z [l, r] = g.spl(t, sz);
+      t = g.me(l, g.newnode({all(str)}), r);
     } else if (op[0] == 'D') {
       INT(n);
-      Z [l, m, r] = g.split(t, sz, n + sz);
-      t = g.merge(l, r);
+      Z [l, m, r] = g.spl(t, sz, n + sz);
+      t = g.me(l, r);
     } else if (op[0] == 'G') {
       INT(n);
-      Z [l, m, r] = g.split(t, sz, n + sz);
+      Z [l, m, r] = g.spl(t, sz, n + sz);
       Z s = g.get_all(m);
       print(string(all(s)));
-      t = g.merge(l, m, r);
+      t = g.me(l, m, r);
     } else if (op[0] == 'P') {
       --sz;
     } else if (op[0] == 'N') {
@@ -43,4 +36,9 @@ void Yorisou() {
     }
   }
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  cin.tie(0)->sync_with_stdio(0);
+  Yorisou();
+  return 0;
+}

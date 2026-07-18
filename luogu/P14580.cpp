@@ -1,5 +1,5 @@
 #include "YRS/all.hpp"
-#include "YRS/IO/fast_io.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/flow/flow_lm.hpp"
 
 void Yorisou() {
@@ -11,9 +11,12 @@ void Yorisou() {
     --f, --t;
     g.add(f, t, l, r);
   }
-  Z [ok, f] = g.qmin();
+  Z [ok, res] = g.qmin();
   if (not ok) print('N');
-  else print(f);
+  else print(res);
 }
-constexpr int tests = 0, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

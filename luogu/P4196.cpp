@@ -1,35 +1,24 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/ge/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ge/basic/half_ins.hpp"
+#include "YRS/ge/basic/area.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
-using RE = long double;
-using P = point<RE>;
+using re = ld;
+using P = point<re>;
+using H = half_plane<re>;
 void Yorisou() {
   INT(N);
-  vc<convex_polygon<RE>> a;
-  FOR(N) {
-    INT(sz);
-    VEC(P, e, sz);
-    e = rearrange(e, hull(e));
-    a.ep(e);
-  }
-  FOR(i, 1, N) {
-    int sz = len(a[i]);
-    FOR(k, sz) {
-      int j = (k + 1) % sz;
-      Z t = a[i - 1].convex_cut(a[i].ps[k], a[i].ps[j]);
-      t = rearrange(t, hull(t));
-      a[i - 1] = convex_polygon(t);
-    }
-    swap(a[i], a[i - 1]);
+  vc<H> a;
+  FOR(i, N) {
+    INT(n);
+    VEC(P, p, n);
+    FOR(i, n) a.ep(p[i], p[(i + 1) % n]);
   }
   setp(3);
-  print(a[N - 1].area() / 2.L);
+  print(area(half_ins(a)) / 2);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
