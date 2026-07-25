@@ -1,16 +1,17 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/range/range_kth_add.hpp"
+#include "YRS/ds/range/range_mode_online.hpp"
 
 void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
-  range_kth_add<int> g(a); 
+  range_mode_online g(a);
+  int ls = 0;
   FOR(Q) {
-    INT(op, l, r, k);
+    INT(l, r);
+    l ^= ls, r ^= ls;
     --l;
-    if (op == 1) print(g.kth(l, r, k - 1));
-    else g.apply(l, r, k);
+    print(ls = g.prod(l, r));
   }
 }
 

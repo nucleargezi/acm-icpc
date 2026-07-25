@@ -1,16 +1,20 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/ds/online_range_q/range_major_voting.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/wave/sswave.hpp"
 
-// #define tests
 void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
-  major_voting seg(a, Q);
+  sswave g(a);
   FOR(Q) {
     INT(l, r);
     --l;
-    print(std::max(0, seg.prod(l, r)));
+    int x = g.median(l, r);
+    print(g.count(l, r, x, x + 1) * 2 > r - l ? x : 0);
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

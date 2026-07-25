@@ -48,8 +48,8 @@
   <g transform="translate(655.147,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">loj</text>
   </g>
-  <rect x="707.715" y="481.152" width="67.2176" height="188.848" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="741.324" y="473.152" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">638</text>
+  <rect x="707.715" y="474.344" width="67.2176" height="195.656" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="741.324" y="466.344" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">661</text>
   <g transform="translate(741.324,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">luogu</text>
   </g>
@@ -73,8 +73,8 @@
   <g transform="translate(1086.03,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">qoj</text>
   </g>
-  <rect x="1138.6" y="625.304" width="67.2176" height="44.696" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1172.21" y="617.304" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">151</text>
+  <rect x="1138.6" y="625.008" width="67.2176" height="44.992" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1172.21" y="617.008" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">152</text>
   <g transform="translate(1172.21,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">regional</text>
   </g>

@@ -1,13 +1,12 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
 #include "YRS/line/mat.hpp"
-#include "YRS/mod/mint_t.hpp"
 
 void Yorisou() {
-  LL(N, K);
-  mat<M11> a(N, N);
-  IN(a);
-  print(a.pow(K));
+  INT(N, M);
+  mat<int> a(N, M), b(a);
+  IN(a, b);
+  print(a += b);
 }
 
 int main() {

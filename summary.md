@@ -1,4 +1,36 @@
 #### History (since 2025/03/12)
+- 2026/07/26
+  ```sh
+  └── luogu
+      └── P4119.cpp | P5312.cpp | P5356.cpp [cover] | P5524.cpp | P5610.cpp | P8512.cpp
+  ```
+- 2026/07/25
+  ```sh
+  └── luogu
+      └── P10639.cpp [cover] | P2824.cpp [cover] | P5046.cpp | P5047.cpp [cover] | P5048.cpp | P5071.cpp | P5612.cpp | P5693.cpp
+  ```
+- 2026/07/23
+  ```sh
+  ├── luogu
+  │   └── P7446.cpp
+  └── regional
+      └── cn
+          └── 2025
+              └── ICPC online2
+                  └── L_异或镜像.cpp
+  ```
+- 2026/07/20
+  ```sh
+  └── luogu
+      └── P1102.cpp | P1678.cpp | P2249.cpp | P2678.cpp | P3156.cpp | P3382.cpp | P3567.cpp [cover] | P3613.cpp | P3853.cpp | P4305.cpp | P9025.cpp
+  ```
+- 2026/07/19
+  ```sh
+  └── luogu
+      ├── B
+      │   └── B2104.cpp | B2105.cpp
+      └── P3390.cpp [cover] | P3834.cpp [cover] | P3919.cpp [cover] | P4783.cpp [cover] | P5494.cpp [cover]
+  ```
 - 2026/07/18
   ```sh
   ├── camp_like

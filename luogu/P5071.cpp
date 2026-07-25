@@ -1,13 +1,13 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/range/range_inv.hpp"
+#include "YRS/ds/range/range_prod_divis.hpp"
 
 void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
   VEC(PII, q, Q);
   for (Z &[l, r] : q) --l;
-  for (ll s : range_inv(a, q)) print(s);
+  for (int x : range_prod_divis<19260817>(a, q)) print(x);
 }
 
 int main() {

@@ -5,11 +5,10 @@
 using MX = Sum_add_ch<ll>;
 void Yorisou() {
   INT(N);
-  AngleBeats<MX> seg(N, [&](int i) {
+  AngelBeats<MX> seg(N, [&](int i) {
     LL(x);
     return MX::sing(x);
   });
-
   INT(Q);
   int op, l, r, x;
   FOR(Q) {

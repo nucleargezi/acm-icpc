@@ -1,15 +1,18 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/wave/wave_mat.hpp"
 
 void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
-  wave_mat<int> g(a);
+  a.ep(-inf<int> / 2), a.ep(inf<int> / 2);
+  sort(a);
+  ll s = 0;
   FOR(Q) {
-    INT(l, r, k);
-    print(g.kth(l - 1, r, k - 1));
+    INT(x);
+    int i = lb(a, x);
+    s += min(a[i] - x, x - a[i - 1]);
   }
+  print(s);
 }
 
 int main() {

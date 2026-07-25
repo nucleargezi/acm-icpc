@@ -1,13 +1,16 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/range/range_inv.hpp"
 
 void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
-  VEC(PII, q, Q);
-  for (Z &[l, r] : q) --l;
-  for (ll s : range_inv(a, q)) print(s);
+  vc<int> rs(Q);
+  FOR(i, Q) {
+    INT(x);
+    if (not fd(a, x)) rs[i] = -1;
+    else rs[i] = lb(a, x) + 1;
+  }
+  print(rs);
 }
 
 int main() {

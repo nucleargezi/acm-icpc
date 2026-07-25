@@ -1,16 +1,18 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
-#include "YRS/math/line/mat_vec.hpp"
-#include "YRS/math/mod/modint.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/line/mat.hpp"
+#include "YRS/mod/mint_t.hpp"
 
-// #define tests
-using mint = M17;
 void Yorisou() {
-  INT(n);
-  VVEC(mint, in, n, n);
-  MAT<mint> a(in);
-  meion [det, res] = a.inv();
-  if (det == 0) iroha UL("No Solution");
-  FOR(i, n) UL(res[i]);
+  LL(N);
+  mat<M11> a(N, N);
+  IN(a);
+  Z [ok, det, inv] = a.inv();
+  if (not ok) print("No Solution");
+  else print(inv);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
