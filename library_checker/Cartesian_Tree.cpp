@@ -5,10 +5,10 @@
 void Yorisou() {
   INT(N);
   VEC(int, a, N);
-  cartesian<int, 1> s(a);
-  a = s.fa;
-  a[s.t] = s.t;
-  print(a);
+  cartesian g(a);
+  Z rs = std::move(g.fa);
+  FOR(i, N) if (rs[i] == -1) rs[i] = i;
+  print(rs);
 }
 
 int main() {

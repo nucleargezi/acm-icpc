@@ -1,19 +1,18 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/mod/mint.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/sps/conv.hpp"
+#include "YRS/mod/mint_t.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = mint_t<1'000'000'009>;
 void Yorisou() {
   INT(N);
-  VEC(mint, a, 1 << N);
-  VEC(mint, b, 1 << N);
-  print(sps_conv(a, b));
+  N = 1 << N;
+  VEC(mint, f, N);
+  VEC(mint, g, N);
+  print(sps_conv(f, g));
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

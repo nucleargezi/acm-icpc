@@ -1,42 +1,44 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
-#include "YRS/ds/treap/treap_commute_monoid.hpp"
-#include "YRS/ds/monoid/add.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/wblt/wblt_sayo_rev.hpp"
+#include "YRS/al/am/sum_add.hpp"
 
-// #define tests
-using mono = monoid_add<ll>;
-using treap = treap_commute_monoid<mono, true>;
-using np = treap::np;
+using MX = Sum_add<ll>;
+using DS = wblt_sayo_rev<MX>;
+using np = DS::np;
 void Yorisou() {
-  LL(q);
-  ll ans = 0;
-  treap seg(q * 70);
-  vector<np> rt(q + 1, nullptr);
-  for (int i = 1; i < q + 1; ++i) {
+  INT(Q);
+  DS g;
+  vc<np> t(Q + 1);
+  ll ls = 0;
+  FOR(c, 1, Q + 1) {
     LL(v, op);
     if (op == 1) {
-      LL(p, x);
-      p ^= ans, x ^= ans;
-      rt[i] = seg.ins(rt[v], p, x);
+      LL(i, x);
+      i ^= ls, x ^= ls;
+      t[c] = g.ins(t[v], i, x);
     } else if (op == 2) {
-      LL(p);
-      p ^= ans;
-      --p;
-      rt[i] = seg.del(rt[v], p);
+      LL(i);
+      i ^= ls;
+      --i;
+      t[c] = g.del(t[v], i);
     } else if (op == 3) {
       LL(l, r);
-      l ^= ans, r ^= ans;
+      l ^= ls, r ^= ls;
       if (l > r) swap(l, r);
       --l;
-      rt[i] = seg.reverse(rt[v], l, r);
+      t[c] = g.reverse(t[v], l, r);
     } else {
       LL(l, r);
-      l ^= ans, r ^= ans;
+      l ^= ls, r ^= ls;
       if (l > r) swap(l, r);
       --l;
-      rt[i] = rt[v];
-      UL(ans = seg.prod(rt[v], l, r));
+      print(ls = g.prod(t[c] = t[v], l, r));
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

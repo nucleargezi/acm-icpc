@@ -1,6 +1,6 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/tr/best_topo_invs.hpp"
+#include "YRS/ttr/best_topo_invs.hpp"
 
 struct F {
   struct X {
@@ -21,13 +21,12 @@ struct F {
 
 void Yorisou() {
   INT(N);
-  graph g(N);
+  vc<vc<int>> g(N);
   FOR(i, 1, N) {
     INT(f);
-    g.add(f, i);
+    g[f].ep(i), g[i].ep(f);
   }
-  g.build();
-  hld v(g);
+  hld v(g, 0);
 
   vc<F::X> a(N);
   FOR(i, N) {

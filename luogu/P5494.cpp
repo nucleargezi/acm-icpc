@@ -1,40 +1,48 @@
 #include "YRS/all.hpp"
+#include "YRS/debug.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/seg/segd_t.hpp"
+#include "YRS/ds/wblt/wblt_meld.hpp"
 #include "YRS/al/m/add.hpp"
 
-using DS = segd_t<Add<ll>>;
+using MX = Add<ll>;
+using DS = wblt_meld<MX>;
 using np = DS::np;
 void Yorisou() {
-  INT(N, M);
-  DS seg(1, N + 1);
-  vc<np> rt(M + 2);
-  FOR(i, 1, N + 1) {
-    LL(a);
-    if (a) rt[1] = seg.set(rt[1], i, a);
+  INT(N, Q);
+  vc<pair<int, ll>> a(N);
+  FOR(i, N) {
+    INT(x);
+    a[i] = {i, x};
   }
+  DS seg;
+  vc<np> t(Q + 1);
+  t[0] = seg.newnode(a);
   int c = 1;
-  FOR(M) {
-    INT(op, p);
+  FOR(Q) {
+    INT(op);
     if (op == 0) {
-      INT(x, y);
-      rt[++c] = seg.split(rt[p], x, y + 1);
+      INT(p, l, r);
+      --p, --l;
+      Z [ls, m, rs] = seg.splk(t[p], l, r);
+      t[p] = seg.me(ls, rs);  
+      t[c++] = m;
     } else if (op == 1) {
-      int t;
-      IN(t);
-      rt[p] = seg.merge(rt[p], rt[t]);
-      rt[t] = 0;
+      INT(to, f);
+      --to, --f;
+      t[to] = seg.meld(t[to], t[f]);
     } else if (op == 2) {
-      LL(x);
-      INT(q);
-      rt[p] = seg.add(rt[p], q, x);
+      INT(p, c, x);
+      --p, --x;
+      t[p] = seg.ins(t[p], x, c);
     } else if (op == 3) {
-      INT(x, y);
-      print(seg.prod(rt[p], x, y + 1));
+      INT(p, l, r);
+      --p, --l;
+      print(seg.prod(t[p], l, r));
     } else {
-      LL(k);
-      int a = seg.maxr(rt[p], [&](ll b) { return b < k; }, 1);
-      print(a == N + 1 ? -1 : a);
+      LL(p, k);
+      --p, --k;
+      if (seg.prod(t[p]) <= k) print(-1);
+      else print(seg.kth(t[p], k, [&](ll x) { return x; }) + 1);
     }
   }
 }

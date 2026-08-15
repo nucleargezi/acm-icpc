@@ -1,17 +1,16 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/Z_H/fast_io.hpp"
-#include "MeIoN_Lib/ds/wave_matrix.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/range/range_rank.hpp"
 
-// #define tests
 void Yorisou() {
-  LL(n, q);
-  VEC(int, a, n);
-  wave_matrix<int, false> seg(a);
-  FOR(q) {
-    LL(l, r, h);
-    --l, ++h;
-    UL(seg.count(l, r, 0, h));
-  }
+  INT(N, Q);
+  VEC(int, a, N);
+  VEC(T3<int>, q, Q);
+  for (Z &[l, r, d] : q) --l, ++d;
+  for (int x : range_rank(a, q)) print(x);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

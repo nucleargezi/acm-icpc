@@ -8,13 +8,12 @@ void Yorisou() {
   FOR(i, 1, N) {
     INT(f);
     --f;
-    g[f].ep(i);
-    g[i].ep(f);
+    g[f].ep(i), g[i].ep(f);
   }
   STR(s);
-  tree_sa tsa(g, 0, {all(s)});
-  for (int &x : tsa.sa) ++x;
-  print(tsa.sa);
+  tree_sa sa(g, 0, s);
+  for (int &x : sa.sa) ++x;
+  print(sa.sa);
 }
 
 int main() {

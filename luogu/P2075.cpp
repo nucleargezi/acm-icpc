@@ -6,9 +6,12 @@ void Yorisou() {
   INT(N, Q);
   VEC(int, a, N);
   for (int &x : a) --x;
-  VEC(PII, q, Q);
-  for (Z &x : q) x.fi -= 1;
-  for (int x : range_lis(a, q).f()) print(x);
+  range_lis g(a);
+  FOR(Q) {
+    INT(l, r);
+    --l;
+    print(g.prod(l, r));
+  }
 }
 
 int main() {

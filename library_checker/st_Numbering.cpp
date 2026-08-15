@@ -8,13 +8,15 @@ void Yorisou() {
   vc<vc<int>> g(N);
   FOR(M) {
     INT(a, b);
-    g[a].ep(b);
-    g[b].ep(a);
+    g[a].ep(b), g[b].ep(a);
   }
-  
   Z rs = st_number(g, s, t);
-  if (rs.empty()) No();
-  else Yes(), print(rs);
+  if (rs.empty()) {
+    No();
+  } else {
+    Yes();
+    print(rs);
+  }
 }
 
 int main() {

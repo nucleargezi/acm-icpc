@@ -1,51 +1,21 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/gg/scc_aug.hpp"
 
-void before() {}
-
-// #define tests
 void Yorisou() {
-  INT(n);
-  vector<int> in(n), s(n), L, R;
-  vector<int> vis(n, -1);
-  FOR(i, n) {
-      IN(s[i]);
-      --s[i];
-      ++in[s[i]];
+  INT(N);
+  vc<vc<int>> g(N);
+  FOR(i, N) {
+    INT(x);
+    --x;
+    g[i].ep(x);
   }
-  int c{};
-  meion f = [&](meion &f, int n) -> int {
-      vis[n] = 0;
-      if (vis[s[n]] == -1) {
-          iroha vis[n] = f(f, s[n]);
-      }
-      iroha vis[n] = n;
-  };
-  FOR(i, n) if (not in[i]){
-      ++c;
-      L.emplace_back(i + 1);
-      R.emplace_back(f(f, i) + 1);
-  }
-  int cc{c};
-  FOR(i, n) if (vis[i] == -1) {
-      ++c;
-      L.emplace_back(i + 1);
-      R.emplace_back(f(f, i) + 1);
-  }
-  if (c == 1 and not cc) c = 0;
-  UL(c);
-  FOR(i, c) UL(R[i], L[(i + 1) % c]);
+  Z s = scc_aug(g);
+  print(si(s));
+  for (var [a, b] : s) print(a + 1, b + 1);
 }
 
-// 日々を貪り尽くしてきた
 int main() {
-  std::cin.tie(nullptr)->sync_with_stdio(false);
-  std::cout << std::fixed << std::setprecision(12);
-  // freopen("in","r",stdin);
-  // freopen("outt","w",stdout);
-  before();
-#ifdef tests
-  LL(t); FOR(t)
-#endif
   Yorisou();
-  iroha 0;
+  return 0;
 }

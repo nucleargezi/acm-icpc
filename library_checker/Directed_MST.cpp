@@ -4,12 +4,11 @@
 
 void Yorisou() {
   INT(N, M, s);
-  VEC(T3<int>, es, M);
-  Z [rs, fe] = *dmst_fast<ll>(N, s, es);
-  vc<int> fa(N);
-  fa[s] = s;
-  FOR(i, N) if (i != s) fa[i] = get<0>(es[fe[i]]);
-  print(rs);
+  VEC(T3<int>, e, M);
+  Z [w, fe] = *dmst_fast<ll>(N, s, e);
+  vc<int> fa(N, s);
+  FOR(i, N) if (i != s) fa[i] = get<0>(e[fe[i]]);
+  print(w);
   print(fa);
 }
 

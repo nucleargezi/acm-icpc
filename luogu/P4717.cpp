@@ -1,30 +1,20 @@
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/set/bit_convolution.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/sps/bit.hpp"
+#include "YRS/mod/mint_t.hpp"
 
-void before() {}
-
-// #define tests
-using mint = modint<mod99>;
+using mint = M99;
 void Yorisou() {
-  INT(n);
-  VEC(mint, a, 1 << n);
-  VEC(mint, b, 1 << n);
-  UL(or_convolution(a, b));
-  UL(and_convolution(a, b));
-  UL(xor_convolution(a, b));
+  INT(N);
+  N = 1 << N;
+  VEC(mint, f, N);
+  VEC(mint, g, N);
+  print(or_conv(f, g));
+  print(and_conv(f, g));
+  print(xor_conv(f, g));
 }
 
-// 日々を貪り尽くしてきた
 int main() {
-  std::cin.tie(nullptr)->sync_with_stdio(false);
-  std::cout << std::fixed << std::setprecision(12);
-  // freopen("in","r",stdin);
-  // freopen("outt","w",stdout);
-  before();
-#ifdef tests
-  LL(t); FOR(t)
-#endif
   Yorisou();
-  iroha 0;
+  return 0;
 }

@@ -1,4 +1,90 @@
 #### History (since 2025/03/12)
+- 2026/08/15
+  ```sh
+  ├── codeforces
+  │   └── beta_round
+  │       └── 20-29
+  │           └── 22 cf_beta22 -ak
+  │               └── 22E.cpp [cover]
+  ├── cses
+  │   └── Introductory Problems
+  │       └── Increasing_Array.cpp | Missing_Number.cpp | Permutations.cpp | Repetition.cpp | Weird_Algorithm.cpp
+  ├── library_checker
+  │   └── Convolution_on_the_Multiplicative_Monoid_of_Z_2_NZ_mathbb_Z_2_N_mathbb_Z_Z_2_NZ.cpp | Convolution_on_the_Multiplicative_Monoid_of_Z_PZ_mathbb_Z_P_mathbb_Z_Z_PZ.cpp | Dynamic_Tree_Subtree_Add_Subtree_Sum.cpp [cover] | Dynamic_Tree_Vertex_Add_Subtree_Sum.cpp [cover] | Polynomial_Root_Finding_Mod_998244353.cpp [cover]
+  ├── loj
+  │   └── 150_挑战多项式.cpp [cover] | 151_多项式求立方根.cpp | 172_多项式欧几里得.cpp [cover] | 178_多项式求根.cpp [cover]
+  └── luogu
+      └── P14993.cpp [cover] | P4512.cpp [cover] | P5050.cpp [cover] | P5277.cpp [cover] | P5494.cpp [cover] | P6800.cpp [cover]
+  ```
+- 2026/08/14
+  ```sh
+  ├── library_checker
+  │   └── Polynomial_Taylor_Shift.cpp [cover] | Product_of_Polynomial_Sequence.cpp [cover]
+  └── luogu
+      └── P3812.cpp [cover] | P4723.cpp [cover]
+  ```
+- 2026/08/13
+  ```sh
+  ├── library_checker
+  │   └── Compositional_Inverse_of_Formal_Power_Series_Large.cpp [cover] | Inv_of_Polynomials.cpp [cover]
+  └── luogu
+      └── P10249.cpp [cover] | P5373.cpp [cover] | P7112.cpp [cover]
+  ```
+- 2026/08/12
+  ```sh
+  └── luogu
+      └── P1440.cpp | P3374.cpp [cover] | P4245.cpp [cover] | P5158.cpp [cover]
+  ```
+- 2026/08/10
+  ```sh
+  └── luogu
+      └── P12685.cpp | P14761.cpp | P1533.cpp | P2042.cpp [cover] | P3605.cpp | P4278.cpp | P5055.cpp [cover] | P5350.cpp | P5586.cpp | P7554.cpp | P8263.cpp | P8659.cpp | P8701.cpp
+  ```
+- 2026/08/09
+  ```sh
+  └── luogu
+      └── P11615.cpp [cover] | P2617.cpp | P3380.cpp | P6362.cpp
+  ```
+- 2026/08/08
+  ```sh
+  ├── library_checker
+  │   └── Cartesian_Tree.cpp [cover] | Chordal_Graph_Recognition.cpp | Counting_Spanning_Trees_Directed.cpp | Counting_Spanning_Trees_Undirected.cpp | Determinant_of_Matrix_Mod_2.cpp | Directed_MST.cpp [cover] | Euclidean_MST.cpp | Frequency_Table_of_Tree_Distance.cpp [cover] | General_Weighted_Matching.cpp | Incremental_Minimum_Spanning_Forest.cpp [cover] | Inverse_Matrix_Mod_2.cpp | Kth_Root_Mod.cpp | Matrix_Product_Mod_2.cpp | Primitive_Root.cpp | Rank_of_Matrix_Mod_2.cpp | Rational_Approximation.cpp [cover] | Rooted_Tree_Topological_Order_with_Minimum_Inversions.cpp [cover] | Strongly_Connected_Components_Incremental.cpp | Sum_of_Floor_of_Linear.cpp [cover] | Sum_of_Multiplicative_Function.cpp [cover] | Sum_of_Totient_Function.cpp [cover] | System_of_Linear_Equations_Mod_2.cpp | Tetration_Mod.cpp [cover] | Three_Edge_Connected_Components.cpp [cover] | qqq_Binomial_Coefficient_Prime_Mod.cpp [cover] | st_Numbering.cpp [cover]
+  └── luogu
+      └── P5353.cpp [cover]
+  ```
+- 2026/08/07
+  ```sh
+  └── luogu
+      └── P14551.cpp [cover] | P2742.cpp [cover] | P3379.cpp [cover] | P4097.cpp [cover] | P4195.cpp [cover] | P4717.cpp [cover] | P4751.cpp [cover] | P5435.cpp [cover] | P5491.cpp [cover] | P5668.cpp | P6097.cpp [cover] | P6177.cpp | P6292.cpp [cover]
+  ```
+- 2026/07/30
+  ```sh
+  ├── luogu
+  │   └── P10814.cpp [cover] | P14957.cpp | P1919.cpp [cover] | P2293.cpp [cover] | P3803.cpp [cover] | P3810.cpp [cover] | P4198.cpp [cover] | P4238.cpp [cover] | P4239.cpp [cover] | P4725.cpp [cover] | P4726.cpp [cover] | P5205.cpp [cover] | P5245.cpp [cover] | P5432.cpp [cover]
+  └── qoj
+      └── 3936 XXIV 赛前模板训练赛
+          └── 21566_四维偏序.cpp
+  ```
+- 2026/07/29
+  ```sh
+  └── luogu
+      └── P2075.cpp [cover]
+  ```
+- 2026/07/28
+  ```sh
+  └── luogu
+      └── P6466.cpp | P6578.cpp
+  ```
+- 2026/07/27
+  ```sh
+  └── luogu
+      └── P6019.cpp | P6109.cpp
+  ```
+- 2026/07/26
+  ```sh
+  └── luogu
+      └── P3674.cpp
+  ```
 - 2026/07/26
   ```sh
   └── luogu

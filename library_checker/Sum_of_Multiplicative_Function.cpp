@@ -1,7 +1,6 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
 #include "YRS/mod/mint_t.hpp"
-#include "YRS/pr/psum.hpp"
 #include "YRS/pr/min_25.hpp"
 
 using mint = mint_t<469762049>;

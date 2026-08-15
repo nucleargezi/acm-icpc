@@ -3,12 +3,14 @@
 #include "YRS/pr/tetration.hpp"
 
 void Yorisou() {
-  LL(a, b, p);
-  print(tetration(a, b, p));
+  INT(Q);
+  FOR(Q) {
+    INT(a, b, p);
+    print(tetration(a, b, p));
+  }
 }
 
 int main() {
-  INT(T);
-  FOR(T) Yorisou();
+  Yorisou();
   return 0;
 }

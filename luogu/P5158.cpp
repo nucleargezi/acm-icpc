@@ -1,22 +1,17 @@
-#define YRSD
-// #include "YRS/aa/fast.hpp"
+// #define MSNTT
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-// #include "YRS/ds/basic/retsu.hpp"
-// #include "YRS/mod/mint.hpp"
-// #include "YRS/aa/def.hpp"
-#include "YRS/poly/multi.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/multi.hpp"
 
 using mint = M99;
-using fps = vc<mint>;
-fps_t<mint> X;
 void Yorisou() {
   INT(N);
-  vc<mint> x(N), y(N);
+  fps x(N), y(N);
   FOR(i, N) IN(x[i], y[i]);
-  print(X.inte(x, y));
+  print(inte(x, y));
 }
-constexpr int tests = 0, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

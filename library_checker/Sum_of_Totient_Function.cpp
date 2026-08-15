@@ -5,8 +5,8 @@
 
 using mint = M99;
 void Yorisou() {
-  LL(N);
-  print(phi_sum<mint>{}[N]);
+  LL(x);
+  print(phi_sum<mint>{}[x]);
 }
 
 int main() {

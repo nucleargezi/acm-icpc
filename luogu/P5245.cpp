@@ -1,21 +1,21 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/poly/fps_pow.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/pow.hpp"
 
-// #define tests
 using mint = M99;
 void Yorisou() {
-  LL(n);
-  ll k = []() {
-    mint ret;
-    S(s);
-    for (char c : s) {
-      ret *= 10;
-      ret += c - '0';
-    }
-    iroha ret.val;
+  INT(N);
+  ll K = []() {
+    mint s;
+    STR(str);
+    for (int c : str) s = s * 10 + c - '0';
+    return s.val();
   }();
-  VEC(mint, a, n);
-  UL(fps_pow(a, k));
+  VEC(mint, f, N);
+  print(pow(f, K));
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

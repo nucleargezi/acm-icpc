@@ -1,6 +1,6 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/g/inc_mst.hpp"
+#include "YRS/gg/inc_mst.hpp"
 
 void Yorisou() {
   INT(N, M);

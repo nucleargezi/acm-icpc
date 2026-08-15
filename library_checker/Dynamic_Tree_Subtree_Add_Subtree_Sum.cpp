@@ -1,32 +1,27 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/ds/toptree/satt.hpp"
+#include "YRS/ds/lct/lct_sub_sayo.hpp"
 #include "YRS/al/am/sum_add.hpp"
 
-using am = a_monoid_sum_add<ll>;
 void Yorisou() {
   INT(N, Q);
-  satt<am> g(N);
-  FOR(i, N) {
-    INT(x);
-    g.set(i, x);
-  }
+  VEC(int, a, N);
+  lct_sub_sayo<Sum_add<ll>> g({all(a)});
   FOR(N - 1) {
-    INT(x, y);
-    g.link(x, y);
+    INT(a, b);
+    g.link(a, b);
   }
   FOR(Q) {
     INT(op);
     if (op == 0) {
-      INT(x, y, a, b);
-      g.cut(x, y);
-      g.link(a, b);
+      INT(a, b, c, d);
+      g.cut(a, b), g.link(c, d);
     } else if (op == 1) {
-      INT(p, rt, x);
-      g.apply_sub(p, rt, x);
+      INT(n, p, x);
+      g.apply(n, p, x);
     } else {
-      INT(x, f);
-      print(g.prod_sub(x, f));
+      INT(n, p);
+      print(g.prod(n, p));
     }
   }
 }

@@ -1,30 +1,48 @@
-#define YRSD
-// #include "YRS/aa/fast.hpp"
 #include "YRS/all.hpp"
 #include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-// #include "YRS/ds/basic/retsu.hpp"
-// #include "YRS/mod/mint_t.hpp"
-// #include "YRS/mod/binom.hpp"
-#include "YRS/ds/seg/range_sum_point_add.hpp"
-#include "YRS/al/m/add.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/IO/yn.hpp"
 
-using DS = range_sum_point_add<monoid_add<ll>, 1 << 4>;
-void Yorisou() {
-  INT(N, Q);
-  VEC(ll, a, N);
-  DS seg(a);
-  FOR(Q) {
-    INT(op, x, y);
-    if (op == 1) {
-      --x;
-      seg.multiply(x, y);
-    } else {
-      --x;
-      print(seg.prod(x, y));
+struct Seg {
+  int N, n, sz;
+  vc<ll> a;
+  void upd(int i) { a[i] = a[i << 1] + a[i << 1 | 1]; }
+  Seg(const vc<int> &v) : N(v.size()) {
+    for (n = 0; 1 << n < N; ++n);
+    sz = 1 << n;
+    a.assign(sz << 1, 0);
+    FOR(i, N) a[i + sz] = v[i];
+    FOR_R(i, 1, sz) upd(i);
+  }
+  void add(int i, int x) {
+    for (a[i += sz] += x; i >>= 1;) upd(i);
+  }
+  ll prod(int l, int r) {
+    ll s = 0;
+    for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {
+      if (l & 1) s += a[l++];
+      if (r & 1) s += a[--r];
     }
+    return s;
+  }
+};
+
+void Yorisou() {
+  int N, Q;
+  IN(N, Q);
+  vc<int> a(N);
+  IN(a);
+
+  Seg seg(a);
+  FOR(Q) {
+    int op, i, x, l, r;
+    IN(op);
+    if (op == 1) IN(i, x), seg.add(i - 1, x);
+    else IN(l, r), print(seg.prod(l - 1, r));
   }
 }
-constexpr int tests = 0, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

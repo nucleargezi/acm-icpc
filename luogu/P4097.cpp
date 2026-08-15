@@ -1,5 +1,5 @@
 #include "YRS/all.hpp"
-#include "YRS/IO/fast_io.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/ds/sl/lict.hpp"
 
 constexpr int m1 = 39989, m2 = 1000000000;
@@ -21,9 +21,9 @@ void Yorisou() {
       if (x > xx) swap(x, xx), swap(y, yy);
       F f;
       if (x == xx) {
-        f = {0, 1. * max(y, yy)};
+        f = {0, 1.l * max(y, yy)};
       } else {
-        re k = (1. * yy - y) / (xx - x);
+        re k = (1.l * yy - y) / (xx - x);
         f = {k, y - k * x};
       }
       seg.add(x, xx + 1, f);

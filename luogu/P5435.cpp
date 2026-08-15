@@ -1,24 +1,26 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/PR/gcd_fast.hpp"
-#include "MeIoN_Lib/math/mod/modint.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/pr/gcd_fast.hpp"
+#include "YRS/mod/mint_t.hpp"
 
-void before() {}
-
-// #define tests
 using mint = M99;
 void Yorisou() {
-  LL(n);
-  VEC(ll, a, n);
-  VEC(ll, b, n);
-  vector<mint> ans(n);
-  FOR(i, n) {
+  INT(N);
+  VEC(int, a, N);
+  VEC(int, b, N);
+  vc<mint> s(N);
+  gcd_fast g(max(QMAX(a), QMAX(b)));
+  FOR(i, N) {
     mint d = i + 1;
-    FOR(k, n) { 
-      ans[i] += d * gcd_fast(a[i], b[k]); 
+    FOR(k, N) { 
+      s[i] += d * g(a[i], b[k]); 
       d *= i + 1;
     }
   }
-  FOR(i, n) UL(ans[i]);
+  for (Z x : s) print(x);
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

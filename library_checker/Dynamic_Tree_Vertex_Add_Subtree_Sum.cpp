@@ -1,4 +1,3 @@
-// https://icpc.bjtu.edu.cn/problem/11428
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
 #include "YRS/ds/lct/lct_sub.hpp"
@@ -6,24 +5,23 @@
 
 void Yorisou() {
   INT(N, Q);
-  lct_sub<monoid_add<ll>> g(N);
-  FOR(i, N) IN(g.a[i].mx);
+  VEC(int, a, N);
+  lct_sub<Add<ll>> g({all(a)});
   FOR(N - 1) {
-    INT(x, y);
-    g.link(x, y);
+    INT(a, b);
+    g.link(a, b);
   }
   FOR(Q) {
     INT(op);
     if (op == 0) {
-      INT(x, y, a, b);
-      g.cut(x, y);
-      g.link(a, b);
+      INT(a, b, c, d);
+      g.cut(a, b), g.link(c, d);
     } else if (op == 1) {
-      INT(p, x);
-      g.multiply(p, x);
+      INT(i, x);
+      g.add(i, x);
     } else {
-      INT(x, f);
-      print(g.prod(x, f));
+      INT(n, p);
+      print(g.prod(n, p));
     }
   }
 }

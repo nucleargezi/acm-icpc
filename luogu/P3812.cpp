@@ -1,17 +1,18 @@
-#include "MeIoN_Lib/Z_H/MeioN.hpp"
-#include "MeIoN_Lib/MeIoN_all.hpp"
-#include "MeIoN_Lib/math/line/01/xor_vector_space.hpp"
+#include "YRS/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/line/01/sp.hpp"
 
-void before() {}
-
-// #define tests
 void Yorisou() {
-  LL(n);
-  vector_space<ll> s;
-  FOR(n) {
+  sp<ll> s;
+  INT(Q);
+  FOR(Q) {
     LL(x);
-    s.add(x);
+    s.ins(x);
   }
-  UL(s.get_max());
+  print(s.max());
 }
-#include "MeIoN_Lib/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

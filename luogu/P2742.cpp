@@ -1,21 +1,20 @@
-#include "YRS/Z_H/MeioN.hpp"
 #include "YRS/all.hpp"
-#include "YRS/ge/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ge/basic/hull.hpp"
 
-// #define tests
-using RE = double;
-using P = point<RE>;
+using re = ld;
+using P = point<re>;
 void Yorisou() {
   INT(N);
   VEC(P, a, N);
   a = rearrange(a, hull(a));
-  N = len(a);
-  RE ans = 0;
-  FOR(i, N) {
-    int k = (i + 1) % N;
-    ans += dist(a[i], a[k]);
-  }
+  re s = 0;
+  FOR(i, si(a)) s += (a[i] - a[(i + 1) % si(a)]).length();
   setp(2);
-  UL(ans);
+  print(s);
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}

@@ -1,28 +1,25 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
+#include "YRS/IO/fio.hpp"
 #include "YRS/nt/bigint/big.hpp"
-#include "YRS/po/fps_inv.hpp"
+#include "YRS/fps/inv.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
-using G = bigint;
-using mint = M99;
-string get() {
-  G a, b;
-  IN(a, b);
-  a /= b;
-  return a.to_string();
+string gen() {
+  using ll = bigint;
+  LL(a, b);
+  return (a / b).to_string();
 }
+
+using T = M99;
 void Yorisou() {
-  string s = get();
-  int N = len(s);
-  vc<mint> f(N);
-  FOR(i, N) f[i] = s[i] - '0';
-  reverse(all(f));
-  print(fps_inv(f));
+  string s = gen();
+  int n = si(s);
+  fps f(n);
+  FOR(i, n) f[i] = s[i] - '0';
+  reverse(f);
+  print(inv(f));
 }
-#include "YRS/aa/main.hpp"
+
+int main() {
+  Yorisou();
+  return 0;
+}
