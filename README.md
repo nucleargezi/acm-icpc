@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/08/15   problems: 4746;
+- 2026/08/19   problems: 4766;
 - 2026/07/26   problems: 4701;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
@@ -26,6 +26,39 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/08/19
+  ```sh
+  └── library_checker
+      └── i_0_n_1_riid_sum_i_0_n_1_r_i_i_d_i_0_n_1_riid.cpp | i_0_riid_sum_i_0_infty_r_i_i_d_i_0_riid.cpp
+  ```
+- 2026/08/18
+  ```sh
+  ├── atcoder
+  │   └── abc
+  │       └── 220-229
+  │           └── abc223
+  │               └── abc223h.cpp
+  ├── luogu
+  │   └── P1036.cpp | P1593.cpp | P3292.cpp [cover] | P4389.cpp [cover] | P4726.cpp [cover] | P5264.cpp [cover] | P5265.cpp [cover] | P5395.cpp [cover] | P5396.cpp [cover] | P5408.cpp [cover] | P5409.cpp [cover] | P5488.cpp [cover] | P5748.cpp [cover] | P6667.cpp
+  └── regional
+      └── na
+          └── 2026
+              └── nac2026
+                  └── qoj17327.cpp | qoj17329.cpp | qoj17331.cpp
+  ```
+- 2026/08/16
+  ```sh
+  ├── library_checker
+  │   └── Power_Projection_of_Set_Power_Series.cpp
+  └── qoj
+      └── 1814 Elegia's Forgotten Hill
+          └── 12.cpp
+  ```
+- 2026/08/15
+  ```sh
+  └── library_checker
+      └── Convolution_Large.cpp | Counting_C_4_C_4_C_4_s.cpp | Counting_Eulerian_Circuits.cpp | Dynamic_Point_Rectangle_Affine_Rectangle_Sum.cpp | Gcd_of_Gaussian_Integers.cpp | Min_Plus_Convolution_Concave_and_Arbitrary.cpp | Minimum_Diameter_Spanning_Tree.cpp | Range_Linear_Add_Range_Min.cpp | Sum_of_Multiplicative_Function_Large.cpp
+  ```
 - 2026/08/15
   ```sh
   ├── codeforces

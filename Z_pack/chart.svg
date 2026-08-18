@@ -18,8 +18,8 @@
   <g transform="translate(135.694,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">aizu</text>
   </g>
-  <rect x="185.342" y="406.56" width="63.4833" height="263.44" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="217.083" y="398.56" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">890</text>
+  <rect x="185.342" y="406.264" width="63.4833" height="263.736" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="217.083" y="398.264" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">891</text>
   <g transform="translate(217.083,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">atcoder</text>
   </g>
@@ -43,8 +43,8 @@
   <g transform="translate(542.639,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">cses</text>
   </g>
-  <rect x="592.286" y="608.432" width="63.4833" height="61.568" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="624.028" y="600.432" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">208</text>
+  <rect x="592.286" y="604.88" width="63.4833" height="65.12" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="624.028" y="596.88" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">220</text>
   <g transform="translate(624.028,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">library_checker</text>
   </g>
@@ -53,8 +53,8 @@
   <g transform="translate(705.417,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">loj</text>
   </g>
-  <rect x="755.064" y="467.536" width="63.4833" height="202.464" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="786.806" y="459.536" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">684</text>
+  <rect x="755.064" y="466.648" width="63.4833" height="203.352" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="786.806" y="458.648" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">687</text>
   <g transform="translate(786.806,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">luogu</text>
   </g>
@@ -73,13 +73,13 @@
   <g transform="translate(1030.97,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">prov</text>
   </g>
-  <rect x="1080.62" y="623.232" width="63.4833" height="46.768" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1112.36" y="615.232" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">158</text>
+  <rect x="1080.62" y="622.936" width="63.4833" height="47.064" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1112.36" y="614.936" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">159</text>
   <g transform="translate(1112.36,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">qoj</text>
   </g>
-  <rect x="1162.01" y="625.008" width="63.4833" height="44.992" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
-  <text x="1193.75" y="617.008" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">152</text>
+  <rect x="1162.01" y="624.12" width="63.4833" height="45.88" fill="#e6adb8" stroke="#f3d5dc" stroke-width="1"/>
+  <text x="1193.75" y="616.12" text-anchor="middle" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">155</text>
   <g transform="translate(1193.75,686) rotate(-45)">
     <text text-anchor="end" font-size="13" font-family="Segoe UI, Arial, sans-serif" fill="#121212">regional</text>
   </g>

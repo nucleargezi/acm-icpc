@@ -1,27 +1,27 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/graph/Tree/tree_monoid_ST.hpp"
-#include "YRS/ds/monoid/vector_space.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ttr/hld_st.hpp"
+#include "YRS/al/m/sp.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 void Yorisou() {
   INT(N, Q);
-  VEC(ll, a, N);
-  graph g(N);
-  g.read_tree();
-  tree v(g);
-  tree_monoid_ST<decltype(v), monoid_vector_space<ll>> seg(v, [&](int i) {
-    return vector_space<ll>({a[i]}, 0);
-  });
+  vc<sp<ll>> dat(N);
+  FOR(i, N) {
+    LL(x);
+    dat[i].ins(x);
+  }
+  vc<vc<int>> g(N);
+  FOR(N - 1) {
+    INT(a, b);
+    --a, --b;
+    g[a].ep(b), g[b].ep(a);
+  }
+  hld_st<int, Sp<ll>> v(g, dat);
   FOR(Q) {
-    INT(x, y);
-    --x, --y;
-    print(seg.prod_path(x, y).get_max());
+    INT(a, b);
+    --a, --b;
+    print(v.prod(a, b).max());
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() { Yorisou(); }
