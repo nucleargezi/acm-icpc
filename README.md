@@ -4,7 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
-- 2026/08/19   problems: 4766;
+- 2026/08/26   problems: 4858;
 - 2026/07/26   problems: 4701;
 - 2026/06/24   problems: 4387;
 - 2026/05/27   problems: 4167;
@@ -26,6 +26,184 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/08/26
+  ```sh
+  ├── luogu
+  │   └── P3295.cpp [cover]
+  └── regional
+      └── cn
+          ├── 2020
+          │   └── 上海
+          │       └── K.cpp | M.cpp
+          └── 2025
+              └── 2025 HK
+                  └── H.cpp
+  ```
+- 2026/08/25
+  ```sh
+  ├── camp_like
+  │   └── ptz
+  │       └── 2021 W
+  │           └── Day 9. Grand Prix of Suwon
+  │               └── A.cpp | J.cpp | L.cpp
+  ├── loj
+  │   └── 175_模立方根.cpp | 2083_NOI_2016_优秀的拆分.cpp | 6764_THUPC_2021_鬼街.cpp
+  └── luogu
+      ├── B
+      │   └── B2119.cpp
+      └── P10469.cpp | P2737.cpp | P3224.cpp [cover] | P4341.cpp | P6656.cpp [cover] | P7603.cpp | P9829.cpp | P9831.cpp
+  ```
+- 2026/08/24
+  ```sh
+  └── luogu
+      └── P16567.cpp
+  ```
+- 2026/08/21
+  ```sh
+  ├── atcoder
+  │   └── abc
+  │       └── 360-369
+  │           └── abc362
+  │               └── abc362g.cpp
+  ├── luogu
+  │   └── P13531.cpp | P4248.cpp [cover]
+  └── uoj
+      └── 577_ULR_1_打击复读.cpp | 697_候选队互测_2022_广为人知题.cpp
+  ```
+- 2026/08/20
+  ```sh
+  ├── camp_like
+  │   └── nowcode
+  │       └── 2026
+  │           └── 10
+  │               └── Occurrences.cpp
+  ├── luogu
+  │   └── P15883.cpp | P15885.cpp | P15887.cpp | P16562.cpp
+  └── regional
+      └── ap
+          └── 2026
+              └── APC2026
+                  └── D.cpp | J.cpp | K.cpp
+  ```
+- 2026/08/19
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 10
+                  └── Joyride.cpp | Natsuhikage.cpp | Yet_Another_A_Plus_B_Problem.cpp
+  ```
+- 2026/08/14
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 9
+                  └── D.cpp | I.cpp
+  ```
+- 2026/08/12
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 8
+                  └── C.cpp | E.cpp | G.cpp | K.cpp
+  ```
+- 2026/08/07
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 7
+                  └── F.cpp | K.cpp
+  ```
+- 2026/08/05
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 6
+                  └── F.cpp | J.cpp
+  ```
+- 2026/07/31
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 5
+                  └── A.cpp | D.cpp | N.py
+  ```
+- 2026/07/30
+  ```sh
+  ├── camp_like
+  │   └── nowcode
+  │       └── 2026
+  │           ├── 3
+  │           │   └── E.cpp | G.cpp | L.cpp
+  │           └── 4
+  │               └── F.cpp
+  └── regional
+      └── cn
+          └── 2025
+              └── 2025 HK
+                  └── K.cpp
+  ```
+- 2026/07/29
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 4
+                  └── E.cpp | G.cpp
+  ```
+- 2026/07/24
+  ```sh
+  └── camp_like
+      └── nowcode
+          └── 2026
+              └── 3
+                  └── I.cpp | M.cpp
+  ```
+- 2026/07/22
+  ```sh
+  ├── camp_like
+  │   └── nowcode
+  │       └── 2026
+  │           └── 2
+  │               └── C.cpp | K.cpp | N.cpp
+  └── qoj
+      └── 3912 Query on a Sequence
+          └── 19_수열과_쿼리_19.cpp | 25_序列与查询_25.cpp | 26_数列与查询_26.cpp | 27_数列与查询_27.cpp | 28_数列与查询_28.cpp | 29_数列与查询_29.cpp | 30_序列与查询_30.cpp | 37_수열과_쿼리_37.cpp | 38_수열과_쿼리_38.cpp | 42_数列与查询_42.cpp
+  ```
+- 2026/07/21
+  ```sh
+  └── qoj
+      └── 3912 Query on a Sequence
+          └── 12_数列与查询_12.cpp | 20_序列与查询_20.cpp | 21_수열과_쿼리_21.cpp | 22_序列与查询_22.cpp | 23_序列与查询_23.cpp | 24_序列与查询_24.cpp | 31_序列与查询_31.cpp | 9_序列与查询_9.cpp
+  ```
+- 2026/07/20
+  ```sh
+  ├── qoj
+  │   └── 3912 Query on a Sequence
+  │       └── 10_数列与查询_10.cpp | 11_序列与查询_11.cpp | 13_수열과_쿼리_13.cpp | 14_数列与查询_14.cpp | 15_数列与查询_15.cpp | 16_序列与查询_16.cpp | 17_数列与查询_17.cpp | 18_数列与查询_18.cpp | 7_数列与查询_7.cpp
+  └── regional
+      └── cn
+          └── 2025
+              └── 2025 HK
+                  └── F.cpp
+  ```
+- 2026/07/02
+  ```sh
+  └── qoj
+      └── 3912 Query on a Sequence
+          └── 2_序列与查询_2.cpp
+  ```
+- 2026/07/01
+  ```sh
+  └── qoj
+      └── 3912 Query on a Sequence
+          └── 1_序列和查询_1.cpp | 3_序列与查询_3.cpp | 4_序列与查询_4.cpp | 5_序列与查询_5.cpp | 6_수열과_쿼리_6.cpp | 8_序列与查询_8.cpp
+  ```
 - 2026/08/19
   ```sh
   └── library_checker
