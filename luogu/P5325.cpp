@@ -1,7 +1,6 @@
 #include "YRS/all.hpp"
-#include "YRS/mod/mint_t.hpp"
-#include "YRS/pr/psum.hpp"
 #include "YRS/pr/min_25.hpp"
+#include "YRS/mod/mint_t.hpp"
 
 using mint = M11;
 constexpr mint in = mint(6).inv();
@@ -10,12 +9,9 @@ void Yorisou() {
   psum<mint> a(N), b(N);
   a.sum();
   b.ke([&](ll x) { return mint(x) * (x + 1) * (x << 1 | 1) * in; });
-  Z pfn = [&](ll x) { return b[x] - a[x]; };
-  Z fn = [&](ll x) { return mint(x) * (x - 1); };
-  print(min_25_2<mint>(N, fn, pfn));
+  Z fnp = [&](ll x) { return b[x] - a[x]; };
+  Z fnpk = [&](ll x) { return mint(x) * (x - 1); };
+  print(min_25<mint>(N, fnpk, fnp));
 }
 
-int main() {
-  Yorisou();
-  return 0;
-}
+int main() { Yorisou(); }

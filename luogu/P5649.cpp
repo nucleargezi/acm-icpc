@@ -1,106 +1,80 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-#include "YRS/ds/toptree/satt.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/lct/lct_sub_sayo.hpp"
 
-// #define tests
 struct MX {
-  using X = struct {
+  static constexpr bool commute = 1;
+  struct X {
     ll s;
     int mx, mn;
+    X(ll s, int mx, int mn) : s(s), mx(mx), mn(mn) {}
+    X() : X(0, ine<int>, inf<int>) {}
+    X(int x) : X(x, x, x) {}
   };
-  static constexpr X unit() { return {0, -inf<int>, inf<int>}; }
-  static constexpr X make(int x) { return {x, x, x}; }
-  static constexpr X op(X L, X R) {
-    return {L.s + R.s, max(L.mx, R.mx), min(L.mn, R.mn)};
+  using A = PLL;
+  static X unit() { return X(); }
+  static X op(const X &a, const X &b) {
+    return {a.s + b.s, max(a.mx, b.mx), min(a.mn, b.mn)};
   }
-};
-struct MA {
-  using X = pair<ll, ll>;
-  static constexpr X op(const X &f, const X &g) {
-    return {f.fi * g.fi, f.se * g.fi + g.se};
+  static A id() { return {1, 0}; }
+  static A fu(const A &a, const A &b) {
+    return {a.fi * b.fi, a.se * b.fi + b.se};
   }
-  static constexpr X unit() {  return {1, 0}; }
-};
-struct AM {
-  using MX = ::MX;
-  using MA = ::MA;
-  using X = MX::X;
-  using A = MA::X;
-  static constexpr X act(X x, A a, int sz) {
-    x.mn *= a.fi, x.mx *= a.fi, x.s *= a.fi;
-    x.mn += a.se, x.mx += a.se, x.s += a.se * sz;
+  static X map(X x, A f, ll n) {
+    if (not n) return x;
+    x.s = x.s * f.fi + f.se * n;
+    x.mx = (ll)x.mx * f.fi + f.se;
+    x.mn = (ll)x.mn * f.fi + f.se;
     return x;
   }
+  static X make(int x) { return {(ll)x, x, x}; }
 };
+
 void Yorisou() {
   INT(N, Q);
-  SATT<AM> satt(N);
-  VEC(PII, e, N - 1);
+  lct_sub_sayo<MX> g(N);
+  VEC(PII, es, N - 1);
   FOR(i, N) {
     INT(x);
-    satt.set(i, MX::make(x));
+    g.set(i, x);
   }
-  for (Z [x, y] : e) {
-    --x, --y;
-    satt.link(x, y);
-  }
+  for (Z [a, b] : es) g.link(a - 1, b - 1);
   INT(rt);
   --rt;
-  satt.evert(rt);
+  int x, y, z;
   FOR(Q) {
     INT(op);
     if (op == 0) {
-      INT(x, y);
-      --x;
-      satt.apply_sub(x, rt, {0, y});
+      IN(x, y), g.apply_sub(x - 1, rt, {0, y});
     } else if (op == 1) {
-      IN(rt);
-      --rt;
+      IN(rt), --rt;
     } else if (op == 2) {
-      INT(x, y, w);
-      --x, --y;
-      satt.apply_chain(x, y, {0, w});
+      IN(x, y, z), g.apply(x - 1, y - 1, {0, z});
     } else if (op == 3) {
-      INT(x);
-      --x;
-      print(satt.prod_sub(x, rt).mn);
+      IN(x), print(g.prod_sub(x - 1, rt).mn);
     } else if (op == 4) {
-      INT(x);
-      --x;
-      print(satt.prod_sub(x, rt).mx);
+      IN(x), print(g.prod_sub(x - 1, rt).mx);
     } else if (op == 5) {
-      INT(x, y);
-      --x;
-      satt.apply_sub(x, rt, {1, y});
+      IN(x, y), g.apply_sub(x - 1, rt, {1, y});
     } else if (op == 6) {
-      INT(x, y, w);
-      --x, --y;
-      satt.apply_chain(x, y, {1, w});
+      IN(x, y, z), g.apply(x - 1, y - 1, {1, z});
     } else if (op == 7) {
-      INT(x, y);
-      --x, --y;
-      print(satt.prod_chain(x, y).mn);
+      IN(x, y), print(g.prod(x - 1, y - 1).mn);
     } else if (op == 8) {
-      INT(x, y);
-      --x, --y;
-      print(satt.prod_chain(x, y).mx);
+      IN(x, y), print(g.prod(x - 1, y - 1).mx);
     } else if (op == 9) {
-      INT(x, y);
+      IN(x, y);
       --x, --y;
-      if (not satt.in_sub(x, y, rt)) {
-        satt.cut(x, rt);
-        satt.link(x, y);
-      }
+      g.evert(rt);
+      if (g.lca(x, y) == x) continue;
+      g.cut_fa(x);
+      g.link(x, y);
     } else if (op == 10) {
-      INT(x, y);
-      --x, --y;
-      print(satt.prod_chain(x, y).s);
+      IN(x, y), print(g.prod(x - 1, y - 1).s);
     } else {
-      INT(x);
-      --x;
-      print(satt.prod_sub(x, rt).s);
+      IN(x), print(g.prod_sub(x - 1, rt).s);
     }
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() { Yorisou(); }

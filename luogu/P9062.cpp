@@ -1,19 +1,13 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/range_of/range_closest_pair.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ds/range/range_closest_pair.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 void Yorisou() {
   INT(N, Q);
   VEC(PII, a, N);
   VEC(PII, q, Q);
-  FOR(i, Q) --q[i].fi;
-  range_closest_pair g(a, q);
-  for (ll s : g.f()) print(s);
+  for (Z &[l, r] : q) --l;
+  for (ll x : range_closest_pair(move(a), move(q)).f()) print(x);
 }
-#include "YRS/aa/main.hpp"
+
+int main() { Yorisou(); }

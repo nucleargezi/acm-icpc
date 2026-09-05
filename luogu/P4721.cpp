@@ -1,22 +1,16 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/fps_inv.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/ofps/online_conv.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
 void Yorisou() {
   INT(N);
-  vc<mint> f(N);
+  VEC(mint, g, N - 1);
+  semi_online_conv<mint> cv(move(g));
+  fps f(N);
   f[0] = 1;
-  FOR(i, 1, N) {
-    INT(x);
-    f[i] = -x;
-  }
-  print(fps_inv(f));
+  FOR(i, 1, N) f[i] = cv(f[i - 1]);
+  print(f);
 }
-#include "YRS/aa/main.hpp"
+
+int main() { Yorisou(); }

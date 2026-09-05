@@ -1,5 +1,6 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
+#include "YRS/ds/seg/angelbeats.hpp"
 #include "YRS/al/beats/sum_add_ch.hpp"
 
 using MX = Sum_add_ch<ll>;
@@ -24,7 +25,4 @@ void Yorisou() {
   }
 }
 
-int main() {
-  Yorisou();
-  return 0;
-}
+int main() { Yorisou(); }

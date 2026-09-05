@@ -1,24 +1,32 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-#include "YRS/tr/near_kinbo.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ttr/near_kinbo.hpp"
 
 void Yorisou() {
   INT(N, Q);
-  graph g(N);
-  g.sc();
-  near_kinbo ds(g);
-  vc<int> dat(ds.tt);
-  FOR(i, N) for (int x : ds.vs(i)) ++dat[x];
-  dat = pre_sum(dat);
+  vc<vc<int>> g(N);
+  FOR(N - 1) {
+    INT(a, b);
+    --a, --b;
+    g[a].ep(b), g[b].ep(a);
+  }
+  near_kinbo v(g);
+  vc<int> c(si(v));
+  FOR(i, N) v.vs(i, [&](int x) { ++c[x]; });
+  c = pre_sum(c);
+
   FOR(Q) {
     INT(x, k);
     --x;
     int s = 0;
-    for (Z [l, r] : ds.range(x, k, k + 1)) s += dat[r] - dat[l];
+    v.range(x, k, k + 1, [&](int l, int r) {
+      s += c[r] - c[l];
+    });
     print(s);
   }
 }
-constexpr int tests = 1, fl = 0, DB = 10;
-#include "YRS/aa/main.hpp"
+
+int main() {
+  INT(T);
+  FOR(T) Yorisou();
+}

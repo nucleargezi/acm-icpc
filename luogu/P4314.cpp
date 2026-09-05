@@ -3,10 +3,10 @@
 #include "YRS/ds/seg/segl_t.hpp"
 #include "YRS/al/am/his_max_add_set.hpp"
 
-using AM = am_his_max_add_set<int>;
+using MX = Hismax_set_add<int>;
 void Yorisou() {
   INT(N);
-  segl_t<AM> seg(N, [&](int) -> PII {
+  segl_t<MX> seg(N, [&](int) -> PII {
     INT(x);
     return {x, x};
   });
@@ -24,16 +24,13 @@ void Yorisou() {
     } else if (op == 'P') {
       INT(l, r, x);
       --l;
-      seg.apply(l, r, AM::add(x));
+      seg.apply(l, r, MX::add(x));
     } else {
       INT(l, r, x);
       --l;
-      seg.apply(l, r, AM::set(x));
+      seg.apply(l, r, MX::set(x));
     }
   }
 }
 
-int main() {
-  Yorisou();
-  return 0;
-}
+int main() { Yorisou(); }

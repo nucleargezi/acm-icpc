@@ -4,31 +4,29 @@
 #include "YRS/ds/un/dsu_mono.hpp"
 
 struct X {
-  bool ze;
-  ll a[4];
+  bool ze = 0;
+  ll a[4] = {ine<ll>, inf<ll>, ine<ll>, inf<ll>};
 };
 
 struct MX {
   using X = ::X;
-  static X op(const X &L, const X &R) {
-    X res = L;
-    res.ze |= R.ze;
-    chmax(res.a[0], R.a[0]);
-    chmax(res.a[2], R.a[2]);
-    chmin(res.a[1], R.a[1]);
-    chmin(res.a[3], R.a[3]);
-    return res;
+  static X op(const X &a, const X &b) {
+    X s = a;
+    s.ze |= b.ze;
+    chmax(s.a[0], b.a[0]);
+    chmax(s.a[2], b.a[2]);
+    chmin(s.a[1], b.a[1]);
+    chmin(s.a[3], b.a[3]);
+    return s;
   }
-  static X unit() {
-    return {0, {-inf<ll>, inf<ll>, -inf<ll>, inf<ll>}};
-  }
+  static X unit() { return X(); }
   static inline ll f(ll x, ll y) {
-    if (max(x, y) == inf<ll>) return -inf<ll>;
-    if (min(x, y) == -inf<ll>) return -inf<ll>;
+    if (max(x, y) == inf<ll>) return ine<ll>;
+    if (min(x, y) == ine<ll>) return ine<ll>;
     return x * y;
   }
   static inline ll f(const X &L, const X &R) {
-    ll s = -inf<ll>;
+    ll s = ine<ll>;
     FOR(i, 4) FOR(k, 4) chmax(s, f(L.a[i], R.a[k]));
     if (L.ze or R.ze) chmax(s, 0);
     return s;
@@ -80,7 +78,4 @@ void Yorisou() {
   }
 }
 
-int main() {
-  Yorisou();
-  return 0;
-}
+int main() { Yorisou(); }

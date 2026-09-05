@@ -1,15 +1,12 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/poly/lag.hpp"
+#include "YRS/fps/lag.hpp"
 
-using mint = M99;
+using T = M99;
 void Yorisou() {
   INT(N, M);
-  VEC(mint ,f, N + 1);
-  print(fps_t<mint>{}.lag(f, M, N + 1));
+  VEC(T ,f, N + 1);
+  print(lag<T>(f, M, N + 1));
 }
 
-int main() {
-  Yorisou();
-  return 0;
-}
+int main() { Yorisou(); }

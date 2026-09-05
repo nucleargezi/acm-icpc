@@ -1,20 +1,16 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/all.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/ofps/online_ctx.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
-using fps = vc<mint>;
+using namespace online;
+
 void Yorisou() {
   INT(N);
-  fps f(N + 1);
-  FOR(i, 3, N + 1) f[i] = fac(i - 1) * ifac(i);
-  f = fps_exp(f);
+  vc<mint> g(N + 1);
+  FOR(i, 2, N + 1) g[i] = 1;
+  Z f = ofps<mint>([&](Z a) { return 1 + integ(a * val<mint>(g)); });
   print(f[N] * fac(N));
 }
-#include "YRS/aa/main.hpp"  
+
+int main() { Yorisou(); }

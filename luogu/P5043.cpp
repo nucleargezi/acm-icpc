@@ -1,29 +1,31 @@
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/graph/Tree/subtree_hash.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/ttr/subtree_hash.hpp"
+#include "YRS/ds/basic/hashmap.hpp"
 
-// #define tests
 void Yorisou() {
-  INT(M);
-  vector<ull> a(M);
-  FOR(i, M) {
+  INT(N);
+  vc<ull> a(N);
+  vc<vc<int>> g;
+  FOR(i, N) {
     INT(N);
-    graph g(N);
+    g.assign(N, {});
     FOR(i, N) {
-      INT(fa);
-      --fa;
-      if (fa == -1) continue;
-      g.add(fa, i);
+      INT(f);
+      --f;
+      if (f == -1) continue;
+      g[f].ep(i), g[i].ep(f);
     }
-    g.build();
-    tree v(g);
-    subtree_hash H(v);
-    FOR(k, N) chmax(a[i], H[k]);
+    ull mx = 0;
+    tree_hash v(g);
+    FOR(i, N) chmax(mx, v[i]);
+    a[i] = mx;
   }
-  hash_map<int> mp;
-  FOR(i, M) {
+  hashmap<int> mp(N);
+  FOR(i, N) {
     if (not mp.contains(a[i])) mp[a[i]] = i + 1;
     print(mp[a[i]]);
   }
 }
-#include "YRS/Z_H/main.hpp"
+
+int main() { Yorisou(); }

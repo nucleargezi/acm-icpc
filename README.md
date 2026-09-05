@@ -4,6 +4,7 @@
 
 ## Platform Statistics
 #### Summary (since 2024/12)
+- 2026/09/05   problems: 4923;
 - 2026/08/26   problems: 4858;
 - 2026/07/26   problems: 4701;
 - 2026/06/24   problems: 4387;
@@ -26,6 +27,73 @@
 - 2025/01/30   problems: 833;
 - 2024/12/31   problems: 485;
 #### History (since 2025/03/12)
+- 2026/09/05
+  ```sh
+  └── luogu
+      └── P4781.cpp [cover] | P5667.cpp [cover]
+  ```
+- 2026/09/04
+  ```sh
+  └── luogu
+      └── P10639.cpp [cover]
+  ```
+- 2026/09/03
+  ```sh
+  └── luogu
+      └── P5649.cpp [cover] | P9062.cpp [cover]
+  ```
+- 2026/09/02
+  ```sh
+  ├── library_checker
+  │   └── Deque.cpp [cover]
+  └── luogu
+      └── P3372.cpp [cover] | P3373.cpp [cover] | P3374.cpp [cover]
+  ```
+- 2026/09/01
+  ```sh
+  ├── codeforces
+  │   └── oth
+  │       └── 53 testing1
+  │           └── 52C.cpp
+  ├── loj
+  │   └── 6074_2017_山东一轮集训_Day_6_子序列.cpp [cover]
+  └── luogu
+      └── P2221.cpp | P4314.cpp [cover] | P4458.cpp | P4868.cpp [cover]
+  ```
+- 2026/08/29
+  ```sh
+  ├── loj
+  │   └── 3457_COCI_2021_1_Janjetina.cpp
+  └── luogu
+      └── P5351.cpp | P7283.cpp
+  ```
+- 2026/08/28
+  ```sh
+  └── luogu
+      └── P4149.cpp | P4178.cpp | P6626.cpp [cover]
+  ```
+- 2026/08/27
+  ```sh
+  ├── loj
+  │   └── 2086_NOI_2016_区间.cpp | 2305_NOI_2017_游戏.cpp | 3847_NOI_2022_众数.cpp
+  ├── luogu
+  │   └── P11738.cpp | P16911.cpp | P16912.cpp | P16913.cpp | P16914.cpp | P16915.cpp | P16919.cpp | P16920.cpp | P16922.cpp | P16923.cpp | P16959.cpp | P16960.cpp | P16961.cpp | P16962.cpp | P16963.cpp | P16964.cpp | P16965.cpp | P16967.cpp | P16968.cpp | P1712.cpp [cover] | P3825.cpp [cover] | P8496.cpp [cover]
+  └── uoj
+      └── 222_NOI_2016_区间.cpp | 317_NOI_2017_游戏.cpp | 764_NOI_2022_众数.cpp | 98_集训队互测_2015_未来程序_改.cpp
+  ```
+- 2026/08/26
+  ```sh
+  ├── atcoder
+  │   └── other
+  │       └── fps_24
+  │           └── fps_24j.cpp [cover] | fps_24k.cpp [cover] | fps_24l.cpp [cover] | fps_24n.cpp [cover]
+  ├── loj
+  │   └── 2130_NOI_2015_软件包管理器.cpp | 2720_NOI_2018_你的名字.cpp | 3156_NOI_2019_回家路线.cpp | 3532_NOI_2021_轻重边.cpp | 3533_NOI_2021_路径交点.cpp | 6520_ICPC_PacNW_2017_Div_1_David_的旅程.cpp
+  ├── luogu
+  │   └── P2146.cpp [cover] | P2178.cpp [cover] | P4566.cpp | P4721.cpp [cover] | P4768.cpp [cover] | P4841.cpp [cover] | P5043.cpp [cover] | P5162.cpp | P5325.cpp [cover] | P5468.cpp [cover] | P5900.cpp [cover] | P6302.cpp | P6597.cpp | P6598.cpp | P6613.cpp [cover] | P6790.cpp | P7735.cpp [cover] | P7736.cpp [cover]
+  └── uoj
+      └── 117_欧拉回路.cpp | 128_NOI_2015_软件包管理器.cpp | 131_NOI_2015_品酒大会.cpp | 219_NOI_2016_优秀的拆分.cpp | 34_多项式乘法.cpp | 35_后缀排序.cpp | 393_NOI_2018_归程.cpp | 395_NOI_2018_你的名字.cpp | 478_NOI_2019_回家路线.cpp | 487_最小费用最大流.cpp | 500_任意基DFT.cpp | 50_UR_3_链式反应.cpp [cover] | 622_单源最短路径.cpp | 673_NOI_2021_轻重边.cpp | 674_NOI_2021_路径交点.cpp | 680_网络最大流.cpp | 78_二分图最大匹配.cpp | 79_一般图最大匹配.cpp | 80_二分图最大权匹配.cpp | 81_一般图最大权匹配.cpp
+  ```
 - 2026/08/26
   ```sh
   ├── luogu

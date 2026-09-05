@@ -1,26 +1,21 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/all.hpp"
-#include "YRS/po/prod_of_one_minus_xn.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/ofps/online_ctx.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
-using fps = vc<mint>;
+using namespace online;
+
 void Yorisou() {
   INT(N);
-  VEC(int, a, N);
-  vc<int> coef(N);
-  FOR(i, N) coef[i] = min<ll>(N + 1, ll(i + 1) * (a[i] + 1));
-  fps f = prod_of_one_minus_xn<mint>(coef, N);
-  FOR(i, N) coef[i] = i + 1;
-  fps g = prod_of_inv_one_minus_xn<mint>(coef, N);
-  mint s = 0;
-  FOR(i, N + 1) s += f[i] * g[N - i];
-  print(s);
+  vc<T> g(N + 1);
+  FOR(i, 1, N + 1) {
+    INT(a);
+    FOR(k, i, N + 1, i) g[k - 1] += i;
+    ll j = ll(i) * (a + 1);
+    if (j <= N) FOR(k, j, N + 1, j) g[k - 1] -= j;
+  }
+  Z f = ofps<T>([&](Z a) { return 1 + integ(a * val<mint>(g)); });
+  print(f[N]);
 }
-#include "YRS/aa/main.hpp"
+
+int main() { Yorisou(); }

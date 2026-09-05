@@ -1,17 +1,13 @@
 #include "YRS/all.hpp"
 #include "YRS/IO/fio.hpp"
-#include "YRS/mod/binom.hpp"
-#include "YRS/poly/lag_t.hpp"
+#include "YRS/fps/lag.hpp"
 
-using mint = M99;
+using T = M99;
 void Yorisou() {
-  INT(N, K);
-  vc<mint> a(N), b(N);
+  INT(N, c);
+  fps a(N), b(N);
   FOR(i, N) IN(a[i], b[i]);
-  print(lag_dis(a, b, K));
+  print(lag_dis(a, b, c));
 }
 
-int main() {
-  Yorisou();
-  return 0;
-}
+int main() { Yorisou(); }

@@ -1,29 +1,27 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-#include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/ofps.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/ofps/online_ctx.hpp"
 
 using mint = M99;
-using fps = vc<mint>;
-using ofps = online_fps_ctx<mint>;
-using dat = ofps::dat;
-using pip = ofps::pipe;
-D_poly()
-#define tests 0
-#define fl 0
-#define DB 10
+using namespace online;
+
 void Yorisou() {
   INT(N);
-  VEC(mint, A, N + 1);
-  VEC(mint, B, N + 1);
-
-  ofps X;
-  dat a = X.val(std::move(A)), b = X.val(std::move(B));
-  pip h = X.var();
-  h.set(X.sing(0));
-  h.set((a * dat(h).exp() + b).inte());
-  print((1 + dat(h)).ke(N + 1));
+  ++N;
+  VEC(mint, a, N);
+  VEC(mint, b, N);
+  Z s = ofps<mint>(
+      [](Z g, Z h) {
+        return 1 + integ(g * h);
+      },
+      [&](Z g, Z) {
+        return val<mint>(a) * g + val<mint>(b);
+      });
+  Z &h = s.get<1>();
+  fps f(N);
+  f[0] = 1;
+  FOR(i, 1, N) f[i] = h[i - 1] * invs(i);
+  print(f);
 }
-#include "YRS/aa/main.hpp"
+
+int main() { Yorisou(); }

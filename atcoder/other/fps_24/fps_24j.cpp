@@ -1,39 +1,32 @@
-#define YRSD
 #include "YRS/all.hpp"
-#include "YRS/debug.hpp"
-// #include "YRS/IO/fast_io.hpp"
-// #include "YRS/random/rng.hpp"
-#include "YRS/po/all.hpp"
-#include "YRS/po/online_conv.hpp"
+#include "YRS/IO/fio.hpp"
+#include "YRS/fps/ofps/online_ctx.hpp"
 
-#define tests 0
-#define fl 0
-#define DB 10
 using mint = M99;
-using fps = vc<mint>;
+using namespace online;
+
 void Yorisou() {
-  INT(N, M, L);
-  vc<int> a(N + 1);
-  FOR(M) {
+  INT(n, m, l);
+  vc<mint> g(n + 1);
+  vc<int> ban(n + 1), suf(n + 2);
+  mint in = mint(m).inv();
+
+  FOR(m) {
     INT(x);
-    a[x] = 1;
+    g[x] = in, ++suf[x];
   }
-  vc<u8> vis(N + 1);
-  FOR(L) {
+  FOR(l) {
     INT(x);
-    vis[x] = 1;
+    ban[x] = 1;
   }
-  online_conv<mint> g;
-  fps f(N + 1);
-  mint im = mint(M).inv();
-  f[0] = 1;
-  FOR(i, N) {
-    f[i + 1] = g(f[i], a[i + 1]) * im;
-    if (vis[i + 1]) f[i + 1] = 0;
-  }
-  mint s = 0;
-  FOR_R(i, N) a[i] += a[i + 1];
-  FOR(i, N) s += f[i] * a[N - i] * im;
-  print(s);
+  FOR_R(i, n + 1) suf[i] += suf[i + 1];
+  Z f = ofps<mint>([&](Z a) {
+    return unary(1 + a * val<mint>(g), 0,
+        [&](mint x, int i) { return ban[i] ? mint() : x; });
+  });
+  mint ans = 0;
+  FOR(i, n) ans += f[i] * suf[n - i] * in;
+  print(ans);
 }
-#include "YRS/aa/main.hpp"
+
+int main() { Yorisou(); }
