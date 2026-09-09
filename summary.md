@@ -1,4 +1,89 @@
 #### History (since 2025/03/12)
+- 2026/09/10
+  ```sh
+  └── atcoder
+      └── abc
+          └── 160-169
+              ├── abc167
+              │   └── abc167e.cpp | abc167f.cpp
+              ├── abc168
+              │   └── abc168a.cpp | abc168b.cpp | abc168c.cpp | abc168d.cpp | abc168e.cpp | abc168f.cpp
+              └── abc169
+                  └── abc169a.cpp | abc169b.cpp | abc169c.cpp | abc169d.cpp | abc169e.cpp | abc169f.cpp
+  ```
+- 2026/09/09
+  ```sh
+  └── atcoder
+      └── abc
+          └── 160-169
+              ├── abc162
+              │   └── abc162a.cpp | abc162b.cpp | abc162c.cpp | abc162d.cpp | abc162e.cpp | abc162f.cpp
+              ├── abc163
+              │   └── abc163a.cpp | abc163b.cpp | abc163c.cpp | abc163d.cpp | abc163e.cpp | abc163f.cpp
+              ├── abc164
+              │   └── abc164a.cpp | abc164b.cpp | abc164c.cpp | abc164d.cpp | abc164e.cpp | abc164f.cpp
+              ├── abc165
+              │   └── abc165a.cpp | abc165b.cpp | abc165c.cpp | abc165d.cpp | abc165e.cpp | abc165f.cpp
+              ├── abc166
+              │   └── abc166a.cpp | abc166b.cpp | abc166c.cpp | abc166d.cpp | abc166e.cpp | abc166f.cpp
+              └── abc167
+                  └── abc167a.cpp | abc167b.cpp | abc167c.cpp | abc167d.cpp
+  ```
+- 2026/09/08
+  ```sh
+  └── atcoder
+      └── abc
+          ├── 150-159
+          │   ├── ABC152
+          │   │   └── abc152e.cpp | abc152f.cpp
+          │   ├── ABC153
+          │   │   └── abc153a.cpp | abc153b.cpp | abc153c.cpp | abc153d.cpp | abc153e.cpp | abc153f.cpp
+          │   ├── ABC154
+          │   │   └── abc154a.cpp | abc154b.cpp | abc154c.cpp | abc154d.cpp | abc154e.cpp | abc154f.cpp
+          │   ├── ABC155
+          │   │   └── abc155a.cpp | abc155b.cpp | abc155c.cpp | abc155d.cpp | abc155e.cpp | abc155f.cpp
+          │   ├── ABC156
+          │   │   └── abc156a.cpp | abc156b.cpp | abc156c.cpp | abc156d.cpp | abc156e.cpp | abc156f.cpp
+          │   ├── ABC157
+          │   │   └── abc157a.cpp | abc157b.cpp | abc157c.cpp | abc157d.cpp | abc157e.cpp | abc157f.cpp
+          │   ├── ABC158
+          │   │   └── abc158a.cpp | abc158b.cpp | abc158c.cpp | abc158d.cpp | abc158e.cpp | abc158f.cpp
+          │   └── ABC159
+          │       └── abc159a.cpp | abc159b.cpp | abc159c.cpp | abc159d.cpp | abc159e.cpp | abc159f.cpp
+          └── 160-169
+              ├── abc160
+              │   └── abc160a.cpp | abc160b.cpp | abc160c.cpp | abc160d.cpp | abc160e.cpp | abc160f.cpp
+              └── abc161
+                  └── abc161a.cpp | abc161b.cpp | abc161c.cpp | abc161d.cpp | abc161e.cpp | abc161f.cpp
+  ```
+- 2026/09/07
+  ```sh
+  ├── atcoder
+  │   └── abc
+  │       └── 150-159
+  │           ├── ABC151
+  │           │   └── abc151a.cpp | abc151b.cpp | abc151c.cpp | abc151d.cpp | abc151e.cpp | abc151f.cpp
+  │           └── ABC152
+  │               └── abc152a.cpp | abc152b.cpp | abc152c.cpp | abc152d.cpp
+  └── codeforces
+      └── beta_round
+          └── 90-99
+              └── 126 cfbeta93 -E
+                  └── 126E.cpp
+  ```
+- 2026/09/06
+  ```sh
+  └── codeforces
+      └── beta_round
+          └── 80-89
+              └── 111 cfbeta85 -E
+                  └── 111E.cpp
+  ```
+- 2026/09/05
+  ```sh
+  └── luogu
+      └── P3911.cpp | P4844.cpp | P6271.cpp
+  ```
 - 2026/09/05
   ```sh
   └── luogu
